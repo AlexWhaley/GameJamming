@@ -1,0 +1,10 @@
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+[Serializable]
+public class ActionComponent : ScriptableObject
+{
+    public virtual void ExecuteAction(Character target, float modifier) { }
+}
