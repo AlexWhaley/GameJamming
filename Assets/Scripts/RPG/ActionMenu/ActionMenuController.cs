@@ -9,38 +9,137 @@ public class ActionMenuController : MonoBehaviour
     [SerializeField]
     private GameObject _menuActionObject;
 
-    [Header("Action Menu Transforms")]
+    [Header("Action Menus")]
     [SerializeField]
-    private Transform _attackMenu;
+    private GameObject _rootMenu;
     [SerializeField]
-    private Transform _assistMenu;
+    private GameObject _attackMenu;
     [SerializeField]
-    private Transform _healMenu;
+    private GameObject _assistMenu;
+    [SerializeField]
+    private GameObject _healMenu;
 
-    // Update is called once per frame
+    private ActionMenus _currentMenu;
+    private MenuEntry _highlightedMenuEntry;
+    private ActionSelectionProcessor _actionSelectionProcessor;
+
+    public enum ActionMenus
+    {
+        Root,
+        Attack,
+        Assist,
+        Heal
+    }
+
+    private Dictionary<ActionMenus, List<MenuEntry>> _menus;
+
     private void Awake()
     {
+        BuildRootMenu();
         BuildActionMenus();
+        _actionSelectionProcessor = GetComponent<ActionSelectionProcessor>();
+
+        InitialiseMenuState();
+    }
+
+    private void BuildRootMenu()
+    {
+        List<MenuEntry> rootMenu = new List<MenuEntry>();
+        // Initialising attack menu entry in the root menu
+        RootActionMenuEntry attackMenuEntry = _attackMenu.GetComponent<RootActionMenuEntry>();
+        attackMenuEntry.Initialise(ActionMenus.Attack, this);
+        rootMenu.Add(attackMenuEntry);
+
+        // Initialising assist menu entry in the root menu
+        RootActionMenuEntry assistMenuEntry = _assistMenu.GetComponent<RootActionMenuEntry>();
+        attackMenuEntry.Initialise(ActionMenus.Assist, this);
+        rootMenu.Add(assistMenuEntry);
+
+        // Initialising assist menu entry in the root menu
+        RootActionMenuEntry healMenuEntry = _assistMenu.GetComponent<RootActionMenuEntry>();
+        healMenuEntry.Initialise(ActionMenus.Heal, this);
+        rootMenu.Add(healMenuEntry);
+
+        _menus.Add(ActionMenus.Root, rootMenu);
     }
 
     private void BuildActionMenus()
     {
         foreach (var attack in _attatchedPlayer.AttackActions)
         {
-            CreateMenuAction(_attackMenu);
+            CreateMenuAction(attack, _attackMenu.transform);
         }
         foreach (var assist in _attatchedPlayer.AssistActions)
         {
-            CreateMenuAction(_assistMenu);
+            CreateMenuAction(assist, _assistMenu.transform);
         }
-        foreach (var attack in _attatchedPlayer.AttackActions)
+        foreach (var heal in _attatchedPlayer.HealActions)
         {
-            CreateMenuAction(_healMenu);
+            CreateMenuAction(heal, _healMenu.transform);
         }
     }
 
-    private void CreateMenuAction(Transform parent)
+    private MenuEntry CreateMenuAction(Action action, Transform parent)
     {
-        GameObject.Instantiate(_menuActionObject, parent);
+        GameObject menuEntryObject = GameObject.Instantiate(_menuActionObject, parent);
+        var menuEntry = menuEntryObject.GetComponent<ActionMenuEntry>();
+        menuEntry.Initialise(action, this);
+
+        return menuEntry;
+    }
+
+    private void InitialiseMenuState()
+    {
+        DisableActionMenus();
+        _currentMenu = ActionMenus.Root;
+    }
+
+    public void NavigateToActionMenu(ActionMenus destinationMenu)
+    {
+        switch (destinationMenu)
+        {
+            case ActionMenus.Attack:
+                _rootMenu.SetActive(false);
+                _attackMenu.SetActive(true);
+                break;
+            case ActionMenus.Assist:
+                _rootMenu.SetActive(false);
+                _assistMenu.SetActive(true);
+                break;
+            case ActionMenus.Heal:
+                _rootMenu.SetActive(false);
+                _healMenu.SetActive(true);
+                break;
+            case ActionMenus.Root:
+                DisableActionMenus();
+                _rootMenu.SetActive(true);
+                break;
+        }
+        _currentMenu = destinationMenu;
+    }
+
+    private void DisableActionMenus()
+    {
+        if (_attackMenu.activeSelf) { _attackMenu.SetActive(false); }
+        if (_assistMenu.activeSelf) { _assistMenu.SetActive(false); }
+        if (_healMenu.activeSelf) { _healMenu.SetActive(false); }
+    }
+
+    public void BeginActionSelection(Action selectedAction)
+    {
+
+    }
+
+    public void HandleBackButton()
+    {
+        if (_currentMenu != ActionMenus.Root)
+        {
+            NavigateToActionMenu(ActionMenus.Root);
+        }
+    }
+
+    public void HandleConfirmButton()
+    {
+        _highlightedMenuEntry.SelectMenuEntry();
     }
 }
