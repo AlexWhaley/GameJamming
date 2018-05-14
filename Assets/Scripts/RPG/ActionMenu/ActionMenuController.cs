@@ -5,15 +5,17 @@ using UnityEngine;
 public class ActionMenuController : MonoBehaviour
 {
     [SerializeField]
-    private PlayerCharacter attatchedPlayer;
+    private PlayerCharacter _attatchedPlayer;
+    [SerializeField]
+    private GameObject _menuActionObject;
 
-    // Menu transforms
+    [Header("Action Menu Transforms")]
     [SerializeField]
-    private readonly Transform _attackMenu;
+    private Transform _attackMenu;
     [SerializeField]
-    private readonly Transform _assistMenu;
+    private Transform _assistMenu;
     [SerializeField]
-    private readonly Transform _healMenu;
+    private Transform _healMenu;
 
     // Update is called once per frame
     private void Awake()
@@ -23,15 +25,15 @@ public class ActionMenuController : MonoBehaviour
 
     private void BuildActionMenus()
     {
-        foreach (var attack in attatchedPlayer.AttackActions)
+        foreach (var attack in _attatchedPlayer.AttackActions)
         {
             CreateMenuAction(_attackMenu);
         }
-        foreach (var assist in attatchedPlayer.AssistActions)
+        foreach (var assist in _attatchedPlayer.AssistActions)
         {
             CreateMenuAction(_assistMenu);
         }
-        foreach (var attack in attatchedPlayer.AttackActions)
+        foreach (var attack in _attatchedPlayer.AttackActions)
         {
             CreateMenuAction(_healMenu);
         }
@@ -39,6 +41,6 @@ public class ActionMenuController : MonoBehaviour
 
     private void CreateMenuAction(Transform parent)
     {
-
+        GameObject.Instantiate(_menuActionObject, parent);
     }
 }
