@@ -16,7 +16,6 @@ public class TargetedAction
 {
     public string ActionPartName;
     public string SelectionPromptMessage;
-    public int ExecutionOrder;
     public TargetType TargetType;
     public List<ActionComponent> ActionComponents;
 }

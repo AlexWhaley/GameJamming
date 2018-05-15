@@ -16,7 +16,6 @@ MonoBehaviour:
   TargetedActions:
   - ActionPartName: AttackAllEnemies
     SelectionPromptMessage: 
-    ExecutionOrder: 0
     TargetType: 2
     ActionComponents:
-    - {fileID: 11400000, guid: 2ad64bbc4b89ca74db652deb174658f5, type: 2}
+    - {fileID: 11400000, guid: 983219bf2d7e1ba4c9c3f1369a3e7483, type: 2}

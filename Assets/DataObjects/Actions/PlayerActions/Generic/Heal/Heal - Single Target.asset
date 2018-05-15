@@ -15,8 +15,7 @@ MonoBehaviour:
   ActionDescription: Heal a single target for a modate amount.
   TargetedActions:
   - ActionPartName: HealSingleTarget
-    SelectionPromptMessage: 
-    ExecutionOrder: 0
+    SelectionPromptMessage: Select a single target to heal.
     TargetType: 1
     ActionComponents:
-    - {fileID: 11400000, guid: 2ad64bbc4b89ca74db652deb174658f5, type: 2}
+    - {fileID: 11400000, guid: 11ed865dd3d048f489c6b6bd02a74ee7, type: 2}
