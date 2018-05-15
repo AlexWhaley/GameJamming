@@ -11,12 +11,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a540db424f3bdf4cb78dd197c52653f, type: 3}
   m_Name: Assist - Shield Single Target
   m_EditorClassIdentifier: 
-  ActionName: Single Target Attack
-  ActionDescription: Deal large damage to a single targer.
+  ActionName: Shield
+  ActionDescription: Shield a single target from a moderate amount of damage.
   TargetedActions:
   - ActionPartName: AttackSingleTarget
     SelectionPromptMessage: Select an ally to give a strong shield.
-    ExecutionOrder: 0
     TargetType: 0
     ActionComponents:
-    - {fileID: 11400000, guid: a5c43f801151c9b43bce34bf5e65f8e8, type: 2}
+    - {fileID: 11400000, guid: e94cd8f8e8594054ca08150ec7f85c52, type: 2}

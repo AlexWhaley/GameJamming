@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Utilities.Prefabs;
 
 public class Character : MonoBehaviour
 {
@@ -22,6 +23,22 @@ public class Character : MonoBehaviour
     private int _shieldTurnDuration = 0;
 
     public bool IsAlive { get; private set; }
+
+    private TargetIndicatorController _targetIndicatorController;
+
+    private void Awake()
+    {
+        PrefabSpawner[] prefabSpawners = GetComponentsInChildren<PrefabSpawner>();
+        foreach (var prefab in prefabSpawners)
+        {
+            prefab.Spawn();
+        }
+    }
+
+    private void Start()
+    {
+        _targetIndicatorController = GetComponentInChildren<TargetIndicatorController>();
+    }
 
     public void InitialiseBattle()
     {
@@ -58,7 +75,7 @@ public class Character : MonoBehaviour
         }
     }
 
-    public void ProcessTurn()
+    public void TickTurnEffects()
     {
         ReduceShield();
     }
@@ -72,6 +89,11 @@ public class Character : MonoBehaviour
                 _shieldModifier = 1.0f;
             }
         }
+    }
+
+    private void SetTargeted(PlayerCharacter.CharacterNames targetedBy, bool isTargeted)
+    {
+        _targetIndicatorController.SetActiveTargetingIndicator(targetedBy, isTargeted);
     }
 
     public float HealthPortionRemaining

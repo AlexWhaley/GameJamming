@@ -1,11 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class ActionMenuEntry : MenuEntry
 {
     [SerializeField]
-    private TextMesh _actionNameText;
+    private TextMeshProUGUI _actionNameText;
     private Action _actionData;
     private ActionMenuController _actionMenuController;
 

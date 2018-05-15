@@ -4,6 +4,18 @@ using UnityEngine;
 
 public class PlayerCharacter : Character
 {
+    public enum CharacterNames
+    {
+        Pick,
+        Nome,
+        Yama,
+        Four
+    }
+
+    [Space(10), SerializeField]
+    private CharacterNames _characterName;
+    public CharacterNames CharacterName { get { return _characterName; } }
+
     [Header("Character Actions")]
     [SerializeField]
     private List<Action> _attackActions;

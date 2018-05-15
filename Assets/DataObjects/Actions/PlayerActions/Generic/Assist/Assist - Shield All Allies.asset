@@ -11,12 +11,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a540db424f3bdf4cb78dd197c52653f, type: 3}
   m_Name: Assist - Shield All Allies
   m_EditorClassIdentifier: 
-  ActionName: Attack All Enemies
-  ActionDescription: Deal minor damage to all enemies.
+  ActionName: Shield All
+  ActionDescription: Shield all allies from a small amount of damage.
   TargetedActions:
   - ActionPartName: ShieldAllAllies
     SelectionPromptMessage: 
-    ExecutionOrder: 0
     TargetType: 4
     ActionComponents:
-    - {fileID: 11400000, guid: a5c43f801151c9b43bce34bf5e65f8e8, type: 2}
+    - {fileID: 11400000, guid: e94cd8f8e8594054ca08150ec7f85c52, type: 2}

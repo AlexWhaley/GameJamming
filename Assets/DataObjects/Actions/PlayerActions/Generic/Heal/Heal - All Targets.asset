@@ -16,7 +16,6 @@ MonoBehaviour:
   TargetedActions:
   - ActionPartName: HealAllPlayers
     SelectionPromptMessage: 
-    ExecutionOrder: 0
     TargetType: 4
     ActionComponents:
-    - {fileID: 11400000, guid: bcd81e2051f6fb742aebedfd3d05d8fb, type: 2}
+    - {fileID: 11400000, guid: 11ed865dd3d048f489c6b6bd02a74ee7, type: 2}

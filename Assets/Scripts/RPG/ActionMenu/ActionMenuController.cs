@@ -7,21 +7,29 @@ public class ActionMenuController : MonoBehaviour
     [SerializeField]
     private PlayerCharacter _attatchedPlayer;
     [SerializeField]
-    private GameObject _menuActionObject;
+    private GameObject _menuEntryPrefab;
 
-    [Header("Action Menus")]
+    [Header("Action Menu Containers")]
     [SerializeField]
-    private GameObject _rootMenu;
+    private GameObject _rootMenuContainer;
     [SerializeField]
-    private GameObject _attackMenu;
+    private GameObject _attackMenuContainer;
     [SerializeField]
-    private GameObject _assistMenu;
+    private GameObject _assistMenuContainer;
     [SerializeField]
-    private GameObject _healMenu;
+    private GameObject _healMenuContainer;
+
+    [Header("Root Menu Entries")]
+    [SerializeField]
+    private RootActionMenuEntry _attackMenuEntry;
+    [SerializeField]
+    private RootActionMenuEntry _assistMenuEntry;
+    [SerializeField]
+    private RootActionMenuEntry _healMenuEntry;
 
     private ActionMenus _currentMenu;
     private MenuEntry _highlightedMenuEntry;
-    private ActionSelectionProcessor _actionSelectionProcessor;
+    //private ActionSelectionProcessor _actionSelectionProcessor;
 
     public enum ActionMenus
     {
@@ -35,10 +43,15 @@ public class ActionMenuController : MonoBehaviour
 
     private void Awake()
     {
+        //_actionSelectionProcessor = GetComponent<ActionSelectionProcessor>();
+        InitialiseActionMenu();
+    }
+
+    private void InitialiseActionMenu()
+    {
+        _menus = new Dictionary<ActionMenus, List<MenuEntry>>();
         BuildRootMenu();
         BuildActionMenus();
-        _actionSelectionProcessor = GetComponent<ActionSelectionProcessor>();
-
         InitialiseMenuState();
     }
 
@@ -46,19 +59,16 @@ public class ActionMenuController : MonoBehaviour
     {
         List<MenuEntry> rootMenu = new List<MenuEntry>();
         // Initialising attack menu entry in the root menu
-        RootActionMenuEntry attackMenuEntry = _attackMenu.GetComponent<RootActionMenuEntry>();
-        attackMenuEntry.Initialise(ActionMenus.Attack, this);
-        rootMenu.Add(attackMenuEntry);
+        _attackMenuEntry.Initialise(ActionMenus.Attack, this);
+        rootMenu.Add(_attackMenuEntry);
 
         // Initialising assist menu entry in the root menu
-        RootActionMenuEntry assistMenuEntry = _assistMenu.GetComponent<RootActionMenuEntry>();
-        attackMenuEntry.Initialise(ActionMenus.Assist, this);
-        rootMenu.Add(assistMenuEntry);
+        _assistMenuEntry.Initialise(ActionMenus.Assist, this);
+        rootMenu.Add(_assistMenuEntry);
 
         // Initialising assist menu entry in the root menu
-        RootActionMenuEntry healMenuEntry = _assistMenu.GetComponent<RootActionMenuEntry>();
-        healMenuEntry.Initialise(ActionMenus.Heal, this);
-        rootMenu.Add(healMenuEntry);
+        _healMenuEntry.Initialise(ActionMenus.Heal, this);
+        rootMenu.Add(_healMenuEntry);
 
         _menus.Add(ActionMenus.Root, rootMenu);
     }
@@ -67,21 +77,21 @@ public class ActionMenuController : MonoBehaviour
     {
         foreach (var attack in _attatchedPlayer.AttackActions)
         {
-            CreateMenuAction(attack, _attackMenu.transform);
+            CreateMenuAction(attack, _attackMenuContainer.transform);
         }
         foreach (var assist in _attatchedPlayer.AssistActions)
         {
-            CreateMenuAction(assist, _assistMenu.transform);
+            CreateMenuAction(assist, _assistMenuContainer.transform);
         }
         foreach (var heal in _attatchedPlayer.HealActions)
         {
-            CreateMenuAction(heal, _healMenu.transform);
+            CreateMenuAction(heal, _healMenuContainer.transform);
         }
     }
 
     private MenuEntry CreateMenuAction(Action action, Transform parent)
     {
-        GameObject menuEntryObject = GameObject.Instantiate(_menuActionObject, parent);
+        GameObject menuEntryObject = GameObject.Instantiate(_menuEntryPrefab, parent);
         var menuEntry = menuEntryObject.GetComponent<ActionMenuEntry>();
         menuEntry.Initialise(action, this);
 
@@ -99,20 +109,20 @@ public class ActionMenuController : MonoBehaviour
         switch (destinationMenu)
         {
             case ActionMenus.Attack:
-                _rootMenu.SetActive(false);
-                _attackMenu.SetActive(true);
+                _rootMenuContainer.SetActive(false);
+                _attackMenuContainer.SetActive(true);
                 break;
             case ActionMenus.Assist:
-                _rootMenu.SetActive(false);
-                _assistMenu.SetActive(true);
+                _rootMenuContainer.SetActive(false);
+                _assistMenuContainer.SetActive(true);
                 break;
             case ActionMenus.Heal:
-                _rootMenu.SetActive(false);
-                _healMenu.SetActive(true);
+                _rootMenuContainer.SetActive(false);
+                _healMenuContainer.SetActive(true);
                 break;
             case ActionMenus.Root:
                 DisableActionMenus();
-                _rootMenu.SetActive(true);
+                _rootMenuContainer.SetActive(true);
                 break;
         }
         _currentMenu = destinationMenu;
@@ -120,9 +130,9 @@ public class ActionMenuController : MonoBehaviour
 
     private void DisableActionMenus()
     {
-        if (_attackMenu.activeSelf) { _attackMenu.SetActive(false); }
-        if (_assistMenu.activeSelf) { _assistMenu.SetActive(false); }
-        if (_healMenu.activeSelf) { _healMenu.SetActive(false); }
+        if (_attackMenuContainer.activeSelf) { _attackMenuContainer.SetActive(false); }
+        if (_assistMenuContainer.activeSelf) { _assistMenuContainer.SetActive(false); }
+        if (_healMenuContainer.activeSelf) { _healMenuContainer.SetActive(false); }
     }
 
     public void BeginActionSelection(Action selectedAction)
