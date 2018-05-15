@@ -61,11 +61,11 @@ public class AudioManager : MonoBehaviour
 
         if (clip != null)
         {
-            _audioSource.clip = clip._audioClip;
+            _audioSource.clip = clip.Clip;
             _audioSource.Play();
 
             _audioStart = (float)AudioSettings.dspTime;
-            _secondsPerBeat = 60f / clip._beatsPerMinute;
+            _secondsPerBeat = 60f / clip.BeatsPerMinute;
 
             IsPlaying = true;
         }
@@ -77,17 +77,16 @@ public class AudioManager : MonoBehaviour
         IsPlaying = false;
     }
 
-    private AudioAsset GetAudioAssetFromId(string id)
+    private AudioAsset GetAudioAssetFromId(string audioId)
     {
-        return _audioClips.FirstOrDefault(x => x._id == id);
+        return _audioClips.FirstOrDefault(x => x.ClipId == audioId);
     }
-   
 }
 
 [Serializable]
 public class AudioAsset
 {
-    public string _id;
-    public AudioClip _audioClip;
-    public int _beatsPerMinute;
+    public string ClipId;
+    public AudioClip Clip;
+    public int BeatsPerMinute;
 }
