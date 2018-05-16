@@ -5,16 +5,14 @@ using UnityEngine;
 
 public class ActionMenuEntry : MenuEntry
 {
-    [SerializeField]
-    private TextMeshProUGUI _actionNameText;
     private Action _actionData;
-    private ActionMenuController _actionMenuController;
 
     public void Initialise(Action actionData, ActionMenuController actionMenuController)
     {
         _actionData = actionData;
         _actionNameText.text = _actionData.ActionName;
         _actionMenuController = actionMenuController;
+        _entryDescription = _actionData.ActionDescription;
     }
 
     public override void SelectMenuEntry()

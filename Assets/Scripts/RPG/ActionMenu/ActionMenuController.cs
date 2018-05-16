@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class ActionMenuController : MonoBehaviour
@@ -8,6 +9,9 @@ public class ActionMenuController : MonoBehaviour
     private PlayerCharacter _attatchedPlayer;
     [SerializeField]
     private GameObject _menuEntryPrefab;
+    [SerializeField]
+    private PlayerActionTargeter _actionTargeter;
+    public PlayerCharacter AttatchedPlayer { get { return _attatchedPlayer; } }
 
     [Header("Action Menu Containers")]
     [SerializeField]
@@ -27,9 +31,34 @@ public class ActionMenuController : MonoBehaviour
     [SerializeField]
     private RootActionMenuEntry _healMenuEntry;
 
+    [Space(10), SerializeField]
+    private TextMeshProUGUI _menuTitle;
+    [SerializeField]
+    private TextMeshProUGUI _actionDescription;
+
     private ActionMenus _currentMenu;
-    private MenuEntry _highlightedMenuEntry;
-    //private ActionSelectionProcessor _actionSelectionProcessor;
+    private int _currentSelectionIndex;
+    private int _rootSelectionIndex;
+
+    private void Update()
+    {
+        if (Input.GetKeyDown("w"))
+        {
+            HandleUpButton();
+        }
+        else if (Input.GetKeyDown("s"))
+        {
+            HandleDownButton();
+        }
+        else if (Input.GetKeyDown("d"))
+        {
+            HandleConfirmButton();
+        }
+        else if (Input.GetKeyDown("a"))
+        {
+            HandleBackButton();
+        }
+    }
 
     public enum ActionMenus
     {
@@ -44,15 +73,29 @@ public class ActionMenuController : MonoBehaviour
     private void Awake()
     {
         //_actionSelectionProcessor = GetComponent<ActionSelectionProcessor>();
-        InitialiseActionMenu();
+        BuildActionMenu();
+        RevealActionMenu(true);
     }
 
-    private void InitialiseActionMenu()
+    private void BuildActionMenu()
     {
         _menus = new Dictionary<ActionMenus, List<MenuEntry>>();
         BuildRootMenu();
         BuildActionMenus();
-        InitialiseMenuState();
+    }
+
+    private void RevealActionMenu(bool freshOpen)
+    {
+        if (freshOpen)
+        {
+            NavigateToActionMenu(ActionMenus.Root);
+        }
+        gameObject.SetActive(true);
+    }
+
+    private void HideActionMenu()
+    {
+        gameObject.SetActive(false);
     }
 
     private void BuildRootMenu()
@@ -75,18 +118,26 @@ public class ActionMenuController : MonoBehaviour
 
     private void BuildActionMenus()
     {
+        List<MenuEntry> _attackEntries = new List<MenuEntry>();
         foreach (var attack in _attatchedPlayer.AttackActions)
         {
-            CreateMenuAction(attack, _attackMenuContainer.transform);
+            _attackEntries.Add(CreateMenuAction(attack, _attackMenuContainer.transform));
         }
+        _menus.Add(ActionMenus.Attack, _attackEntries);
+
+        List<MenuEntry> _assistEntries = new List<MenuEntry>();
         foreach (var assist in _attatchedPlayer.AssistActions)
         {
-            CreateMenuAction(assist, _assistMenuContainer.transform);
+            _assistEntries.Add(CreateMenuAction(assist, _assistMenuContainer.transform));
         }
+        _menus.Add(ActionMenus.Assist, _assistEntries);
+
+        List<MenuEntry> _healEntries = new List<MenuEntry>();
         foreach (var heal in _attatchedPlayer.HealActions)
         {
-            CreateMenuAction(heal, _healMenuContainer.transform);
+            _healEntries.Add(CreateMenuAction(heal, _healMenuContainer.transform));
         }
+        _menus.Add(ActionMenus.Heal, _healEntries);
     }
 
     private MenuEntry CreateMenuAction(Action action, Transform parent)
@@ -98,34 +149,35 @@ public class ActionMenuController : MonoBehaviour
         return menuEntry;
     }
 
-    private void InitialiseMenuState()
-    {
-        DisableActionMenus();
-        _currentMenu = ActionMenus.Root;
-    }
-
     public void NavigateToActionMenu(ActionMenus destinationMenu)
     {
+        _currentMenu = destinationMenu;
+        _currentSelectionIndex = 0;
         switch (destinationMenu)
         {
             case ActionMenus.Attack:
                 _rootMenuContainer.SetActive(false);
                 _attackMenuContainer.SetActive(true);
+                _menuTitle.text = "Attack Menu";
                 break;
             case ActionMenus.Assist:
                 _rootMenuContainer.SetActive(false);
                 _assistMenuContainer.SetActive(true);
+                _menuTitle.text = "Assist Menu";
                 break;
             case ActionMenus.Heal:
                 _rootMenuContainer.SetActive(false);
                 _healMenuContainer.SetActive(true);
+                _menuTitle.text = "Heal Menu";
                 break;
             case ActionMenus.Root:
+                _currentSelectionIndex = _rootSelectionIndex;
                 DisableActionMenus();
                 _rootMenuContainer.SetActive(true);
+                _menuTitle.text = "Action Menu";
                 break;
         }
-        _currentMenu = destinationMenu;
+        HighlightedMenuEntry.HighlightMenuEntry();
     }
 
     private void DisableActionMenus()
@@ -135,21 +187,61 @@ public class ActionMenuController : MonoBehaviour
         if (_healMenuContainer.activeSelf) { _healMenuContainer.SetActive(false); }
     }
 
-    public void BeginActionSelection(Action selectedAction)
+    private MenuEntry HighlightedMenuEntry
     {
-
+        get
+        {
+            return _menus[_currentMenu][_currentSelectionIndex];
+        }
     }
 
+    public void SetActionDescriptionText(string newDescription)
+    {
+        _actionDescription.text = newDescription;
+    }
+
+    public void BeginActionSelection(Action selectedAction)
+    {
+        _actionTargeter.InitiateTargettingSequence(selectedAction);
+    }
+
+    // Menu controls
     public void HandleBackButton()
     {
         if (_currentMenu != ActionMenus.Root)
         {
+            HighlightedMenuEntry.UnHighlightMenuEntry();
             NavigateToActionMenu(ActionMenus.Root);
         }
     }
 
     public void HandleConfirmButton()
     {
-        _highlightedMenuEntry.SelectMenuEntry();
+        HighlightedMenuEntry.SelectMenuEntry();
+    }
+    
+    public void HandleUpButton()
+    {
+        StepThroughActionMenu(-1);
+    }
+
+    public void HandleDownButton()
+    {
+        StepThroughActionMenu(1);
+    }
+
+    private void StepThroughActionMenu(int indexChange)
+    {
+        var currentEntryList = _menus[_currentMenu];
+        currentEntryList[_currentSelectionIndex].UnHighlightMenuEntry();
+
+        int entryCount = _menus[_currentMenu].Count;
+        _currentSelectionIndex = (((_currentSelectionIndex + indexChange) % entryCount) + entryCount) % entryCount;
+        currentEntryList[_currentSelectionIndex].HighlightMenuEntry();
+
+        if (_currentMenu == ActionMenus.Root)
+        {
+            _rootSelectionIndex = _currentSelectionIndex;
+        }
     }
 }

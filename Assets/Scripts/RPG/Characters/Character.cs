@@ -24,7 +24,7 @@ public class Character : MonoBehaviour
 
     public bool IsAlive { get; private set; }
 
-    private TargetIndicatorController _targetIndicatorController;
+    public TargetIndicatorController TargetIndicatorController { get; private set; }
 
     private void Awake()
     {
@@ -37,7 +37,7 @@ public class Character : MonoBehaviour
 
     private void Start()
     {
-        _targetIndicatorController = GetComponentInChildren<TargetIndicatorController>();
+        TargetIndicatorController = GetComponentInChildren<TargetIndicatorController>();
     }
 
     public void InitialiseBattle()
@@ -91,9 +91,9 @@ public class Character : MonoBehaviour
         }
     }
 
-    private void SetTargeted(PlayerCharacter.CharacterNames targetedBy, bool isTargeted)
+    private void SetTargeted(Character targetedBy, bool isTargeted)
     {
-        _targetIndicatorController.SetActiveTargetingIndicator(targetedBy, isTargeted);
+        TargetIndicatorController.SetActiveTargetingIndicator(targetedBy, isTargeted);
     }
 
     public float HealthPortionRemaining
