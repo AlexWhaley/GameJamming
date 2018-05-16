@@ -8,6 +8,9 @@ public class CharacterManager : MonoBehaviour
     [SerializeField]
     List<Character> _playerCharacters;
 
+    [SerializeField]
+    List<Character> _enemyCharacters;
+
     private static CharacterManager _instance;
     public static CharacterManager Instance
     {
@@ -47,6 +50,35 @@ public class CharacterManager : MonoBehaviour
         Debug.LogError("Can't fetch a random character from an empty list of characters.");
         return null;
     }
+
+    public List<Character> PruneTargetedCharacters(List<Character> potentialTargets, Character targetingCharacter)
+    {
+        return potentialTargets.Where(target => !target.TargetIndicatorController.IsTargetedBy(targetingCharacter)).ToList();
+    }
+
+    #region PlayerTargetFunctions
+
+    public List<Character> GetAliveEnemies()
+    {
+        return AliveCharacters(_enemyCharacters);
+    }
+
+    public List<Character> GetNonTargetedAliveEnemies(Character targetingCharacter)
+    {
+        return PruneTargetedCharacters(GetAliveEnemies(), targetingCharacter);
+    }
+
+    public List<Character> GetAlivePlayers()
+    {
+        return AliveCharacters(_playerCharacters);
+    }
+
+    public List<Character> GetNonTargetedAlivePlayers(Character targetingCharacter)
+    {
+        return PruneTargetedCharacters(GetAlivePlayers(), targetingCharacter);
+    }
+
+    #endregion
 
     #region EnemyTargetFunctions
 

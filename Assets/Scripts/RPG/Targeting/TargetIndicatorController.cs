@@ -13,32 +13,38 @@ public class TargetIndicatorController : MonoBehaviour
     [SerializeField]
     private GameObject _fourIndicator;
 
-    private void Awake()
-    {
-        InitialiseTargetIndicators();
-    }
+    List<Character> _charactersTargetting;
 
-    private void InitialiseTargetIndicators()
+    public void SetActiveTargetingIndicator(Character targetedBy, bool setActive)
     {
-        // Set colours from some kind of manager?
-    }
-
-    public void SetActiveTargetingIndicator(PlayerCharacter.CharacterNames targetedBy, bool setActive)
-    {
-        switch (targetedBy)
+        if (targetedBy is PlayerCharacter)
         {
-            case PlayerCharacter.CharacterNames.Pick:
-                _pickIndicator.SetActive(setActive);
-                break;
-            case PlayerCharacter.CharacterNames.Nome:
-                _nomeIndicator.SetActive(setActive);
-                break;
-            case PlayerCharacter.CharacterNames.Yama:
-                _yamaIndicator.SetActive(setActive);
-                break;
-            case PlayerCharacter.CharacterNames.Four:
-                _fourIndicator.SetActive(setActive);
-                break;
+            switch (((PlayerCharacter)targetedBy).CharacterName)
+            {
+                case PlayerCharacter.CharacterNames.Pick:
+                    _pickIndicator.SetActive(setActive);
+                    break;
+                case PlayerCharacter.CharacterNames.Nome:
+                    _nomeIndicator.SetActive(setActive);
+                    break;
+                case PlayerCharacter.CharacterNames.Yama:
+                    _yamaIndicator.SetActive(setActive);
+                    break;
+                case PlayerCharacter.CharacterNames.Four:
+                    _fourIndicator.SetActive(setActive);
+                    break;
+            }
         }
+        /*
+        else if (targetedBy is EnemyCharacter)
+        {
+
+        }
+        */
+    }
+
+    public bool IsTargetedBy(Character character)
+    {
+        return _charactersTargetting.Contains(character);
     }
 }
