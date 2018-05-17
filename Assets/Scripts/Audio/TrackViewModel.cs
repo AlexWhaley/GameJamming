@@ -7,92 +7,61 @@ using UnityEngine;
 public class TrackViewModel : MonoBehaviour
 {
     private AudioTrack _trackData;
+    private PlayerInputHandler _input;
     [SerializeField] private PlayerCharacter _attachedCharacter;
+    [SerializeField] private LaneViewModel _leftLane;
+    [SerializeField] private LaneViewModel _rightLane;
 
-    [SerializeField] private RectTransform _leftLane;
-    [SerializeField] private RectTransform _rightLane;
-
-    [SerializeField] private RectTransform _leftLaneSpawn;
-    [SerializeField] private RectTransform _leftLaneDestruct;
-
-    [SerializeField] private RectTransform _rightLaneSpawn;
-    [SerializeField] private RectTransform _rightLaneDestruct;
-
-    private int _nextLeftIndex = 0;
-    private int _nextRightIndex = 0;
+    private void Awake()
+    {
+        _input = InputManager.Instance.GetPlayerInputHandler(_attachedCharacter);
+    }
 
     public void Initialize(AudioTrack track)
     {
         _trackData = track;
+        _leftLane.Initialize(_attachedCharacter, Lane.Left, _trackData.LeftLane);
+        _rightLane.Initialize(_attachedCharacter, Lane.Right, _trackData.RightLane);
     }
 
     private void Update()
     {
-        if (TrackManager.Instance.PlayingTrack && _trackData != null)
+        var leftNote = _leftLane.NoteInCatcher;
+        var rightNote = _rightLane.NoteInCatcher;
+        
+        if (_input != null && _input.LeftStick.IsHeld)
         {
-            UpdateTrackNotes(Lane.Left);
-            UpdateTrackNotes(Lane.Right);
-        }
-    }
-
-    private void UpdateTrackNotes(Lane lane)
-    {
-        RectTransform laneTransform = lane == Lane.Left ? _leftLane : _rightLane;
-        Vector2 spawn = lane == Lane.Left ? _leftLaneSpawn.position : _rightLaneSpawn.position;
-        Vector2 destruct = lane == Lane.Left ? _leftLaneDestruct.position : _rightLaneDestruct.position;
-        int nextIndex = lane == Lane.Left ? _nextLeftIndex : _nextRightIndex;
-
-        Note nextNote = GetNextNote(lane, nextIndex);
-        if (nextIndex < GetNoteCount(lane) && nextNote.StartTime < AudioManager.Instance.SongPosition + TrackManager.Instance.BeatsShownInAdvance)
-        {
-            TrackManager.Instance.SpawnNote(_attachedCharacter, lane, laneTransform, nextNote, spawn, destruct);
-
-            if (lane == Lane.Left)
+            if (leftNote != null)
             {
-                _nextLeftIndex++;
-            }
-            else
-            {
-                _nextRightIndex++;
-            }
-        }
-    }
-
-    private int GetNoteCount(Lane lane)
-    {
-        int count = 0;
-
-        List<NoteGroup> noteGroups = lane == Lane.Left ? _trackData.LeftLane : _trackData.RightLane;
-
-        foreach (var group in noteGroups)
-        {
-            count += group.NoteChain.Count;
-        }
-
-        return count;
-    }
-
-    private Note GetNextNote(Lane lane, int nextIndex)
-    {
-        List<NoteGroup> noteGroups = lane == Lane.Left ? _trackData.LeftLane : _trackData.RightLane;
-
-        int iterateIndex = 0;
-
-        foreach(var group in noteGroups)
-        {
-            foreach(var note in group.NoteChain)
-            {
-                if (iterateIndex == nextIndex)
+                if (_input.LeftStick.Direction == leftNote.Direction)
                 {
-                    return note;
-                }
-                else
-                {
-                    iterateIndex++;
+                    leftNote.HasBeenHit = true;
+                    if (leftNote.HasTail)
+                    {
+
+                    }
                 }
             }
         }
 
-        return null;
+        if (_input != null && _input.RightStick.IsHeld)
+        {
+            if (rightNote != null)
+            {
+                if (_input.RightStick.Direction == rightNote.Direction)
+                {
+                    rightNote.HasBeenHit = true;
+                    if (rightNote.HasTail)
+                    {
+
+                    }
+                }
+            }
+        }
+
+        if (Input.GetKeyUp(KeyCode.A))
+        {
+            //if (leftNote)
+        }
     }
 }

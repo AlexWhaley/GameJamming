@@ -170,6 +170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a924486703ec00459e2c24f1d25e9ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _playerID: Player1
   ConfirmButton: e
   BackButton: q
   UpButton: w
@@ -187,6 +188,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a924486703ec00459e2c24f1d25e9ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _playerID: Player3
   ConfirmButton: o
   BackButton: u
   UpButton: i
@@ -204,6 +206,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a924486703ec00459e2c24f1d25e9ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _playerID: Player2
   ConfirmButton: y
   BackButton: r
   UpButton: t
@@ -221,6 +224,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a924486703ec00459e2c24f1d25e9ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _playerID: Player4
   ConfirmButton: '[9]'
   BackButton: '[7]'
   UpButton: '[8]'

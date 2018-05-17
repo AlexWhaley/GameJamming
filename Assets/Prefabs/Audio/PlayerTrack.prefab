@@ -121,6 +121,7 @@ GameObject:
   m_Component:
   - component: {fileID: 224866851250330944}
   - component: {fileID: 222411841891890088}
+  - component: {fileID: 114944906577483968}
   - component: {fileID: 114705933612526202}
   - component: {fileID: 114187488031213498}
   m_Layer: 0
@@ -139,6 +140,7 @@ GameObject:
   m_Component:
   - component: {fileID: 224480171854899716}
   - component: {fileID: 222585798640680602}
+  - component: {fileID: 114017620952028096}
   - component: {fileID: 114008872579504106}
   - component: {fileID: 114293091088920298}
   m_Layer: 0
@@ -157,7 +159,7 @@ GameObject:
   m_Component:
   - component: {fileID: 224559353573489710}
   m_Layer: 0
-  m_Name: MovingTrack
+  m_Name: NoteStream
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -280,6 +282,22 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114017620952028096
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1751065568685982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fa51e468f128f14bad2185ead2b8135, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _noteStreamParent: {fileID: 224559353573489710}
+  _spawn: {fileID: 224157224743322930}
+  _destruct: {fileID: 224441493551119618}
+  _noteGroups: []
+  NoteInCatcher: {fileID: 0}
 --- !u!114 &114187488031213498
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -367,13 +385,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7301bb065e65569498c2b1badc6da5ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerID: 0
-  _leftLane: {fileID: 224559353573489710}
-  _rightLane: {fileID: 224110384650222486}
-  _leftLaneSpawn: {fileID: 224157224743322930}
-  _leftLaneDestruct: {fileID: 224441493551119618}
-  _rightLaneSpawn: {fileID: 224145925711359968}
-  _rightLaneDestruct: {fileID: 224492834294572850}
+  _attachedCharacter: {fileID: 0}
+  _leftLane: {fileID: 114017620952028096}
+  _rightLane: {fileID: 114944906577483968}
 --- !u!114 &114817725881608558
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -428,6 +442,22 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114944906577483968
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1697106242748636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fa51e468f128f14bad2185ead2b8135, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _noteStreamParent: {fileID: 224110384650222486}
+  _spawn: {fileID: 224145925711359968}
+  _destruct: {fileID: 224492834294572850}
+  _noteGroups: []
+  NoteInCatcher: {fileID: 0}
 --- !u!222 &222255306142826250
 CanvasRenderer:
   m_ObjectHideFlags: 1

@@ -28,16 +28,10 @@ public class TrackManager : MonoBehaviour
 
         foreach (var playerTrack in _playerTracks)
         {
-            playerTrack.Initialize(TrackManager.Instance.GetTrackFromId("demoTrack"));
+            playerTrack.Initialize(GetTrackFromId("demoTrack"));
         }
 
         AudioManager.Instance.AddSoundToQueue(audioTrack.AudioAssetId, true);
-    }
-
-    public void SpawnNote(PlayerCharacter attachedCharacter, Lane lane, RectTransform trackTransform, Note note, Vector2 spawn, Vector2 destruct)
-    {
-        GameObject noteGO = Instantiate(AssetManager.Instance.NotePrefab, trackTransform);
-        noteGO.GetComponent<NoteViewModel>().Initialize(attachedCharacter, note, lane, spawn, destruct);
     }
 
     public AudioTrack GetTrackFromId(string trackId)

@@ -27,12 +27,6 @@ public class Note
     public Direction Direction;
 }
 
-public enum Lane
-{
-    Left,
-    Right
-}
-
 public enum Direction
 {
     Up = 0,
