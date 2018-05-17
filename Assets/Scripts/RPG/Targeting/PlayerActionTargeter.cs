@@ -1,36 +1,160 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
-public class PlayerActionTargeter : MonoBehaviour
+public class PlayerActionTargeter : MonoBehaviour, InputCommandHandler
 {
-    // Refactor this so one object contains all this UI related stuff together.
-    [SerializeField]
-    ActionMenuController _actionMenuController;
+    private PlayerUIController _uiController;
 
     private List<TargetedAction> _actionsToTarget;
     private PlayerCharacter _attatchedPlayer;
 
+    private List<Character> _potentialTargets;
+    private TargetType _currentTargetType;
+    private int _currentSingleTargetIndex;
+
+    private int _currentTargetedActionIndex;
+    private List<ExecuteableAction> _confirmedActions;
+
+    private enum TargetSelectionMode
+    {
+        Choice,
+        NoChoice
+    }
+
+    private TargetSelectionMode _currentTargetSelectionMode;
     private void Awake()
     {
-        _attatchedPlayer = _actionMenuController.AttatchedPlayer;
+        _uiController = GetComponentInParent<PlayerUIController>();
+        _attatchedPlayer = _uiController.AttatchedPlayer;
+
     }
 
     public void InitiateTargettingSequence(Action action)
     {
         _actionsToTarget = action.TargetedActions;
+        _currentTargetedActionIndex = 0;
+        _confirmedActions = new List<ExecuteableAction>();
+
+        ProcessTargetedAction();
+        RegisterInputHandlers();
     }
 
-    private void ProcessTargetedAction(TargetedAction targetedAction)
+    private TargetedAction CurrentTargetedAction
+    {
+        get
+        {
+            return _actionsToTarget[_currentTargetedActionIndex];
+        }
+    }
+
+    public void ReturnToActionMenuController()
+    {
+        UnregisterInputHandlers();
+        _uiController.OpenActionMenu(false);
+    }
+
+    private void ProcessTargetedAction()
     {
         // First find all potential targets
-        List<Character> potentialTargets = FindPotentialActionTargets(targetedAction);
+        if (_currentTargetedActionIndex != _actionsToTarget.Count)
+        {
+            _currentTargetType = CurrentTargetedAction.TargetType;
+            _potentialTargets = FindPotentialActionTargets(CurrentTargetedAction);
+
+            DetermineCurrentTargetingMode();
+            PlaceInitialTargettingIndicators();
+        }
+        else
+        {
+            _uiController.LockInActionTargets();
+        }
+
     }
+
+    private void PlaceInitialTargettingIndicators()
+    {
+        switch (_currentTargetSelectionMode)
+        {
+            case TargetSelectionMode.Choice:
+                _currentSingleTargetIndex = 0;
+                SetTargetedIndex(_currentSingleTargetIndex, true);
+                break;
+            case TargetSelectionMode.NoChoice:
+                foreach (var character in _potentialTargets)
+                {
+                    character.TargetIndicatorController.SetActiveTargetingIndicator(_attatchedPlayer, true);
+                }
+                break;
+        }
+    }
+
+    private void RemoveAllIndicators()
+    {
+        foreach (var character in _potentialTargets)
+        {
+            character.TargetIndicatorController.SetActiveTargetingIndicator(_attatchedPlayer, false);
+        }
+    }
+
+    private void MoveSingleTargetIndicator(int indexChange)
+    {
+        SetTargetedIndex(_currentSingleTargetIndex, false);
+        
+        int potentialTargetCount = _potentialTargets.Count;
+        _currentSingleTargetIndex = (((_currentSingleTargetIndex + indexChange) % potentialTargetCount) + potentialTargetCount) % potentialTargetCount;
+        SetTargetedIndex(_currentSingleTargetIndex, true);
+    }
+
+    private void RevokeLastTargetedAction()
+    {
+        // This logic is bad and wont work with long chains but we never will be targetting more than twice per player in a single action so it doesnt matter now.
+        RemoveAllIndicators();
+        if (_currentTargetedActionIndex != 0)
+        {
+            _confirmedActions.RemoveAt(--_currentTargetedActionIndex);
+            --_currentTargetedActionIndex;
+            ProcessTargetedAction();
+        }
+        else
+        {
+            ReturnToActionMenuController();
+        }
+    }
+
+    private void LockInAction()
+    {
+        ExecuteableAction actionToLock = new ExecuteableAction();
+        switch (_currentTargetSelectionMode)
+        {
+            case TargetSelectionMode.Choice:
+                actionToLock.Targets.Add(_potentialTargets[_currentSingleTargetIndex]);
+                break;
+            case TargetSelectionMode.NoChoice:
+                actionToLock.Targets = _potentialTargets.ToList();
+                break;
+        }
+
+        actionToLock.ActionToApply = CurrentTargetedAction;
+        _confirmedActions.Add(actionToLock);
+
+        //Process next targeted action or end.
+        ++_currentTargetedActionIndex;
+        ProcessTargetedAction();
+
+    }
+
+    private void SetTargetedIndex(int index, bool setTargeted)
+    {
+        _potentialTargets[index].TargetIndicatorController.SetActiveTargetingIndicator(_attatchedPlayer, setTargeted);
+    }
+
 
     private List<Character> FindPotentialActionTargets(TargetedAction targetedAction)
     {
         List<Character> potentialTargets = new List<Character>();
-        switch (targetedAction.TargetType)
+        switch (_currentTargetType)
         {
             case TargetType.AllEnemiesExclusive:
                 potentialTargets = CharacterManager.Instance.GetNonTargetedAliveEnemies(_attatchedPlayer);
@@ -56,10 +180,84 @@ public class PlayerActionTargeter : MonoBehaviour
         }
         return potentialTargets;
     }
+
+    private void DetermineCurrentTargetingMode()
+    {
+
+        switch (_currentTargetType)
+        {
+            case TargetType.AllEnemiesExclusive:
+            case TargetType.AllEnemiesInclusive:
+            case TargetType.AllPlayersExclusive:
+            case TargetType.AllPlayersInclusive:
+            case TargetType.Self:
+                _currentTargetSelectionMode = TargetSelectionMode.NoChoice;
+                break;
+            case TargetType.EnemySingle:
+            case TargetType.PlayersSingle:
+                _currentTargetSelectionMode = TargetSelectionMode.Choice;
+                break;
+        }
+    }
+
+    public void HandleBackButton()
+    {
+        RevokeLastTargetedAction();
+    }
+
+    public void HandleConfirmButton()
+    {
+        LockInAction();
+    }
+
+    public void HandleUpButton()
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public void HandleDownButton()
+    {
+        throw new System.NotImplementedException();
+    }
+
+    public void HandleLeftButton()
+    {
+        if (_currentTargetSelectionMode == TargetSelectionMode.Choice)
+        {
+            MoveSingleTargetIndicator(-1);
+        }
+    }
+
+    public void HandleRightButton()
+    {
+        if (_currentTargetSelectionMode == TargetSelectionMode.Choice)
+        {
+            MoveSingleTargetIndicator(1);
+        }
+    }
+
+    public void RegisterInputHandlers()
+    {
+        var playerInputHandler = InputManager.Instance.GetPlayerInputHandler(_attatchedPlayer);
+        playerInputHandler.ConfirmButtonPress += HandleConfirmButton;
+        playerInputHandler.BackButtonPress += HandleBackButton;
+        playerInputHandler.LeftButtonPress += HandleLeftButton;
+        playerInputHandler.RightButtonPress += HandleRightButton;
+    }
+
+    public void UnregisterInputHandlers()
+    {
+        var playerInputHandler = InputManager.Instance.GetPlayerInputHandler(_attatchedPlayer);
+        playerInputHandler.ConfirmButtonPress -= HandleConfirmButton;
+        playerInputHandler.BackButtonPress -= HandleBackButton;
+        playerInputHandler.LeftButtonPress -= HandleLeftButton;
+        playerInputHandler.RightButtonPress -= HandleRightButton;
+
+    }
 }
 
-public class ExecuteableActions
+public class ExecuteableAction
 {
-    public List<Character> targets;
-    Action actionToApply;
+    public List<Character> Targets;
+    public TargetedAction ActionToApply;
 }

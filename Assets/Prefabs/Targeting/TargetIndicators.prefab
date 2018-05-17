@@ -37,6 +37,7 @@ GameObject:
   m_Component:
   - component: {fileID: 224857909780793544}
   - component: {fileID: 114553146902077874}
+  - component: {fileID: 114191898078211832}
   m_Layer: 0
   m_Name: TargetIndicators
   m_TagString: Untagged
@@ -95,6 +96,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
+--- !u!114 &114191898078211832
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1092021339256550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f4663851063915498d762e46f962ac0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _pickIndicator: {fileID: 1037886779381556}
+  _nomeIndicator: {fileID: 1939022761577934}
+  _yamaIndicator: {fileID: 1328461090217464}
+  _fourIndicator: {fileID: 1702934701110628}
 --- !u!114 &114464976479606924
 MonoBehaviour:
   m_ObjectHideFlags: 1
