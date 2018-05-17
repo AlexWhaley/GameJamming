@@ -7,9 +7,9 @@ public class HealComponent : ActionComponent
 {
     public int BaseHealing;
 
-    public override void ExecuteAction(Character target, float modifier)
+    public override void ExecuteAction(Character target, Character targeter, float modifier)
     {
-        int modifiedHealing = (int)(modifier * BaseHealing);
+        int modifiedHealing = (int)(targeter.HealModifier * modifier * BaseHealing);
         target.ApplyHealing(modifiedHealing);
     }
 }

@@ -15,6 +15,8 @@ public class Character : MonoBehaviour
     [SerializeField, Tooltip("Higher is better - 1 heals a normal amount -> 2 heals double.")]
     private float _healModifier = 1.0f;
 
+    private Animator _actionAnimator;
+
     // Current battle stats
     private float _currentHealth;
     
@@ -25,6 +27,21 @@ public class Character : MonoBehaviour
     public bool IsAlive { get; private set; }
 
     public TargetIndicatorController TargetIndicatorController { get; private set; }
+
+    public float ArmorModifier
+    {
+        get { return _armorModifier; }
+    }
+
+    public float AttackModifier
+    {
+        get { return _attackModifier; }
+    }
+
+    public float HealModifier
+    {
+        get { return _healModifier; }
+    }
 
     private void Awake()
     {
@@ -40,6 +57,7 @@ public class Character : MonoBehaviour
     private void Start()
     {
         TargetIndicatorController = GetComponentInChildren<TargetIndicatorController>();
+        _actionAnimator = GetComponentInChildren<Animator>();
     }
 
     public void InitialiseBattle()
@@ -51,6 +69,8 @@ public class Character : MonoBehaviour
     public void ApplyDamage(int damage)
     {
         _healthStat -= (int)(damage * _shieldModifier);
+        _actionAnimator.SetTrigger("PlayDamage");
+
         if (_currentHealth <= 0)
         {
             IsAlive = false;
@@ -63,18 +83,15 @@ public class Character : MonoBehaviour
         if (IsAlive)
         {
             _currentHealth += healing;
+            _actionAnimator.SetTrigger("PlayHeal");
         }
     }
 
-    public void ApplyShield(float newShieldModifier, int addTurnDuration)
+    public void ApplyShield(float newShieldModifier)
     {
         if (IsAlive)
         {
-            if (newShieldModifier < _shieldModifier)
-            {
-                _shieldModifier = newShieldModifier;
-            }
-            
+            _shieldModifier -= _shieldTurnDuration;
         }
     }
 

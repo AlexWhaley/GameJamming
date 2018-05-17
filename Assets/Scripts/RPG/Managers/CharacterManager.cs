@@ -68,6 +68,11 @@ public class CharacterManager : MonoBehaviour
         return PruneTargetedCharacters(GetAliveEnemies(), targetingCharacter);
     }
 
+    public Character GetRandomAliveEnemy()
+    {
+        return GetRandomCharacter(AliveCharacters(_enemyCharacters));
+    }
+
     public List<Character> GetAlivePlayers()
     {
         return AliveCharacters(_playerCharacters);

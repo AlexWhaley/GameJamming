@@ -7,9 +7,9 @@ public class DamageComponent : ActionComponent
 {
     public int BaseDamage;
 
-    public override void ExecuteAction(Character target, float modifier)
+    public override void ExecuteAction(Character target, Character targeter, float modifier)
     {
-        int modifiedDamage = (int)(BaseDamage * modifier);
+        int modifiedDamage = (int)(targeter.AttackModifier * BaseDamage * modifier);
         target.ApplyDamage(modifiedDamage);
     }
 }

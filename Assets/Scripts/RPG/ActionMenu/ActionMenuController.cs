@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ActionMenuController : MonoBehaviour, InputCommandHandler
 {
@@ -35,11 +36,12 @@ public class ActionMenuController : MonoBehaviour, InputCommandHandler
     private TextMeshProUGUI _actionDescription;
 
     [SerializeField] private GameObject _readyMessage;
+    [SerializeField] private Image _borderImage;
 
     private ActionMenus _currentMenu;
     private int _currentSelectionIndex;
     private int _rootSelectionIndex;
-
+     
     public enum ActionMenus
     {
         Root,
@@ -59,6 +61,7 @@ public class ActionMenuController : MonoBehaviour, InputCommandHandler
     {
         _uiController = GetComponentInParent<PlayerUIController>();
         _attatchedPlayer = _uiController.AttatchedPlayer;
+        _borderImage.color = _uiController.HudColor;
 
     }
 
@@ -79,7 +82,11 @@ public class ActionMenuController : MonoBehaviour, InputCommandHandler
     {
         if (freshOpen)
         {
-            NavigateToActionMenu(ActionMenus.Root);
+            NavigateToActionMenu(ActionMenus.Root, true);
+        }
+        else
+        {
+            NavigateToActionMenu(_currentMenu, false);
         }
         gameObject.SetActive(true);
         RegisterInputHandlers();
@@ -141,10 +148,14 @@ public class ActionMenuController : MonoBehaviour, InputCommandHandler
         return menuEntry;
     }
 
-    public void NavigateToActionMenu(ActionMenus destinationMenu)
+    public void NavigateToActionMenu(ActionMenus destinationMenu, bool resetSelection)
     {
         _currentMenu = destinationMenu;
-        _currentSelectionIndex = 0;
+        if (resetSelection)
+        {
+            _currentSelectionIndex = 0;
+        }
+        
         switch (destinationMenu)
         {
             case ActionMenus.Attack:
@@ -206,6 +217,12 @@ public class ActionMenuController : MonoBehaviour, InputCommandHandler
         _readyMessage.SetActive(true);
     }
 
+
+    public void HideReadyMessage()
+    {
+        NavigateToActionMenu(_currentMenu, false);
+    }
+
     public void RegisterInputHandlers()
     {
         var playerInputHandler = InputManager.Instance.GetPlayerInputHandler(_attatchedPlayer);
@@ -213,8 +230,6 @@ public class ActionMenuController : MonoBehaviour, InputCommandHandler
         playerInputHandler.BackButtonPress += HandleBackButton;
         playerInputHandler.UpButtonPress += HandleUpButton;
         playerInputHandler.DownButtonPress += HandleDownButton;
-        playerInputHandler.RightButtonPress += HandleConfirmButton;
-        playerInputHandler.LeftButtonPress += HandleBackButton;
     }
 
     public void UnregisterInputHandlers()
@@ -224,8 +239,6 @@ public class ActionMenuController : MonoBehaviour, InputCommandHandler
         playerInputHandler.BackButtonPress -= HandleBackButton;
         playerInputHandler.UpButtonPress -= HandleUpButton;
         playerInputHandler.DownButtonPress -= HandleDownButton;
-        playerInputHandler.RightButtonPress -= HandleConfirmButton;
-        playerInputHandler.LeftButtonPress -= HandleBackButton;
 
     }
 
@@ -235,7 +248,7 @@ public class ActionMenuController : MonoBehaviour, InputCommandHandler
         if (_currentMenu != ActionMenus.Root)
         {
             HighlightedMenuEntry.UnHighlightMenuEntry();
-            NavigateToActionMenu(ActionMenus.Root);
+            NavigateToActionMenu(ActionMenus.Root, true);
         }
     }
 
@@ -256,11 +269,9 @@ public class ActionMenuController : MonoBehaviour, InputCommandHandler
 
     public void HandleLeftButton()
     {
-        throw new System.NotImplementedException();
     }
     public void HandleRightButton()
     {
-        throw new System.NotImplementedException();
     }
 
     private void StepThroughActionMenu(int indexChange)

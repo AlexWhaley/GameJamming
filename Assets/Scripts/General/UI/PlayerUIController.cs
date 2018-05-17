@@ -6,6 +6,8 @@ using UnityEngine.Networking;
 public class PlayerUIController : MonoBehaviour
 {
     [SerializeField] private PlayerCharacter _attatchedPlayer;
+    [SerializeField] private Color _hudColor;
+
     public PlayerCharacter AttatchedPlayer { get { return _attatchedPlayer; }}
 
     [SerializeField] private ActionMenuController _actionMenuController;
@@ -25,5 +27,15 @@ public class PlayerUIController : MonoBehaviour
     public void LockInActionTargets()
     {
         _actionMenuController.DisplayReadyMessage();
+    }
+
+    public void UnlockInActionTargets()
+    {
+        _actionMenuController.HideReadyMessage();
+    }
+
+    public Color HudColor
+    {
+        get { return _hudColor; }
     }
 }
