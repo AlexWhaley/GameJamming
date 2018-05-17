@@ -15,14 +15,15 @@ public class AudioManager : MonoBehaviour
 
     public bool IsPlaying { get; private set; }
 
-    public float SongPosition;
+    private float _songTimeInSeconds;
     private float _audioStart;
     private float _secondsPerBeat;
-    private int _songBeats;
+
+    public int SongBeats;
+    public float SongPosition;
 
 
     public TextMeshProUGUI _beatText;
-    public TextMeshProUGUI _posText;
 
 
     private void Awake()
@@ -36,20 +37,11 @@ public class AudioManager : MonoBehaviour
     {
         if (IsPlaying)
         {
-            SongPosition = (float)AudioSettings.dspTime - _audioStart;
-            var previousBeat = _songBeats;
-            _songBeats = Mathf.CeilToInt(SongPosition / _secondsPerBeat);
+            _songTimeInSeconds = (float)(AudioSettings.dspTime - _audioStart);
+            SongPosition = (_songTimeInSeconds / _secondsPerBeat) + 1;
+            SongBeats = Mathf.FloorToInt(SongPosition);
 
-            if (previousBeat != _songBeats)
-            {
-                _beatText.text = _songBeats.ToString();
-            }
-            _posText.text = SongPosition.ToString("0.00");
-            if (SongPosition > 2)
-            {
-                Debug.Log(SongPosition.ToString());
-                StopPlaying();
-            }
+            _beatText.text = SongBeats.ToString();
         }
     }
 
@@ -60,10 +52,10 @@ public class AudioManager : MonoBehaviour
         if (clip != null)
         {
             _audioSource.clip = clip.Clip;
-            _audioSource.Play();
+            _secondsPerBeat = 60f / clip.BeatsPerMinute;
 
             _audioStart = (float)AudioSettings.dspTime;
-            _secondsPerBeat = 60f / clip.BeatsPerMinute;
+            _audioSource.Play();
 
             IsPlaying = true;
             TrackManager.Instance.PlayingTrack = true;

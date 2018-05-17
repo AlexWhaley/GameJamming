@@ -6,12 +6,12 @@ using UnityEngine;
 
 public class TrackManager : MonoBehaviour
 {
-    public float YScale = 120f;
     public static TrackManager Instance;
     
-    [SerializeField] private List<AudioTrack> _audioTracks;
+    public float YScale;
+    public int BeatsShownInAdvance = 4;
 
-    [SerializeField] private List<RectTransform> _movingTracks;
+    [SerializeField] private List<AudioTrack> _audioTracks;
 
     public bool PlayingTrack = false;
 
@@ -20,28 +20,10 @@ public class TrackManager : MonoBehaviour
         Instance = this;
     }
 
-    public void BuildTrack(PlayerID playerID, List<NoteGroup> noteGroups, Lane lane, Transform trackTransform)
+    public void SpawnNote(PlayerID playerID, Lane lane, RectTransform trackTransform, Note note, Vector2 spawn, Vector2 destruct)
     {
-        foreach (var noteGroup in noteGroups)
-        {
-            foreach (var note in noteGroup.NoteChain)
-            {
-                GameObject noteGO = Instantiate(AssetManager.Instance.NotePrefab, trackTransform);
-                noteGO.transform.localPosition = new Vector3(0f, (note.StartTime - 1) * YScale, 0f);
-                noteGO.GetComponent<NoteViewModel>().Initialize(playerID, note, lane);
-            }
-        }
-    }
-
-    private void Update()
-    {
-        if (PlayingTrack)
-        {
-            foreach (var track in _movingTracks)
-            {
-                track.anchoredPosition = new Vector2(track.localPosition.x, /*(YScale * 4)*/ -AudioManager.Instance.SongPosition * YScale);
-            }
-        }
+        GameObject noteGO = Instantiate(AssetManager.Instance.NotePrefab, trackTransform);
+        noteGO.GetComponent<NoteViewModel>().Initialize(playerID, note, lane, spawn, destruct);
     }
 
     public AudioTrack GetTrackFromId(string trackId)
