@@ -6,11 +6,10 @@ using UnityEngine;
 public class ShieldComponent : ActionComponent
 {
     public float BaseShieldModifier;
-    public int BaseShieldDuration;
 
-    public override void ExecuteAction(Character target, float modifier)
+    public override void ExecuteAction(Character target, Character targeter, float modifier)
     {
         int modifiedShieldModifier = (int)(modifier * BaseShieldModifier);
-        target.ApplyShield(modifiedShieldModifier, BaseShieldDuration);
+        target.ApplyShield(modifiedShieldModifier);
     }
 }

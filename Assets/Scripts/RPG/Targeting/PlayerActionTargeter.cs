@@ -69,6 +69,7 @@ public class PlayerActionTargeter : MonoBehaviour, InputCommandHandler
         else
         {
             _uiController.LockInActionTargets();
+            BattleManager.Instance.SubmitCharacterAction(_attatchedPlayer, _confirmedActions);
         }
 
     }
@@ -113,8 +114,8 @@ public class PlayerActionTargeter : MonoBehaviour, InputCommandHandler
         RemoveAllIndicators();
         if (_currentTargetedActionIndex != 0)
         {
+            _uiController.UnlockInActionTargets();
             _confirmedActions.RemoveAt(--_currentTargetedActionIndex);
-            --_currentTargetedActionIndex;
             ProcessTargetedAction();
         }
         else
@@ -125,24 +126,24 @@ public class PlayerActionTargeter : MonoBehaviour, InputCommandHandler
 
     private void LockInAction()
     {
-        ExecuteableAction actionToLock = new ExecuteableAction();
-        switch (_currentTargetSelectionMode)
+        if (_currentTargetedActionIndex <= _actionsToTarget.Count)
         {
-            case TargetSelectionMode.Choice:
-                actionToLock.Targets.Add(_potentialTargets[_currentSingleTargetIndex]);
-                break;
-            case TargetSelectionMode.NoChoice:
-                actionToLock.Targets = _potentialTargets.ToList();
-                break;
+            ExecuteableAction actionToLock = new ExecuteableAction(_attatchedPlayer, CurrentTargetedAction);
+            switch (_currentTargetSelectionMode)
+            {
+                case TargetSelectionMode.Choice:
+                    actionToLock.Targets.Add(_potentialTargets[_currentSingleTargetIndex]);
+                    break;
+                case TargetSelectionMode.NoChoice:
+                    actionToLock.Targets = _potentialTargets.ToList();
+                    break;
+            }
+            _confirmedActions.Add(actionToLock);
+
+            //Process next targeted action or end.
+            ++_currentTargetedActionIndex;
+            ProcessTargetedAction();
         }
-
-        actionToLock.ActionToApply = CurrentTargetedAction;
-        _confirmedActions.Add(actionToLock);
-
-        //Process next targeted action or end.
-        ++_currentTargetedActionIndex;
-        ProcessTargetedAction();
-
     }
 
     private void SetTargetedIndex(int index, bool setTargeted)
@@ -212,12 +213,10 @@ public class PlayerActionTargeter : MonoBehaviour, InputCommandHandler
 
     public void HandleUpButton()
     {
-        throw new System.NotImplementedException();
     }
 
     public void HandleDownButton()
     {
-        throw new System.NotImplementedException();
     }
 
     public void HandleLeftButton()
@@ -259,5 +258,13 @@ public class PlayerActionTargeter : MonoBehaviour, InputCommandHandler
 public class ExecuteableAction
 {
     public List<Character> Targets;
+    public Character Targeter;
     public TargetedAction ActionToApply;
+
+    public ExecuteableAction(Character targeter, TargetedAction action)
+    {
+        Targeter = targeter;
+        ActionToApply = action;
+        Targets = new List<Character>();
+    }
 }

@@ -17,6 +17,6 @@ public class RootActionMenuEntry : MenuEntry
 
     public override void SelectMenuEntry()
     {
-        _actionMenuController.NavigateToActionMenu(_rootMenuType);
+        _actionMenuController.NavigateToActionMenu(_rootMenuType, true);
     }
 }

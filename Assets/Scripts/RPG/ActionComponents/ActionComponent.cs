@@ -6,5 +6,6 @@ using UnityEngine;
 [Serializable]
 public class ActionComponent : ScriptableObject
 {
-    public virtual void ExecuteAction(Character target, float modifier) { }
+    public virtual void ExecuteAction(Character target, Character targeter, float modifier) { }
+
 }
