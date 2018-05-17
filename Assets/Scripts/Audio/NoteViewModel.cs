@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class NoteViewModel : MonoBehaviour
 {
     private Image _noteImage;
-    private PlayerID _playerID;
+    private PlayerCharacter _attachedCharacter;
     private Note _noteData;
     private Lane _lane;
     private Vector2 _spawnPosition;
@@ -17,15 +17,15 @@ public class NoteViewModel : MonoBehaviour
         _noteImage = GetComponent<Image>();
     }
 
-    public void Initialize(PlayerID playerID, Note noteData, Lane lane, Vector2 spawn, Vector2 destruct)
+    public void Initialize(PlayerCharacter attachedCharacter, Note noteData, Lane lane, Vector2 spawn, Vector2 destruct)
     {
-        _playerID = playerID;
+        _attachedCharacter = attachedCharacter;
         _noteData = noteData;
         _lane = lane;
 
         transform.Rotate(0, 0, (int)noteData.Direction * -90);
 
-        _noteImage.sprite = AssetManager.Instance.GetNoteSprite(playerID, lane);
+        _noteImage.sprite = AssetManager.Instance.GetNoteSprite(_attachedCharacter.CharacterName, lane);
 
         _spawnPosition = spawn;
         _destructPosition = destruct;
@@ -47,12 +47,11 @@ public class NoteViewModel : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (_playerID == PlayerID.Player1)
+        if (_noteData.Direction == Direction.Left && GameManager.Instance.Player1LeftPressed)
         {
-            if (_noteData.Direction == Direction.Left && GameManager.Instance.Player1LeftPressed)
-            {
-                Debug.Log("NOTE HIT");
-            }
+            Debug.Log("NOTE HIT");
         }
     }
+
+    
 }

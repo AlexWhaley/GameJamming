@@ -34,10 +34,10 @@ public class TrackManager : MonoBehaviour
         AudioManager.Instance.AddSoundToQueue(audioTrack.AudioAssetId, true);
     }
 
-    public void SpawnNote(PlayerID playerID, Lane lane, RectTransform trackTransform, Note note, Vector2 spawn, Vector2 destruct)
+    public void SpawnNote(PlayerCharacter attachedCharacter, Lane lane, RectTransform trackTransform, Note note, Vector2 spawn, Vector2 destruct)
     {
         GameObject noteGO = Instantiate(AssetManager.Instance.NotePrefab, trackTransform);
-        noteGO.GetComponent<NoteViewModel>().Initialize(playerID, note, lane, spawn, destruct);
+        noteGO.GetComponent<NoteViewModel>().Initialize(attachedCharacter, note, lane, spawn, destruct);
     }
 
     public AudioTrack GetTrackFromId(string trackId)

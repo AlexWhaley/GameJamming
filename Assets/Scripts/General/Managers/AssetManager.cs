@@ -19,14 +19,14 @@ public class AssetManager : MonoBehaviour
         Instance = this;
     }
 
-    public Sprite GetNoteSprite(PlayerID playerIndex, Lane lane)
+    public Sprite GetNoteSprite(PlayerCharacter.CharacterNames character, Lane lane)
     {
         switch (lane)
         {
             case Lane.Left:
-                return LeftLaneNote[(int)playerIndex];
+                return LeftLaneNote[(int)character];
             case Lane.Right:
-                return RightLaneNote[(int)playerIndex];
+                return RightLaneNote[(int)character];
         }
 
         return null;

@@ -4,18 +4,10 @@ using System.Linq;
 using System.Text;
 using UnityEngine;
 
-public enum PlayerID
-{
-    Player1,
-    Player2,
-    Player3,
-    Player4
-}
-
 public class TrackViewModel : MonoBehaviour
 {
     private AudioTrack _trackData;
-    public PlayerID PlayerID;
+    [SerializeField] private PlayerCharacter _attachedCharacter;
 
     [SerializeField] private RectTransform _leftLane;
     [SerializeField] private RectTransform _rightLane;
@@ -53,7 +45,7 @@ public class TrackViewModel : MonoBehaviour
         Note nextNote = GetNextNote(lane, nextIndex);
         if (nextIndex < GetNoteCount(lane) && nextNote.StartTime < AudioManager.Instance.SongPosition + TrackManager.Instance.BeatsShownInAdvance)
         {
-            TrackManager.Instance.SpawnNote(PlayerID, lane, laneTransform, nextNote, spawn, destruct);
+            TrackManager.Instance.SpawnNote(_attachedCharacter, lane, laneTransform, nextNote, spawn, destruct);
 
             if (lane == Lane.Left)
             {
