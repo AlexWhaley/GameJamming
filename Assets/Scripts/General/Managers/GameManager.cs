@@ -6,8 +6,6 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
-    [SerializeField] private List<TrackViewModel> _playerTracks; 
-
     private void Awake()
     {
         Instance = this;
@@ -17,21 +15,19 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.P))
         {
-            foreach (var track in _playerTracks)
-            {
-                track.Initialize(TrackManager.Instance.GetTrackFromId("demoTrack"));
-            }
-            AudioManager.Instance.PlaySound("demo");
+            TrackManager.Instance.PlayTrack("demoTrack");
+        }
+
+        if (Input.GetKeyDown(KeyCode.L))
+        {
+            AudioManager.Instance.AddSoundToQueue("play1");
+            AudioManager.Instance.AddSoundToQueue("choice1");
+            AudioManager.Instance.PlayNextQueueClip();
         }
 
         if (Input.GetKeyDown(KeyCode.O))
         {
             AudioManager.Instance.StopPlaying();
         }
-    }
-
-    private TrackViewModel GetPlayerTrack(PlayerID playerId)
-    {
-        return _playerTracks[(int)playerId];
     }
 }

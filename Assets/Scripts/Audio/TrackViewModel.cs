@@ -26,7 +26,8 @@ public class TrackViewModel : MonoBehaviour
     [SerializeField] private RectTransform _rightLaneSpawn;
     [SerializeField] private RectTransform _rightLaneDestruct;
 
-    private int nextIndex = 0;
+    private int _nextLeftIndex = 0;
+    private int _nextRightIndex = 0;
 
     public void Initialize(AudioTrack track)
     {
@@ -47,12 +48,21 @@ public class TrackViewModel : MonoBehaviour
         RectTransform laneTransform = lane == Lane.Left ? _leftLane : _rightLane;
         Vector2 spawn = lane == Lane.Left ? _leftLaneSpawn.position : _rightLaneSpawn.position;
         Vector2 destruct = lane == Lane.Left ? _leftLaneDestruct.position : _rightLaneDestruct.position;
+        int nextIndex = lane == Lane.Left ? _nextLeftIndex : _nextRightIndex;
 
-        Note nextNote = GetNextNote(lane);
+        Note nextNote = GetNextNote(lane, nextIndex);
         if (nextIndex < GetNoteCount(lane) && nextNote.StartTime < AudioManager.Instance.SongPosition + TrackManager.Instance.BeatsShownInAdvance)
         {
             TrackManager.Instance.SpawnNote(PlayerID, lane, laneTransform, nextNote, spawn, destruct);
-            nextIndex++;
+
+            if (lane == Lane.Left)
+            {
+                _nextLeftIndex++;
+            }
+            else
+            {
+                _nextRightIndex++;
+            }
         }
     }
 
@@ -70,7 +80,7 @@ public class TrackViewModel : MonoBehaviour
         return count;
     }
 
-    private Note GetNextNote(Lane lane)
+    private Note GetNextNote(Lane lane, int nextIndex)
     {
         List<NoteGroup> noteGroups = lane == Lane.Left ? _trackData.LeftLane : _trackData.RightLane;
 
