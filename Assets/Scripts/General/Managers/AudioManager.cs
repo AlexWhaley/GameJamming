@@ -15,13 +15,14 @@ public class AudioManager : MonoBehaviour
 
     public bool IsPlaying { get; private set; }
 
-    private float _songPosition;
+    public float SongPosition;
     private float _audioStart;
     private float _secondsPerBeat;
     private int _songBeats;
 
 
     public TextMeshProUGUI _beatText;
+    public TextMeshProUGUI _posText;
 
 
     private void Awake()
@@ -35,13 +36,19 @@ public class AudioManager : MonoBehaviour
     {
         if (IsPlaying)
         {
-            _songPosition = (float)AudioSettings.dspTime - _audioStart;
+            SongPosition = (float)AudioSettings.dspTime - _audioStart;
             var previousBeat = _songBeats;
-            _songBeats = Mathf.CeilToInt(_songPosition / _secondsPerBeat);
+            _songBeats = Mathf.CeilToInt(SongPosition / _secondsPerBeat);
 
             if (previousBeat != _songBeats)
             {
                 _beatText.text = _songBeats.ToString();
+            }
+            _posText.text = SongPosition.ToString("0.00");
+            if (SongPosition > 2)
+            {
+                Debug.Log(SongPosition.ToString());
+                StopPlaying();
             }
         }
     }
@@ -59,6 +66,7 @@ public class AudioManager : MonoBehaviour
             _secondsPerBeat = 60f / clip.BeatsPerMinute;
 
             IsPlaying = true;
+            TrackManager.Instance.PlayingTrack = true;
         }
     }
 
@@ -66,6 +74,7 @@ public class AudioManager : MonoBehaviour
     {
         _audioSource.Stop();
         IsPlaying = false;
+        TrackManager.Instance.PlayingTrack = false;
     }
 
     private AudioAsset GetAudioAssetFromId(string audioId)

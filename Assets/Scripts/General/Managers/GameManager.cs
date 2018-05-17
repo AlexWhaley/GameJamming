@@ -25,6 +25,14 @@ public class GameManager : MonoBehaviour
             AudioManager.Instance.StopPlaying();
         }
 
+        if (Input.GetKeyDown(KeyCode.I))
+        {
+            foreach(var track in _playerTracks)
+            {
+                track.Initialize(TrackManager.Instance.GetTrackFromId("demoTrack"));
+            }
+        }
+
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             var track = GetPlayerTrack(PlayerID.Player1);

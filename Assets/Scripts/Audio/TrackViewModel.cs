@@ -28,9 +28,9 @@ public class TrackViewModel : MonoBehaviour
     public void BuildTrack()
     {
         // Build left lane
-        TrackManager.Instance.BuildTrack(_trackData.LeftLane, Lane.Left, _leftLane);
+        TrackManager.Instance.BuildTrack(PlayerID, _trackData.LeftLane, Lane.Left, _leftLane);
 
         // Build right lane
-        TrackManager.Instance.BuildTrack(_trackData.LeftLane, Lane.Right, _rightLane);
+        TrackManager.Instance.BuildTrack(PlayerID, _trackData.LeftLane, Lane.Right, _rightLane);
     }
 }
