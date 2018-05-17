@@ -1329,7 +1329,7 @@ MonoBehaviour:
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 0
+  m_isInputParsingRequired: 1
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -1389,6 +1389,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4efb0a7627a30042bca18bf9b910ee3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Player1LeftPressed: 0
+  Player1UpPressed: 0
+  Player1RightPressed: 0
+  Player1DownPressed: 0
 --- !u!4 &894533403 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4495210875407840, guid: 8815374c8d4241f44b2cd73feebcb6e9,

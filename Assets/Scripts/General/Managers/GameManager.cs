@@ -6,6 +6,11 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
+    public bool Player1LeftPressed;
+    public bool Player1UpPressed;
+    public bool Player1RightPressed;
+    public bool Player1DownPressed;
+
     private void Awake()
     {
         Instance = this;
@@ -29,5 +34,10 @@ public class GameManager : MonoBehaviour
         {
             AudioManager.Instance.StopPlaying();
         }
+
+        Player1LeftPressed = Input.GetKeyDown(KeyCode.A);
+        Player1UpPressed = Input.GetKeyDown(KeyCode.W);
+        Player1RightPressed = Input.GetKeyDown(KeyCode.D);
+        Player1DownPressed = Input.GetKeyDown(KeyCode.S);
     }
 }
