@@ -7,7 +7,7 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    public static AudioManager Instance { get; private set; }
+    public static AudioManager Instance;
 
     private AudioSource _audioSource;
 
@@ -15,10 +15,12 @@ public class AudioManager : MonoBehaviour
 
     public bool IsPlaying { get; private set; }
 
-    private float _songPosition;
+    private float _songTimeInSeconds;
     private float _audioStart;
     private float _secondsPerBeat;
-    private int _songBeats;
+
+    public int SongBeats;
+    public float SongPosition;
 
 
     public TextMeshProUGUI _beatText;
@@ -29,29 +31,17 @@ public class AudioManager : MonoBehaviour
         Instance = this;
         _audioSource = GetComponent<AudioSource>();
     }
-    
+
     // Update is called once per frame
-    private void Update () {
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            PlaySound("demo");
-        }
-
-        if (Input.GetKeyDown(KeyCode.O))
-        {
-            StopPlaying();
-        }
-
+    private void Update()
+    {
         if (IsPlaying)
         {
-            _songPosition = (float) AudioSettings.dspTime - _audioStart;
-            var previousBeat = _songBeats;
-            _songBeats = Mathf.CeilToInt(_songPosition / _secondsPerBeat);
+            _songTimeInSeconds = (float)(AudioSettings.dspTime - _audioStart);
+            SongPosition = (_songTimeInSeconds / _secondsPerBeat) + 1;
+            SongBeats = Mathf.FloorToInt(SongPosition);
 
-            if (previousBeat != _songBeats)
-            {
-                _beatText.text = _songBeats.ToString();
-            }
+            _beatText.text = SongBeats.ToString();
         }
     }
 
@@ -62,12 +52,13 @@ public class AudioManager : MonoBehaviour
         if (clip != null)
         {
             _audioSource.clip = clip.Clip;
-            _audioSource.Play();
-
-            _audioStart = (float)AudioSettings.dspTime;
             _secondsPerBeat = 60f / clip.BeatsPerMinute;
 
+            _audioStart = (float)AudioSettings.dspTime;
+            _audioSource.Play();
+
             IsPlaying = true;
+            TrackManager.Instance.PlayingTrack = true;
         }
     }
 
@@ -75,6 +66,7 @@ public class AudioManager : MonoBehaviour
     {
         _audioSource.Stop();
         IsPlaying = false;
+        TrackManager.Instance.PlayingTrack = false;
     }
 
     private AudioAsset GetAudioAssetFromId(string audioId)

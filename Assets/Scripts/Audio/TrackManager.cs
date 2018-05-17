@@ -6,39 +6,24 @@ using UnityEngine;
 
 public class TrackManager : MonoBehaviour
 {
-    public float YScale = 0.1f;
     public static TrackManager Instance;
-
-    [SerializeField] private GameObject _notePrefab;
-
+    
+    public float YScale;
+    public int BeatsShownInAdvance = 4;
 
     [SerializeField] private List<AudioTrack> _audioTracks;
+
+    public bool PlayingTrack = false;
 
     private void Awake()
     {
         Instance = this;
     }
 
-    public void BuildTrack(List<NoteGroup> noteGroups, Lane lane, Transform trackTransform)
+    public void SpawnNote(PlayerID playerID, Lane lane, RectTransform trackTransform, Note note, Vector2 spawn, Vector2 destruct)
     {
-        foreach (var noteGroup in noteGroups)
-        {
-            foreach (var note in noteGroup.NoteChain)
-            {
-                GameObject noteGO = Instantiate(_notePrefab, trackTransform);
-                noteGO.transform.localPosition = new Vector3(0f, (note.StartTime - 1) * YScale, 0f);
-                noteGO.GetComponent<NoteViewModel>().Initialize(note, lane);
-            }
-        }
-    }
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            var track = FindObjectOfType<TrackViewModel>();
-            track.BuildTrack();
-        }
+        GameObject noteGO = Instantiate(AssetManager.Instance.NotePrefab, trackTransform);
+        noteGO.GetComponent<NoteViewModel>().Initialize(playerID, note, lane, spawn, destruct);
     }
 
     public AudioTrack GetTrackFromId(string trackId)
