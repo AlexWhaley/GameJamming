@@ -7,7 +7,7 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    public static AudioManager Instance { get; private set; }
+    public static AudioManager Instance;
 
     private AudioSource _audioSource;
 
@@ -29,22 +29,13 @@ public class AudioManager : MonoBehaviour
         Instance = this;
         _audioSource = GetComponent<AudioSource>();
     }
-    
+
     // Update is called once per frame
-    private void Update () {
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            PlaySound("demo");
-        }
-
-        if (Input.GetKeyDown(KeyCode.O))
-        {
-            StopPlaying();
-        }
-
+    private void Update()
+    {
         if (IsPlaying)
         {
-            _songPosition = (float) AudioSettings.dspTime - _audioStart;
+            _songPosition = (float)AudioSettings.dspTime - _audioStart;
             var previousBeat = _songBeats;
             _songBeats = Mathf.CeilToInt(_songPosition / _secondsPerBeat);
 

@@ -19,7 +19,7 @@ public class NoteViewModel : MonoBehaviour
         _noteData = noteData;
         _lane = lane;
 
-        _directionTransform.Rotate(0, 0, 90 + (int) noteData.Direction * 90);
+        _directionTransform.Rotate(0, 0, (int)noteData.Direction * 90);
 
         _noteSprite.color = _lane == Lane.Left ? new Color(0.1f, 0.5f, 1.0f) : new Color(1.0f, 0.1f, 0.0f);
     }

@@ -31,11 +31,7 @@ public class TrackManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            var track = FindObjectOfType<TrackViewModel>();
-            track.BuildTrack();
-        }
+        
     }
 
     public AudioTrack GetTrackFromId(string trackId)
