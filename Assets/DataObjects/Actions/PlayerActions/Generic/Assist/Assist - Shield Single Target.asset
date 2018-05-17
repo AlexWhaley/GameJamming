@@ -14,8 +14,8 @@ MonoBehaviour:
   ActionName: Shield
   ActionDescription: Shield a single target from a moderate amount of damage.
   TargetedActions:
-  - ActionPartName: AttackSingleTarget
+  - ActionPartName: ShieldSingleTarget
     SelectionPromptMessage: Select an ally to give a strong shield.
-    TargetType: 0
+    TargetType: 1
     ActionComponents:
     - {fileID: 11400000, guid: e94cd8f8e8594054ca08150ec7f85c52, type: 2}

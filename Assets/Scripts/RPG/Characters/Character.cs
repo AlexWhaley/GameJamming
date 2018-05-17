@@ -33,6 +33,8 @@ public class Character : MonoBehaviour
         {
             prefab.Spawn();
         }
+
+        InitialiseBattle();
     }
 
     private void Start()
@@ -43,6 +45,7 @@ public class Character : MonoBehaviour
     public void InitialiseBattle()
     {
         _currentHealth = _healthStat;
+        IsAlive = true;
     }
 
     public void ApplyDamage(int damage)

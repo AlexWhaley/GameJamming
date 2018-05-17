@@ -3,15 +3,13 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class ActionMenuController : MonoBehaviour
+public class ActionMenuController : MonoBehaviour, InputCommandHandler
 {
-    [SerializeField]
+    private PlayerUIController _uiController;
     private PlayerCharacter _attatchedPlayer;
+
     [SerializeField]
     private GameObject _menuEntryPrefab;
-    [SerializeField]
-    private PlayerActionTargeter _actionTargeter;
-    public PlayerCharacter AttatchedPlayer { get { return _attatchedPlayer; } }
 
     [Header("Action Menu Containers")]
     [SerializeField]
@@ -36,29 +34,11 @@ public class ActionMenuController : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI _actionDescription;
 
+    [SerializeField] private GameObject _readyMessage;
+
     private ActionMenus _currentMenu;
     private int _currentSelectionIndex;
     private int _rootSelectionIndex;
-
-    private void Update()
-    {
-        if (Input.GetKeyDown("w"))
-        {
-            HandleUpButton();
-        }
-        else if (Input.GetKeyDown("s"))
-        {
-            HandleDownButton();
-        }
-        else if (Input.GetKeyDown("d"))
-        {
-            HandleConfirmButton();
-        }
-        else if (Input.GetKeyDown("a"))
-        {
-            HandleBackButton();
-        }
-    }
 
     public enum ActionMenus
     {
@@ -70,9 +50,20 @@ public class ActionMenuController : MonoBehaviour
 
     private Dictionary<ActionMenus, List<MenuEntry>> _menus;
 
+    public void InitialisePlayer(PlayerCharacter playerCharacter)
+    {
+        _attatchedPlayer = playerCharacter;
+    }
+
     private void Awake()
     {
-        //_actionSelectionProcessor = GetComponent<ActionSelectionProcessor>();
+        _uiController = GetComponentInParent<PlayerUIController>();
+        _attatchedPlayer = _uiController.AttatchedPlayer;
+
+    }
+
+    private void Start()
+    {
         BuildActionMenu();
         RevealActionMenu(true);
     }
@@ -84,13 +75,14 @@ public class ActionMenuController : MonoBehaviour
         BuildActionMenus();
     }
 
-    private void RevealActionMenu(bool freshOpen)
+    public void RevealActionMenu(bool freshOpen)
     {
         if (freshOpen)
         {
             NavigateToActionMenu(ActionMenus.Root);
         }
         gameObject.SetActive(true);
+        RegisterInputHandlers();
     }
 
     private void HideActionMenu()
@@ -177,6 +169,7 @@ public class ActionMenuController : MonoBehaviour
                 _menuTitle.text = "Action Menu";
                 break;
         }
+        _readyMessage.SetActive(false);
         HighlightedMenuEntry.HighlightMenuEntry();
     }
 
@@ -202,7 +195,38 @@ public class ActionMenuController : MonoBehaviour
 
     public void BeginActionSelection(Action selectedAction)
     {
-        _actionTargeter.InitiateTargettingSequence(selectedAction);
+        UnregisterInputHandlers();
+        _uiController.InitiateTargettingSequence(selectedAction);
+
+    }
+
+    public void DisplayReadyMessage()
+    {
+        DisableActionMenus();
+        _readyMessage.SetActive(true);
+    }
+
+    public void RegisterInputHandlers()
+    {
+        var playerInputHandler = InputManager.Instance.GetPlayerInputHandler(_attatchedPlayer);
+        playerInputHandler.ConfirmButtonPress += HandleConfirmButton;
+        playerInputHandler.BackButtonPress += HandleBackButton;
+        playerInputHandler.UpButtonPress += HandleUpButton;
+        playerInputHandler.DownButtonPress += HandleDownButton;
+        playerInputHandler.RightButtonPress += HandleConfirmButton;
+        playerInputHandler.LeftButtonPress += HandleBackButton;
+    }
+
+    public void UnregisterInputHandlers()
+    {
+        var playerInputHandler = InputManager.Instance.GetPlayerInputHandler(_attatchedPlayer);
+        playerInputHandler.ConfirmButtonPress -= HandleConfirmButton;
+        playerInputHandler.BackButtonPress -= HandleBackButton;
+        playerInputHandler.UpButtonPress -= HandleUpButton;
+        playerInputHandler.DownButtonPress -= HandleDownButton;
+        playerInputHandler.RightButtonPress -= HandleConfirmButton;
+        playerInputHandler.LeftButtonPress -= HandleBackButton;
+
     }
 
     // Menu controls
@@ -228,6 +252,15 @@ public class ActionMenuController : MonoBehaviour
     public void HandleDownButton()
     {
         StepThroughActionMenu(1);
+    }
+
+    public void HandleLeftButton()
+    {
+        throw new System.NotImplementedException();
+    }
+    public void HandleRightButton()
+    {
+        throw new System.NotImplementedException();
     }
 
     private void StepThroughActionMenu(int indexChange)

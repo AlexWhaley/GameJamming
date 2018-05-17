@@ -15,6 +15,11 @@ public class TargetIndicatorController : MonoBehaviour
 
     List<Character> _charactersTargetting;
 
+    public void Awake()
+    {
+        _charactersTargetting = new List<Character>();
+    }
+
     public void SetActiveTargetingIndicator(Character targetedBy, bool setActive)
     {
         if (targetedBy is PlayerCharacter)
@@ -41,6 +46,17 @@ public class TargetIndicatorController : MonoBehaviour
 
         }
         */
+        if (setActive)
+        {
+            _charactersTargetting.Add(targetedBy);
+        }
+        else
+        {
+            if (_charactersTargetting.Contains(targetedBy))
+            {
+                _charactersTargetting.Remove(targetedBy);
+            }
+        }
     }
 
     public bool IsTargetedBy(Character character)
