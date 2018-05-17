@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AssetManager : MonoBehaviour {
+public class AssetManager : MonoBehaviour
+{
 
     public static AssetManager Instance;
-    
+
     [Header("Sprites")]
     [SerializeField] private List<Sprite> LeftLaneNote;
     [SerializeField] private List<Sprite> RightLaneNote;
