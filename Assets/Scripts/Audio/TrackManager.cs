@@ -8,10 +8,7 @@ public class TrackManager : MonoBehaviour
 {
     public float YScale = 0.1f;
     public static TrackManager Instance;
-
-    [SerializeField] private GameObject _notePrefab;
-
-
+    
     [SerializeField] private List<AudioTrack> _audioTracks;
 
     private void Awake()
@@ -25,7 +22,7 @@ public class TrackManager : MonoBehaviour
         {
             foreach (var note in noteGroup.NoteChain)
             {
-                GameObject noteGO = Instantiate(_notePrefab, trackTransform);
+                GameObject noteGO = Instantiate(AssetManager.Instance.NotePrefab, trackTransform);
                 noteGO.transform.localPosition = new Vector3(0f, (note.StartTime - 1) * YScale, 0f);
                 noteGO.GetComponent<NoteViewModel>().Initialize(note, lane);
             }
