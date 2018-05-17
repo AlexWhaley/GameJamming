@@ -22,6 +22,8 @@ public class AudioManager : MonoBehaviour
     public int SongBeats;
     public float SongPosition;
 
+    private Queue<string> _audioPlayQueue = new Queue<string>();
+
 
     public TextMeshProUGUI _beatText;
 
@@ -29,10 +31,16 @@ public class AudioManager : MonoBehaviour
     private void Awake()
     {
         Instance = this;
-        _audioSource = GetComponent<AudioSource>();
-    }
 
-    // Update is called once per frame
+        foreach(var clip in _audioClips)
+        {
+            var go = new GameObject(clip.ClipId + "_AudioSource", typeof(AudioSource));
+            go.transform.SetParent(transform);
+            clip.AudioSource = go.GetComponent<AudioSource>();
+            clip.AudioSource.clip = clip.Clip;
+        }
+    }
+    
     private void Update()
     {
         if (IsPlaying)
@@ -42,24 +50,45 @@ public class AudioManager : MonoBehaviour
             SongBeats = Mathf.FloorToInt(SongPosition);
 
             _beatText.text = SongBeats.ToString();
+
+            if (!_audioSource.isPlaying)
+            {
+                PlayNextQueueClip();
+            }
         }
     }
 
-    public void PlaySound(string clipId)
+    public void PlaySound(string clipId, bool countIn = false)
     {
         var clip = GetAudioAssetFromId(clipId);
 
-        if (clip != null)
+        if (clip != null && clip.AudioSource != null)
         {
-            _audioSource.clip = clip.Clip;
             _secondsPerBeat = 60f / clip.BeatsPerMinute;
 
             _audioStart = (float)AudioSettings.dspTime;
+
+            _audioSource = clip.AudioSource;
             _audioSource.Play();
 
             IsPlaying = true;
             TrackManager.Instance.PlayingTrack = true;
         }
+    }
+
+    public void AddSoundToQueue(string clipId, bool play = false)
+    {
+        _audioPlayQueue.Enqueue(clipId);
+
+        if (play)
+        {
+            PlayNextQueueClip();
+        }
+    }
+
+    public void PlayNextQueueClip()
+    {
+        PlaySound(_audioPlayQueue.Dequeue());
     }
 
     public void StopPlaying()
@@ -81,4 +110,5 @@ public class AudioAsset
     public string ClipId;
     public AudioClip Clip;
     public int BeatsPerMinute;
+    public AudioSource AudioSource;
 }

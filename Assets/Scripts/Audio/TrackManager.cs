@@ -13,11 +13,25 @@ public class TrackManager : MonoBehaviour
 
     [SerializeField] private List<AudioTrack> _audioTracks;
 
+    [SerializeField] private List<TrackViewModel> _playerTracks;
+
     public bool PlayingTrack = false;
 
     private void Awake()
     {
         Instance = this;
+    }
+
+    public void PlayTrack(string trackId)
+    {
+        AudioTrack audioTrack = GetTrackFromId(trackId);
+
+        foreach (var playerTrack in _playerTracks)
+        {
+            playerTrack.Initialize(TrackManager.Instance.GetTrackFromId("demoTrack"));
+        }
+
+        AudioManager.Instance.AddSoundToQueue(audioTrack.AudioAssetId, true);
     }
 
     public void SpawnNote(PlayerID playerID, Lane lane, RectTransform trackTransform, Note note, Vector2 spawn, Vector2 destruct)

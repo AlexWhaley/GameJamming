@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class NoteViewModel : MonoBehaviour
 {
     private Image _noteImage;
+    private PlayerID _playerID;
     private Note _noteData;
     private Lane _lane;
     private Vector2 _spawnPosition;
@@ -18,6 +19,7 @@ public class NoteViewModel : MonoBehaviour
 
     public void Initialize(PlayerID playerID, Note noteData, Lane lane, Vector2 spawn, Vector2 destruct)
     {
+        _playerID = playerID;
         _noteData = noteData;
         _lane = lane;
 
@@ -40,6 +42,17 @@ public class NoteViewModel : MonoBehaviour
                 _destructPosition,
                 trackTime
             );
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (_playerID == PlayerID.Player1)
+        {
+            if (_noteData.Direction == Direction.Left && GameManager.Instance.Player1LeftPressed)
+            {
+                Debug.Log("NOTE HIT");
+            }
         }
     }
 }
