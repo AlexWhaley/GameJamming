@@ -43,8 +43,8 @@ public class PhaseManager : MonoBehaviour
     private void Initialise()
     {
         _currentGamePhase = GameflowPhases.Intro;
+        AudioManager.Instance.PlaySound("splash");
     }
-
 
     public void NextPhase()
     {

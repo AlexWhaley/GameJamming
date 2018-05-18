@@ -55,7 +55,1027 @@ MonoBehaviour:
   BeatsShownInAdvance: 6
   _audioLoops:
   - LoopId: play1a
-    AudioAssetId: play1
+    AudioAssetId: play1a
+    Tracks:
+    - LeftLane:
+      - StartTime: 1
+        Duration: 0
+        Direction: 0
+      - StartTime: 2
+        Duration: 0
+        Direction: 0
+      - StartTime: 3
+        Duration: 0
+        Direction: 0
+      - StartTime: 4
+        Duration: 0
+        Direction: 0
+      - StartTime: 5
+        Duration: 0
+        Direction: 0
+      - StartTime: 6
+        Duration: 0
+        Direction: 0
+      - StartTime: 7
+        Duration: 0
+        Direction: 0
+      - StartTime: 8
+        Duration: 0
+        Direction: 0
+      RightLane:
+      - StartTime: 1
+        Duration: 1
+        Direction: 0
+      - StartTime: 2
+        Duration: 1
+        Direction: 1
+      - StartTime: 3
+        Duration: 1
+        Direction: 0
+      - StartTime: 4
+        Duration: 1
+        Direction: 1
+      - StartTime: 5
+        Duration: 1
+        Direction: 0
+      - StartTime: 6
+        Duration: 1
+        Direction: 1
+      - StartTime: 7
+        Duration: 1
+        Direction: 0
+      - StartTime: 8
+        Duration: 1
+        Direction: 1
+    - LeftLane:
+      - StartTime: 1
+        Duration: 0
+        Direction: 0
+      - StartTime: 2
+        Duration: 0
+        Direction: 0
+      - StartTime: 3
+        Duration: 0
+        Direction: 0
+      - StartTime: 4
+        Duration: 0
+        Direction: 0
+      - StartTime: 5
+        Duration: 0
+        Direction: 0
+      - StartTime: 6
+        Duration: 0
+        Direction: 0
+      - StartTime: 7
+        Duration: 0
+        Direction: 0
+      - StartTime: 8
+        Duration: 0
+        Direction: 0
+      RightLane:
+      - StartTime: 1
+        Duration: 1
+        Direction: 0
+      - StartTime: 2
+        Duration: 1
+        Direction: 1
+      - StartTime: 3
+        Duration: 1
+        Direction: 0
+      - StartTime: 4
+        Duration: 1
+        Direction: 1
+      - StartTime: 5
+        Duration: 1
+        Direction: 0
+      - StartTime: 6
+        Duration: 1
+        Direction: 1
+      - StartTime: 7
+        Duration: 1
+        Direction: 0
+      - StartTime: 8
+        Duration: 1
+        Direction: 1
+    - LeftLane:
+      - StartTime: 1
+        Duration: 0
+        Direction: 0
+      - StartTime: 2
+        Duration: 0
+        Direction: 0
+      - StartTime: 3
+        Duration: 0
+        Direction: 0
+      - StartTime: 4
+        Duration: 0
+        Direction: 0
+      - StartTime: 5
+        Duration: 0
+        Direction: 0
+      - StartTime: 6
+        Duration: 0
+        Direction: 0
+      - StartTime: 7
+        Duration: 0
+        Direction: 0
+      - StartTime: 8
+        Duration: 0
+        Direction: 0
+      RightLane:
+      - StartTime: 1
+        Duration: 1
+        Direction: 0
+      - StartTime: 2
+        Duration: 1
+        Direction: 1
+      - StartTime: 3
+        Duration: 1
+        Direction: 0
+      - StartTime: 4
+        Duration: 1
+        Direction: 1
+      - StartTime: 5
+        Duration: 1
+        Direction: 0
+      - StartTime: 6
+        Duration: 1
+        Direction: 1
+      - StartTime: 7
+        Duration: 1
+        Direction: 0
+      - StartTime: 8
+        Duration: 1
+        Direction: 1
+    - LeftLane:
+      - StartTime: 1
+        Duration: 0
+        Direction: 0
+      - StartTime: 2
+        Duration: 0
+        Direction: 0
+      - StartTime: 3
+        Duration: 0
+        Direction: 0
+      - StartTime: 4
+        Duration: 0
+        Direction: 0
+      - StartTime: 5
+        Duration: 0
+        Direction: 0
+      - StartTime: 6
+        Duration: 0
+        Direction: 0
+      - StartTime: 7
+        Duration: 0
+        Direction: 0
+      - StartTime: 8
+        Duration: 0
+        Direction: 0
+      RightLane:
+      - StartTime: 1
+        Duration: 1
+        Direction: 0
+      - StartTime: 2
+        Duration: 1
+        Direction: 1
+      - StartTime: 3
+        Duration: 1
+        Direction: 0
+      - StartTime: 4
+        Duration: 1
+        Direction: 1
+      - StartTime: 5
+        Duration: 1
+        Direction: 0
+      - StartTime: 6
+        Duration: 1
+        Direction: 1
+      - StartTime: 7
+        Duration: 1
+        Direction: 0
+      - StartTime: 8
+        Duration: 1
+        Direction: 1
+    BeatsPerMinute: 110
+  - LoopId: play1b
+    AudioAssetId: play1a
+    Tracks:
+    - LeftLane:
+      - StartTime: 1
+        Duration: 0
+        Direction: 0
+      - StartTime: 2
+        Duration: 0
+        Direction: 0
+      - StartTime: 3
+        Duration: 0
+        Direction: 0
+      - StartTime: 4
+        Duration: 0
+        Direction: 0
+      - StartTime: 5
+        Duration: 0
+        Direction: 0
+      - StartTime: 6
+        Duration: 0
+        Direction: 0
+      - StartTime: 7
+        Duration: 0
+        Direction: 0
+      - StartTime: 8
+        Duration: 0
+        Direction: 0
+      RightLane:
+      - StartTime: 1
+        Duration: 1
+        Direction: 0
+      - StartTime: 2
+        Duration: 1
+        Direction: 1
+      - StartTime: 3
+        Duration: 1
+        Direction: 0
+      - StartTime: 4
+        Duration: 1
+        Direction: 1
+      - StartTime: 5
+        Duration: 1
+        Direction: 0
+      - StartTime: 6
+        Duration: 1
+        Direction: 1
+      - StartTime: 7
+        Duration: 1
+        Direction: 0
+      - StartTime: 8
+        Duration: 1
+        Direction: 1
+    - LeftLane:
+      - StartTime: 1
+        Duration: 0
+        Direction: 0
+      - StartTime: 2
+        Duration: 0
+        Direction: 0
+      - StartTime: 3
+        Duration: 0
+        Direction: 0
+      - StartTime: 4
+        Duration: 0
+        Direction: 0
+      - StartTime: 5
+        Duration: 0
+        Direction: 0
+      - StartTime: 6
+        Duration: 0
+        Direction: 0
+      - StartTime: 7
+        Duration: 0
+        Direction: 0
+      - StartTime: 8
+        Duration: 0
+        Direction: 0
+      RightLane:
+      - StartTime: 1
+        Duration: 1
+        Direction: 0
+      - StartTime: 2
+        Duration: 1
+        Direction: 1
+      - StartTime: 3
+        Duration: 1
+        Direction: 0
+      - StartTime: 4
+        Duration: 1
+        Direction: 1
+      - StartTime: 5
+        Duration: 1
+        Direction: 0
+      - StartTime: 6
+        Duration: 1
+        Direction: 1
+      - StartTime: 7
+        Duration: 1
+        Direction: 0
+      - StartTime: 8
+        Duration: 1
+        Direction: 1
+    - LeftLane:
+      - StartTime: 1
+        Duration: 0
+        Direction: 0
+      - StartTime: 2
+        Duration: 0
+        Direction: 0
+      - StartTime: 3
+        Duration: 0
+        Direction: 0
+      - StartTime: 4
+        Duration: 0
+        Direction: 0
+      - StartTime: 5
+        Duration: 0
+        Direction: 0
+      - StartTime: 6
+        Duration: 0
+        Direction: 0
+      - StartTime: 7
+        Duration: 0
+        Direction: 0
+      - StartTime: 8
+        Duration: 0
+        Direction: 0
+      RightLane:
+      - StartTime: 1
+        Duration: 1
+        Direction: 0
+      - StartTime: 2
+        Duration: 1
+        Direction: 1
+      - StartTime: 3
+        Duration: 1
+        Direction: 0
+      - StartTime: 4
+        Duration: 1
+        Direction: 1
+      - StartTime: 5
+        Duration: 1
+        Direction: 0
+      - StartTime: 6
+        Duration: 1
+        Direction: 1
+      - StartTime: 7
+        Duration: 1
+        Direction: 0
+      - StartTime: 8
+        Duration: 1
+        Direction: 1
+    - LeftLane:
+      - StartTime: 1
+        Duration: 0
+        Direction: 0
+      - StartTime: 2
+        Duration: 0
+        Direction: 0
+      - StartTime: 3
+        Duration: 0
+        Direction: 0
+      - StartTime: 4
+        Duration: 0
+        Direction: 0
+      - StartTime: 5
+        Duration: 0
+        Direction: 0
+      - StartTime: 6
+        Duration: 0
+        Direction: 0
+      - StartTime: 7
+        Duration: 0
+        Direction: 0
+      - StartTime: 8
+        Duration: 0
+        Direction: 0
+      RightLane:
+      - StartTime: 1
+        Duration: 1
+        Direction: 0
+      - StartTime: 2
+        Duration: 1
+        Direction: 1
+      - StartTime: 3
+        Duration: 1
+        Direction: 0
+      - StartTime: 4
+        Duration: 1
+        Direction: 1
+      - StartTime: 5
+        Duration: 1
+        Direction: 0
+      - StartTime: 6
+        Duration: 1
+        Direction: 1
+      - StartTime: 7
+        Duration: 1
+        Direction: 0
+      - StartTime: 8
+        Duration: 1
+        Direction: 1
+    BeatsPerMinute: 110
+  - LoopId: play2a
+    AudioAssetId: play1a
+    Tracks:
+    - LeftLane:
+      - StartTime: 1
+        Duration: 0
+        Direction: 0
+      - StartTime: 2
+        Duration: 0
+        Direction: 0
+      - StartTime: 3
+        Duration: 0
+        Direction: 0
+      - StartTime: 4
+        Duration: 0
+        Direction: 0
+      - StartTime: 5
+        Duration: 0
+        Direction: 0
+      - StartTime: 6
+        Duration: 0
+        Direction: 0
+      - StartTime: 7
+        Duration: 0
+        Direction: 0
+      - StartTime: 8
+        Duration: 0
+        Direction: 0
+      RightLane:
+      - StartTime: 1
+        Duration: 1
+        Direction: 0
+      - StartTime: 2
+        Duration: 1
+        Direction: 1
+      - StartTime: 3
+        Duration: 1
+        Direction: 0
+      - StartTime: 4
+        Duration: 1
+        Direction: 1
+      - StartTime: 5
+        Duration: 1
+        Direction: 0
+      - StartTime: 6
+        Duration: 1
+        Direction: 1
+      - StartTime: 7
+        Duration: 1
+        Direction: 0
+      - StartTime: 8
+        Duration: 1
+        Direction: 1
+    - LeftLane:
+      - StartTime: 1
+        Duration: 0
+        Direction: 0
+      - StartTime: 2
+        Duration: 0
+        Direction: 0
+      - StartTime: 3
+        Duration: 0
+        Direction: 0
+      - StartTime: 4
+        Duration: 0
+        Direction: 0
+      - StartTime: 5
+        Duration: 0
+        Direction: 0
+      - StartTime: 6
+        Duration: 0
+        Direction: 0
+      - StartTime: 7
+        Duration: 0
+        Direction: 0
+      - StartTime: 8
+        Duration: 0
+        Direction: 0
+      RightLane:
+      - StartTime: 1
+        Duration: 1
+        Direction: 0
+      - StartTime: 2
+        Duration: 1
+        Direction: 1
+      - StartTime: 3
+        Duration: 1
+        Direction: 0
+      - StartTime: 4
+        Duration: 1
+        Direction: 1
+      - StartTime: 5
+        Duration: 1
+        Direction: 0
+      - StartTime: 6
+        Duration: 1
+        Direction: 1
+      - StartTime: 7
+        Duration: 1
+        Direction: 0
+      - StartTime: 8
+        Duration: 1
+        Direction: 1
+    - LeftLane:
+      - StartTime: 1
+        Duration: 0
+        Direction: 0
+      - StartTime: 2
+        Duration: 0
+        Direction: 0
+      - StartTime: 3
+        Duration: 0
+        Direction: 0
+      - StartTime: 4
+        Duration: 0
+        Direction: 0
+      - StartTime: 5
+        Duration: 0
+        Direction: 0
+      - StartTime: 6
+        Duration: 0
+        Direction: 0
+      - StartTime: 7
+        Duration: 0
+        Direction: 0
+      - StartTime: 8
+        Duration: 0
+        Direction: 0
+      RightLane:
+      - StartTime: 1
+        Duration: 1
+        Direction: 0
+      - StartTime: 2
+        Duration: 1
+        Direction: 1
+      - StartTime: 3
+        Duration: 1
+        Direction: 0
+      - StartTime: 4
+        Duration: 1
+        Direction: 1
+      - StartTime: 5
+        Duration: 1
+        Direction: 0
+      - StartTime: 6
+        Duration: 1
+        Direction: 1
+      - StartTime: 7
+        Duration: 1
+        Direction: 0
+      - StartTime: 8
+        Duration: 1
+        Direction: 1
+    - LeftLane:
+      - StartTime: 1
+        Duration: 0
+        Direction: 0
+      - StartTime: 2
+        Duration: 0
+        Direction: 0
+      - StartTime: 3
+        Duration: 0
+        Direction: 0
+      - StartTime: 4
+        Duration: 0
+        Direction: 0
+      - StartTime: 5
+        Duration: 0
+        Direction: 0
+      - StartTime: 6
+        Duration: 0
+        Direction: 0
+      - StartTime: 7
+        Duration: 0
+        Direction: 0
+      - StartTime: 8
+        Duration: 0
+        Direction: 0
+      RightLane:
+      - StartTime: 1
+        Duration: 1
+        Direction: 0
+      - StartTime: 2
+        Duration: 1
+        Direction: 1
+      - StartTime: 3
+        Duration: 1
+        Direction: 0
+      - StartTime: 4
+        Duration: 1
+        Direction: 1
+      - StartTime: 5
+        Duration: 1
+        Direction: 0
+      - StartTime: 6
+        Duration: 1
+        Direction: 1
+      - StartTime: 7
+        Duration: 1
+        Direction: 0
+      - StartTime: 8
+        Duration: 1
+        Direction: 1
+    BeatsPerMinute: 110
+  - LoopId: play2b
+    AudioAssetId: play1a
+    Tracks:
+    - LeftLane:
+      - StartTime: 1
+        Duration: 0
+        Direction: 0
+      - StartTime: 2
+        Duration: 0
+        Direction: 0
+      - StartTime: 3
+        Duration: 0
+        Direction: 0
+      - StartTime: 4
+        Duration: 0
+        Direction: 0
+      - StartTime: 5
+        Duration: 0
+        Direction: 0
+      - StartTime: 6
+        Duration: 0
+        Direction: 0
+      - StartTime: 7
+        Duration: 0
+        Direction: 0
+      - StartTime: 8
+        Duration: 0
+        Direction: 0
+      RightLane:
+      - StartTime: 1
+        Duration: 1
+        Direction: 0
+      - StartTime: 2
+        Duration: 1
+        Direction: 1
+      - StartTime: 3
+        Duration: 1
+        Direction: 0
+      - StartTime: 4
+        Duration: 1
+        Direction: 1
+      - StartTime: 5
+        Duration: 1
+        Direction: 0
+      - StartTime: 6
+        Duration: 1
+        Direction: 1
+      - StartTime: 7
+        Duration: 1
+        Direction: 0
+      - StartTime: 8
+        Duration: 1
+        Direction: 1
+    - LeftLane:
+      - StartTime: 1
+        Duration: 0
+        Direction: 0
+      - StartTime: 2
+        Duration: 0
+        Direction: 0
+      - StartTime: 3
+        Duration: 0
+        Direction: 0
+      - StartTime: 4
+        Duration: 0
+        Direction: 0
+      - StartTime: 5
+        Duration: 0
+        Direction: 0
+      - StartTime: 6
+        Duration: 0
+        Direction: 0
+      - StartTime: 7
+        Duration: 0
+        Direction: 0
+      - StartTime: 8
+        Duration: 0
+        Direction: 0
+      RightLane:
+      - StartTime: 1
+        Duration: 1
+        Direction: 0
+      - StartTime: 2
+        Duration: 1
+        Direction: 1
+      - StartTime: 3
+        Duration: 1
+        Direction: 0
+      - StartTime: 4
+        Duration: 1
+        Direction: 1
+      - StartTime: 5
+        Duration: 1
+        Direction: 0
+      - StartTime: 6
+        Duration: 1
+        Direction: 1
+      - StartTime: 7
+        Duration: 1
+        Direction: 0
+      - StartTime: 8
+        Duration: 1
+        Direction: 1
+    - LeftLane:
+      - StartTime: 1
+        Duration: 0
+        Direction: 0
+      - StartTime: 2
+        Duration: 0
+        Direction: 0
+      - StartTime: 3
+        Duration: 0
+        Direction: 0
+      - StartTime: 4
+        Duration: 0
+        Direction: 0
+      - StartTime: 5
+        Duration: 0
+        Direction: 0
+      - StartTime: 6
+        Duration: 0
+        Direction: 0
+      - StartTime: 7
+        Duration: 0
+        Direction: 0
+      - StartTime: 8
+        Duration: 0
+        Direction: 0
+      RightLane:
+      - StartTime: 1
+        Duration: 1
+        Direction: 0
+      - StartTime: 2
+        Duration: 1
+        Direction: 1
+      - StartTime: 3
+        Duration: 1
+        Direction: 0
+      - StartTime: 4
+        Duration: 1
+        Direction: 1
+      - StartTime: 5
+        Duration: 1
+        Direction: 0
+      - StartTime: 6
+        Duration: 1
+        Direction: 1
+      - StartTime: 7
+        Duration: 1
+        Direction: 0
+      - StartTime: 8
+        Duration: 1
+        Direction: 1
+    - LeftLane:
+      - StartTime: 1
+        Duration: 0
+        Direction: 0
+      - StartTime: 2
+        Duration: 0
+        Direction: 0
+      - StartTime: 3
+        Duration: 0
+        Direction: 0
+      - StartTime: 4
+        Duration: 0
+        Direction: 0
+      - StartTime: 5
+        Duration: 0
+        Direction: 0
+      - StartTime: 6
+        Duration: 0
+        Direction: 0
+      - StartTime: 7
+        Duration: 0
+        Direction: 0
+      - StartTime: 8
+        Duration: 0
+        Direction: 0
+      RightLane:
+      - StartTime: 1
+        Duration: 1
+        Direction: 0
+      - StartTime: 2
+        Duration: 1
+        Direction: 1
+      - StartTime: 3
+        Duration: 1
+        Direction: 0
+      - StartTime: 4
+        Duration: 1
+        Direction: 1
+      - StartTime: 5
+        Duration: 1
+        Direction: 0
+      - StartTime: 6
+        Duration: 1
+        Direction: 1
+      - StartTime: 7
+        Duration: 1
+        Direction: 0
+      - StartTime: 8
+        Duration: 1
+        Direction: 1
+    BeatsPerMinute: 110
+  - LoopId: play3a
+    AudioAssetId: play1a
+    Tracks:
+    - LeftLane:
+      - StartTime: 1
+        Duration: 0
+        Direction: 0
+      - StartTime: 2
+        Duration: 0
+        Direction: 0
+      - StartTime: 3
+        Duration: 0
+        Direction: 0
+      - StartTime: 4
+        Duration: 0
+        Direction: 0
+      - StartTime: 5
+        Duration: 0
+        Direction: 0
+      - StartTime: 6
+        Duration: 0
+        Direction: 0
+      - StartTime: 7
+        Duration: 0
+        Direction: 0
+      - StartTime: 8
+        Duration: 0
+        Direction: 0
+      RightLane:
+      - StartTime: 1
+        Duration: 1
+        Direction: 0
+      - StartTime: 2
+        Duration: 1
+        Direction: 1
+      - StartTime: 3
+        Duration: 1
+        Direction: 0
+      - StartTime: 4
+        Duration: 1
+        Direction: 1
+      - StartTime: 5
+        Duration: 1
+        Direction: 0
+      - StartTime: 6
+        Duration: 1
+        Direction: 1
+      - StartTime: 7
+        Duration: 1
+        Direction: 0
+      - StartTime: 8
+        Duration: 1
+        Direction: 1
+    - LeftLane:
+      - StartTime: 1
+        Duration: 0
+        Direction: 0
+      - StartTime: 2
+        Duration: 0
+        Direction: 0
+      - StartTime: 3
+        Duration: 0
+        Direction: 0
+      - StartTime: 4
+        Duration: 0
+        Direction: 0
+      - StartTime: 5
+        Duration: 0
+        Direction: 0
+      - StartTime: 6
+        Duration: 0
+        Direction: 0
+      - StartTime: 7
+        Duration: 0
+        Direction: 0
+      - StartTime: 8
+        Duration: 0
+        Direction: 0
+      RightLane:
+      - StartTime: 1
+        Duration: 1
+        Direction: 0
+      - StartTime: 2
+        Duration: 1
+        Direction: 1
+      - StartTime: 3
+        Duration: 1
+        Direction: 0
+      - StartTime: 4
+        Duration: 1
+        Direction: 1
+      - StartTime: 5
+        Duration: 1
+        Direction: 0
+      - StartTime: 6
+        Duration: 1
+        Direction: 1
+      - StartTime: 7
+        Duration: 1
+        Direction: 0
+      - StartTime: 8
+        Duration: 1
+        Direction: 1
+    - LeftLane:
+      - StartTime: 1
+        Duration: 0
+        Direction: 0
+      - StartTime: 2
+        Duration: 0
+        Direction: 0
+      - StartTime: 3
+        Duration: 0
+        Direction: 0
+      - StartTime: 4
+        Duration: 0
+        Direction: 0
+      - StartTime: 5
+        Duration: 0
+        Direction: 0
+      - StartTime: 6
+        Duration: 0
+        Direction: 0
+      - StartTime: 7
+        Duration: 0
+        Direction: 0
+      - StartTime: 8
+        Duration: 0
+        Direction: 0
+      RightLane:
+      - StartTime: 1
+        Duration: 1
+        Direction: 0
+      - StartTime: 2
+        Duration: 1
+        Direction: 1
+      - StartTime: 3
+        Duration: 1
+        Direction: 0
+      - StartTime: 4
+        Duration: 1
+        Direction: 1
+      - StartTime: 5
+        Duration: 1
+        Direction: 0
+      - StartTime: 6
+        Duration: 1
+        Direction: 1
+      - StartTime: 7
+        Duration: 1
+        Direction: 0
+      - StartTime: 8
+        Duration: 1
+        Direction: 1
+    - LeftLane:
+      - StartTime: 1
+        Duration: 0
+        Direction: 0
+      - StartTime: 2
+        Duration: 0
+        Direction: 0
+      - StartTime: 3
+        Duration: 0
+        Direction: 0
+      - StartTime: 4
+        Duration: 0
+        Direction: 0
+      - StartTime: 5
+        Duration: 0
+        Direction: 0
+      - StartTime: 6
+        Duration: 0
+        Direction: 0
+      - StartTime: 7
+        Duration: 0
+        Direction: 0
+      - StartTime: 8
+        Duration: 0
+        Direction: 0
+      RightLane:
+      - StartTime: 1
+        Duration: 1
+        Direction: 0
+      - StartTime: 2
+        Duration: 1
+        Direction: 1
+      - StartTime: 3
+        Duration: 1
+        Direction: 0
+      - StartTime: 4
+        Duration: 1
+        Direction: 1
+      - StartTime: 5
+        Duration: 1
+        Direction: 0
+      - StartTime: 6
+        Duration: 1
+        Direction: 1
+      - StartTime: 7
+        Duration: 1
+        Direction: 0
+      - StartTime: 8
+        Duration: 1
+        Direction: 1
+    BeatsPerMinute: 110
+  - LoopId: play3b
+    AudioAssetId: play1a
     Tracks:
     - LeftLane:
       - StartTime: 1

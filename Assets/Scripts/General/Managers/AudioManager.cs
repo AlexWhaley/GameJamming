@@ -24,9 +24,7 @@ public class AudioManager : MonoBehaviour
 
     private Queue<string> _audioPlayQueue = new Queue<string>();
 
-
-    public TextMeshProUGUI _beatText;
-
+    public System.Action SoundFinished;
 
     private void Awake()
     {
@@ -49,11 +47,9 @@ public class AudioManager : MonoBehaviour
             SongPosition = (_songTimeInSeconds / _secondsPerBeat) + 1;
             SongBeats = Mathf.FloorToInt(SongPosition);
 
-            _beatText.text = SongBeats.ToString();
-
             if (!_audioSource.isPlaying)
             {
-                TrackManager.Instance.PlayNextLoop();
+                SoundFinished();
             }
         }
     }
@@ -72,7 +68,6 @@ public class AudioManager : MonoBehaviour
             _audioSource.Play();
 
             IsPlaying = true;
-            TrackManager.Instance.PlayingTrack = true;
         }
     }
 

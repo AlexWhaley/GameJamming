@@ -28,6 +28,13 @@ public class TrackManager : MonoBehaviour
         _rng = new System.Random(DateTime.Now.Second);
     }
 
+    public void QueueUpNextPlayerLoop()
+    {
+        int index = _rng.Next(0, _audioLoops.Count);
+
+        AddLoopToQueue(_audioLoops[index].LoopId);
+    }
+
     public void AddLoopToQueue(string loopId)
     {
         AudioLoop loop = GetLoopFromId(loopId);
@@ -49,7 +56,8 @@ public class TrackManager : MonoBehaviour
                 _playerTracks[i].Initialize(loop.Tracks[i]); ;
             }
 
-            AudioManager.Instance.AddSoundToQueue(loop.AudioAssetId, true);
+            AudioManager.Instance.PlaySound(loop.AudioAssetId, true);
+            PlayingTrack = true;
         }
     }
     public AudioLoop GetLoopFromId(string loopId)
