@@ -22,13 +22,17 @@ public class LaneViewModel : MonoBehaviour
     private Lane _lane;
     private int _nextIndex = 0;
 
-    public NoteViewModel NoteInCatcher;
+    public Queue<NoteViewModel> NotesInCatcher;
+    public Queue<NoteViewModel> HeldNotes;
 
     public void Initialize(PlayerCharacter attachedCharacter, Lane lane, List<NoteGroup> noteGroups)
     {
         _attachedCharacter = attachedCharacter;
         _lane = lane;
         _noteGroups = noteGroups;
+
+        NotesInCatcher = new Queue<NoteViewModel>();
+        HeldNotes = new Queue<NoteViewModel>();
     }
 
     private void Update()

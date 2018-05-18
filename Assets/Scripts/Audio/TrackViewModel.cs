@@ -26,42 +26,39 @@ public class TrackViewModel : MonoBehaviour
 
     private void Update()
     {
-        var leftNote = _leftLane.NoteInCatcher;
-        var rightNote = _rightLane.NoteInCatcher;
-        
-        if (_input != null && _input.LeftStick.IsHeld)
-        {
-            if (leftNote != null)
-            {
-                if (_input.LeftStick.Direction == leftNote.Direction)
-                {
-                    leftNote.HasBeenHit = true;
-                    if (leftNote.HasTail)
-                    {
+        UpdateLaneInput(_leftLane, _input.LeftStick);
+        UpdateLaneInput(_rightLane, _input.RightStick);
+    }
 
-                    }
+    private void UpdateLaneInput(LaneViewModel lane, PlayerInputHandler.AnalogueStick analogueStick)
+    {
+        if (lane.NotesInCatcher != null && lane.HeldNotes != null)
+        {
+            var catcherNote = lane.NotesInCatcher.NullSafePeek();
+            var heldNote = lane.HeldNotes.NullSafePeek();
+
+            if (catcherNote != null)
+            {
+                bool correctHit = analogueStick.Direction == catcherNote.Direction;
+                bool correctHold = heldNote != null ? analogueStick.Direction == heldNote.Direction : false;
+
+                if (!catcherNote.HasBeenHit && 
+                    (analogueStick.IsPressed || (analogueStick.IsHeld && correctHit && heldNote != null && !correctHold)))
+                {
+                    catcherNote.HitNote(correctHit);
+                    Debug.Log("Attempted note hit");
                 }
             }
-        }
 
-        if (_input != null && _input.RightStick.IsHeld)
-        {
-            if (rightNote != null)
+            if (heldNote != null)
             {
-                if (_input.RightStick.Direction == rightNote.Direction)
-                {
-                    rightNote.HasBeenHit = true;
-                    if (rightNote.HasTail)
-                    {
+                bool correctHold = analogueStick.Direction == heldNote.Direction;
 
-                    }
+                if (analogueStick.IsReleased || (!heldNote.InSafeZone && !correctHold))
+                {
+                    heldNote.ReleaseHeldNote(false);
                 }
             }
-        }
-
-        if (Input.GetKeyUp(KeyCode.A))
-        {
-            //if (leftNote)
         }
     }
 }

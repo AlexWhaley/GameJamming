@@ -7,6 +7,7 @@ public class NoteViewModel : MonoBehaviour
 {
     [SerializeField] private Trigger2DCallback _noteTrigger;
     [SerializeField] private Trigger2DCallback _tailTrigger;
+    [SerializeField] private Trigger2DCallback _safeZoneTrigger;
     [SerializeField] private Image _noteImage;
     [SerializeField] private Image _tailImage;
 
@@ -17,33 +18,8 @@ public class NoteViewModel : MonoBehaviour
     private Vector2 _destructPosition;
 
     private LaneViewModel _laneViewModel;
-
-    private bool _hasBeenHit = false;
-    public bool HasBeenHit
-    {
-        get
-        {
-            return _hasBeenHit;
-        }
-        set
-        {
-            _hasBeenHit = value;
-
-            if (_hasBeenHit)
-            {
-                if (_noteData.Duration <= 0)
-                {
-                    Debug.Log("Note hit correctly.");
-                    _laneViewModel.NoteInCatcher = null;
-                    Destroy(gameObject);
-                }
-                else
-                {
-
-                }
-            }
-        }
-    }
+    
+    public bool HasBeenHit { get; private set; }
 
     public bool HasTail
     {
@@ -52,6 +28,8 @@ public class NoteViewModel : MonoBehaviour
             return _noteData != null ? _noteData.Duration > 0 : false;
         }
     }
+
+    public bool InSafeZone { get; private set; }
 
     public Direction Direction
     {
@@ -69,6 +47,9 @@ public class NoteViewModel : MonoBehaviour
         _tailTrigger.OnEnter += OnTailTriggerEnter;
         _tailTrigger.OnStay += OnTailTriggerStay;
         _tailTrigger.OnExit += OnTailTriggerExit;
+        _safeZoneTrigger.OnEnter += OnSafeZoneTriggerEnter;
+        _safeZoneTrigger.OnStay += OnSafeZoneTriggerStay;
+        _safeZoneTrigger.OnExit += OnSafeZoneTriggerExit;
     }
 
     public void Initialize(PlayerCharacter attachedCharacter, LaneViewModel laneVM, Note noteData, Lane lane, Vector2 spawn, Vector2 destruct)
@@ -89,9 +70,58 @@ public class NoteViewModel : MonoBehaviour
 
         float trackHeight = _spawnPosition.y - _destructPosition.y;
 
-        _tailImage.GetComponent<RectTransform>().sizeDelta = new Vector2(
+        Vector2 tailSize = new Vector2(
             _tailImage.GetComponent<RectTransform>().sizeDelta.x,
             _noteData.Duration * trackHeight / TrackManager.Instance.BeatsShownInAdvance);
+
+        _tailImage.GetComponent<RectTransform>().sizeDelta = tailSize;
+        _tailImage.GetComponent<BoxCollider2D>().size = tailSize;
+        _tailImage.GetComponent<BoxCollider2D>().offset = new Vector2(0, tailSize.y / 2);
+        _tailImage.transform.rotation = Quaternion.Euler(0, 0, 0);
+    }
+
+    public void HitNote(bool correctHit)
+    {
+        if (!HasBeenHit)
+        {
+            HasBeenHit = true;
+            if (correctHit)
+            {
+                if (!HasTail)
+                {
+                    Debug.Log("Note hit correctly.");
+                    _laneViewModel.NotesInCatcher.Dequeue();
+                    Destroy(gameObject);
+                }
+                else
+                {
+                    Debug.Log("Note hit started.");
+                    _laneViewModel.NotesInCatcher.Dequeue();
+                    _laneViewModel.HeldNotes.Enqueue(this);
+                }
+            }
+            else
+            {
+                Debug.Log("Note hit incorrectly.");
+                _laneViewModel.NotesInCatcher.Dequeue();
+                Destroy(gameObject);
+            }
+        }
+    }
+
+    public void ReleaseHeldNote(bool withinAcceptableZone)
+    {
+        _laneViewModel.HeldNotes.Dequeue();
+        if (withinAcceptableZone)
+        {
+            Debug.Log("Note tail released correctly.");
+            Destroy(gameObject);
+        }
+        else
+        {
+            Debug.Log("Note tail released early");
+            Destroy(gameObject);
+        }
     }
 
     private void Update()
@@ -110,7 +140,7 @@ public class NoteViewModel : MonoBehaviour
 
     private void OnNoteTriggerEnter(Collider2D collision)
     {
-        _laneViewModel.NoteInCatcher = this;
+        _laneViewModel.NotesInCatcher.Enqueue(this);
     }
 
     private void OnNoteTriggerStay(Collider2D collision)
@@ -120,14 +150,10 @@ public class NoteViewModel : MonoBehaviour
 
     private void OnNoteTriggerExit(Collider2D collision)
     {
-        if (_laneViewModel.NoteInCatcher == this)
+        if (_laneViewModel.NotesInCatcher.NullSafePeek() == this)
         {
-            _laneViewModel.NoteInCatcher = null;
-        }
-
-        if (!HasBeenHit)
-        {
-            Debug.Log("Player is shit.");
+            _laneViewModel.NotesInCatcher.Dequeue();
+            Destroy(gameObject);
         }
     }
 
@@ -141,5 +167,23 @@ public class NoteViewModel : MonoBehaviour
 
     private void OnTailTriggerExit(Collider2D collision)
     {
+        if (_laneViewModel.HeldNotes.NullSafePeek() == this)
+        {
+            ReleaseHeldNote(true);
+        }
+    }
+
+    private void OnSafeZoneTriggerEnter(Collider2D collision)
+    {
+        InSafeZone = true;
+    }
+
+    private void OnSafeZoneTriggerStay(Collider2D collision)
+    {
+    }
+
+    private void OnSafeZoneTriggerExit(Collider2D collision)
+    {
+        InSafeZone = false;
     }
 }
