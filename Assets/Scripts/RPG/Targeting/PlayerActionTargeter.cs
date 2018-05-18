@@ -91,11 +91,14 @@ public class PlayerActionTargeter : MonoBehaviour, InputCommandHandler
         }
     }
 
-    private void RemoveAllIndicators()
+    public void RemoveAllIndicators()
     {
-        foreach (var character in _potentialTargets)
+        if (_potentialTargets != null)
         {
-            character.TargetIndicatorController.SetActiveTargetingIndicator(_attatchedPlayer, false);
+            foreach (var character in _potentialTargets)
+            {
+                character.TargetIndicatorController.SetActiveTargetingIndicator(_attatchedPlayer, false);
+            }
         }
     }
 

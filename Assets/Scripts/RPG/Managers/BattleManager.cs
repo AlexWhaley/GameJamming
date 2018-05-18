@@ -30,27 +30,25 @@ public class BattleManager : MonoBehaviour
         {
             // If the singleton hasn't been initialized yet
             _instance = this;
-            StartPlayersTurns();
+            Initialise();
         }
     }
 
-    private void Update()
+    private void Initialise()
     {
-        if (Input.GetKeyDown("/"))
-        {
-            EndPlayersTurns();
-        }
+        PhaseManager.Instance.ActionExecutionStarted += EndPlayersTurns;
     }
 
     public void StartPlayersTurns()
     {
-        //Show action menu.
         _submittedPlayerActions = new List<SubmittedAction>();
         
     }
 
     public void EndPlayersTurns()
     {
+        RemovePlayerShields();
+
         List<Character> alivePlayers = CharacterManager.Instance.GetAlivePlayers();
         foreach (var player in alivePlayers)
         {
@@ -71,6 +69,15 @@ public class BattleManager : MonoBehaviour
         _actionSequence = StartCoroutine(ProcessSubmittedTurns(_submittedPlayerActions));
     }
 
+    private void RemovePlayerShields()
+    {
+        var players = CharacterManager.Instance.GetPlayers();
+        foreach (var player in players)
+        {
+            player.ResetShieldModifier();
+        }
+    }
+
     private IEnumerator ProcessSubmittedTurns(List<SubmittedAction> submittedActions)
     {
         float actionTime = 1.0f;
@@ -80,6 +87,7 @@ public class BattleManager : MonoBehaviour
             StartCoroutine(HandleSubmittedAction(submittedAction, actionTime));
             yield return new WaitForSeconds(actionTime);
         }
+        PhaseManager.Instance.NextPhase();
     }
 
     private IEnumerator HandleSubmittedAction(SubmittedAction submittedAction, float actionTime)
@@ -98,12 +106,21 @@ public class BattleManager : MonoBehaviour
     private void ExecuteAction(ExecuteableAction executeableAction)
     {
         int targetNumber = executeableAction.Targets.Count;
+        bool usedAttack = false;
         foreach (var target in executeableAction.Targets)
         {
             foreach (var actionComponent in executeableAction.ActionToApply.ActionComponents)
             {
+                if (actionComponent is DamageComponent)
+                {
+                    usedAttack = true;
+                }
                 actionComponent.ExecuteAction(target, executeableAction.Targeter, 1.0f / targetNumber);
             }
+        }
+        if (usedAttack)
+        {
+            executeableAction.Targeter.ResetAttackBuffModifier();
         }
     }
 
