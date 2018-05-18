@@ -52,7 +52,7 @@ public class BattleManager : MonoBehaviour
         List<Character> alivePlayers = CharacterManager.Instance.GetAlivePlayers();
         foreach (var player in alivePlayers)
         {
-            if (_submittedPlayerActions.FirstOrDefault(x => x.PlayerCharacter == player) == null)
+            if (_submittedPlayerActions.FirstOrDefault(x => x.TargetingCharacter == player) == null)
             {
                 ExecuteableAction executeableAction = new ExecuteableAction(player, _defaultAction.TargetedActions[0]);
                 executeableAction.Targets.Add(CharacterManager.Instance.GetRandomAliveEnemy());
@@ -69,12 +69,26 @@ public class BattleManager : MonoBehaviour
         _actionSequence = StartCoroutine(ProcessSubmittedTurns(_submittedPlayerActions));
     }
 
+    public void ExecuteEnemyTurn(List<SubmittedAction> enemyActions)
+    {
+        _actionSequence = StartCoroutine(ProcessSubmittedTurns(enemyActions));
+    }
+
     private void RemovePlayerShields()
     {
         var players = CharacterManager.Instance.GetPlayers();
         foreach (var player in players)
         {
             player.ResetShieldModifier();
+        }
+    }
+
+    private void RemoveEnemyShields()
+    {
+        var enemies = CharacterManager.Instance.GetEnemies();
+        foreach (var enemy in enemies)
+        {
+            enemy.ResetShieldModifier();
         }
     }
 
@@ -156,7 +170,7 @@ public class BattleManager : MonoBehaviour
 
     public void SubmitCharacterAction(Character playerCharacter, List<ExecuteableAction> lockedInActions)
     {
-        SubmittedAction existingSubmission = _submittedPlayerActions.FirstOrDefault(x => x.PlayerCharacter == playerCharacter);
+        SubmittedAction existingSubmission = _submittedPlayerActions.FirstOrDefault(x => x.TargetingCharacter == playerCharacter);
         if (existingSubmission != null)
         {
             _submittedPlayerActions.Remove(existingSubmission);
@@ -168,7 +182,7 @@ public class BattleManager : MonoBehaviour
     {
         foreach (var submision in _submittedPlayerActions)
         {
-            if (submision.PlayerCharacter == playerCharacter)
+            if (submision.TargetingCharacter == playerCharacter)
             {
                 _submittedPlayerActions.Remove(submision);
             }
@@ -178,12 +192,12 @@ public class BattleManager : MonoBehaviour
 
 public class SubmittedAction
 {
-    public Character PlayerCharacter;
+    public Character TargetingCharacter;
     public List<ExecuteableAction> ExecuteableActions;
 
-    public SubmittedAction(Character playerCharacter, List<ExecuteableAction> executeableActions)
+    public SubmittedAction(Character targetingCharacter, List<ExecuteableAction> executeableActions)
     {
-        PlayerCharacter = playerCharacter;
+        TargetingCharacter = targetingCharacter;
         ExecuteableActions = executeableActions;
     }
 }

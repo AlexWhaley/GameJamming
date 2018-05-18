@@ -5,6 +5,8 @@ using Utilities.Prefabs;
 
 public class Character : MonoBehaviour
 {
+    public string Name;
+
     [Header("Character Attributes")]
     [SerializeField]
     private int _healthStat = 1000;

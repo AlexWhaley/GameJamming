@@ -73,6 +73,11 @@ public class CharacterManager : MonoBehaviour
         return PruneTargetedCharacters(GetAliveEnemies(), targetingCharacter);
     }
 
+    public List<Character> GetEnemies()
+    {
+        return _enemyCharacters;
+    }
+
     public Character GetRandomAliveEnemy()
     {
         return GetRandomCharacter(AliveCharacters(_enemyCharacters));
@@ -119,6 +124,29 @@ public class CharacterManager : MonoBehaviour
 
         return GetRandomCharacter(canididateCharacters);
     }
+    public Character GetWeakestEnemy()
+    {
+        List<Character> aliveEnemies = AliveCharacters(_enemyCharacters);
+        List<Character> canididateCharacters = new List<Character>();
+        float currentMinHealth = 1.0f;
+        foreach (var enemy in aliveEnemies)
+        {
+            float remainingHealthPercentage = enemy.HealthPortionRemaining;
+            if (remainingHealthPercentage < currentMinHealth)
+            {
+                canididateCharacters.Clear();
+                canididateCharacters.Add(enemy);
+                currentMinHealth = remainingHealthPercentage;
+            }
+            else if (remainingHealthPercentage == currentMinHealth)
+            {
+                canididateCharacters.Add(enemy);
+            }
+        }
+
+        return GetRandomCharacter(canididateCharacters);
+    }
+
 
     public Character GetRandomAlivePlayer()
     {

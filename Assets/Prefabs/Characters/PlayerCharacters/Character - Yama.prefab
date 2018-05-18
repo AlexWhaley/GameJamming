@@ -231,7 +231,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00bfa28cb3396ba4e9f62294353d9bac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _healthStat: 900
+  Name: Yama
+  _healthStat: 550
   _armorModifier: 1
   _attackModifier: 1
   _healModifier: 1.2

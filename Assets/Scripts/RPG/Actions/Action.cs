@@ -30,3 +30,10 @@ public enum TargetType
     AllPlayersExclusive,
     Self
 }
+
+[Serializable]
+public class EnemyTargetedAction : TargetedAction
+{
+    public string TargetPreferenceName;
+    public bool TargetLowest = false;
+}
