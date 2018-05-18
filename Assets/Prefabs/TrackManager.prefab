@@ -263,165 +263,225 @@ MonoBehaviour:
         ShouldSpawn: 0
     - LeftLane:
       - StartTime: 1
-        Duration: 0
-        Direction: 0
+        Duration: 0.25
+        Direction: 2
         LinkedToNextNote: 0
         ShouldSpawn: 1
-      - StartTime: 2
-        Duration: 0
-        Direction: 0
+      - StartTime: 1.5
+        Duration: 0.25
+        Direction: 2
         LinkedToNextNote: 0
         ShouldSpawn: 1
       - StartTime: 3
-        Duration: 0
-        Direction: 0
+        Duration: 0.25
+        Direction: 2
         LinkedToNextNote: 0
         ShouldSpawn: 1
-      - StartTime: 4
-        Duration: 0
-        Direction: 0
+      - StartTime: 3.25
+        Duration: 0.25
+        Direction: 2
+        LinkedToNextNote: 0
+        ShouldSpawn: 1
+      - StartTime: 3.5
+        Duration: 0.25
+        Direction: 2
+        LinkedToNextNote: 0
+        ShouldSpawn: 1
+      - StartTime: 3.75
+        Duration: 0.25
+        Direction: 2
         LinkedToNextNote: 0
         ShouldSpawn: 1
       - StartTime: 5
-        Duration: 0
-        Direction: 0
+        Duration: 0.35
+        Direction: 3
         LinkedToNextNote: 0
         ShouldSpawn: 1
-      - StartTime: 6
-        Duration: 0
-        Direction: 0
+      - StartTime: 5.25
+        Duration: 0.25
+        Direction: 3
+        LinkedToNextNote: 0
+        ShouldSpawn: 1
+      - StartTime: 5.5
+        Duration: 0.25
+        Direction: 3
+        LinkedToNextNote: 0
+        ShouldSpawn: 1
+      - StartTime: 5.75
+        Duration: 0.25
+        Direction: 3
         LinkedToNextNote: 0
         ShouldSpawn: 1
       - StartTime: 7
-        Duration: 0
-        Direction: 0
+        Duration: 0.25
+        Direction: 1
         LinkedToNextNote: 0
         ShouldSpawn: 1
-      - StartTime: 8
-        Duration: 0
-        Direction: 0
+      - StartTime: 7.25
+        Duration: 0.25
+        Direction: 1
+        LinkedToNextNote: 0
+        ShouldSpawn: 1
+      - StartTime: 7.5
+        Duration: 0.25
+        Direction: 1
+        LinkedToNextNote: 0
+        ShouldSpawn: 1
+      - StartTime: 7.75
+        Duration: 0.25
+        Direction: 1
         LinkedToNextNote: 0
         ShouldSpawn: 1
       RightLane:
-      - StartTime: 1
-        Duration: 1
-        Direction: 0
-        LinkedToNextNote: 1
-        ShouldSpawn: 1
       - StartTime: 2
-        Duration: 1
-        Direction: 1
-        LinkedToNextNote: 1
+        Duration: 0.25
+        Direction: 2
+        LinkedToNextNote: 0
         ShouldSpawn: 1
-      - StartTime: 3
-        Duration: 1
-        Direction: 0
-        LinkedToNextNote: 1
+      - StartTime: 2.5
+        Duration: 0.25
+        Direction: 2
+        LinkedToNextNote: 0
         ShouldSpawn: 1
       - StartTime: 4
-        Duration: 1
-        Direction: 1
-        LinkedToNextNote: 1
+        Duration: 0.25
+        Direction: 2
+        LinkedToNextNote: 0
         ShouldSpawn: 1
-      - StartTime: 5
-        Duration: 1
-        Direction: 0
-        LinkedToNextNote: 1
+      - StartTime: 4.25
+        Duration: 0.25
+        Direction: 2
+        LinkedToNextNote: 0
+        ShouldSpawn: 1
+      - StartTime: 4.5
+        Duration: 0.25
+        Direction: 2
+        LinkedToNextNote: 0
+        ShouldSpawn: 1
+      - StartTime: 4.75
+        Duration: 0.25
+        Direction: 2
+        LinkedToNextNote: 0
         ShouldSpawn: 1
       - StartTime: 6
-        Duration: 1
+        Duration: 0.25
         Direction: 1
-        LinkedToNextNote: 1
+        LinkedToNextNote: 0
         ShouldSpawn: 1
-      - StartTime: 7
-        Duration: 1
-        Direction: 0
-        LinkedToNextNote: 1
+      - StartTime: 6.25
+        Duration: 0.25
+        Direction: 1
+        LinkedToNextNote: 0
+        ShouldSpawn: 1
+      - StartTime: 6.5
+        Duration: 0.25
+        Direction: 1
+        LinkedToNextNote: 0
+        ShouldSpawn: 1
+      - StartTime: 6.75
+        Duration: 0.25
+        Direction: 1
+        LinkedToNextNote: 0
         ShouldSpawn: 1
       - StartTime: 8
-        Duration: 1
-        Direction: 1
+        Duration: 0.25
+        Direction: 3
+        LinkedToNextNote: 0
+        ShouldSpawn: 1
+      - StartTime: 8.25
+        Duration: 0.25
+        Direction: 3
+        LinkedToNextNote: 0
+        ShouldSpawn: 1
+      - StartTime: 8.5
+        Duration: 0.25
+        Direction: 3
+        LinkedToNextNote: 0
+        ShouldSpawn: 1
+      - StartTime: 8.75
+        Duration: 0.25
+        Direction: 3
         LinkedToNextNote: 0
         ShouldSpawn: 1
     - LeftLane:
       - StartTime: 1
-        Duration: 0
+        Duration: 0.25
         Direction: 0
         LinkedToNextNote: 0
         ShouldSpawn: 1
-      - StartTime: 2
-        Duration: 0
+      - StartTime: 1.5
+        Duration: 0.25
         Direction: 0
         LinkedToNextNote: 0
         ShouldSpawn: 1
       - StartTime: 3
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
+        Duration: 1
+        Direction: 2
+        LinkedToNextNote: 1
         ShouldSpawn: 1
-      - StartTime: 4
-        Duration: 0
-        Direction: 0
+      - StartTime: 3.75
+        Duration: 0.25
+        Direction: 2
         LinkedToNextNote: 0
         ShouldSpawn: 1
       - StartTime: 5
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
+        Duration: 0.5
+        Direction: 3
+        LinkedToNextNote: 1
         ShouldSpawn: 1
-      - StartTime: 6
-        Duration: 0
-        Direction: 0
+      - StartTime: 5.5
+        Duration: 0.5
+        Direction: 1
         LinkedToNextNote: 0
         ShouldSpawn: 1
       - StartTime: 7
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
+        Duration: 0.5
+        Direction: 1
+        LinkedToNextNote: 1
         ShouldSpawn: 1
-      - StartTime: 8
-        Duration: 0
-        Direction: 0
+      - StartTime: 7.5
+        Duration: 0.5
+        Direction: 3
         LinkedToNextNote: 0
         ShouldSpawn: 1
       RightLane:
-      - StartTime: 1
-        Duration: 1
-        Direction: 0
-        LinkedToNextNote: 1
-        ShouldSpawn: 1
       - StartTime: 2
         Duration: 1
-        Direction: 1
-        LinkedToNextNote: 1
-        ShouldSpawn: 1
-      - StartTime: 3
-        Duration: 1
         Direction: 0
         LinkedToNextNote: 1
+        ShouldSpawn: 1
+      - StartTime: 2.75
+        Duration: 0.25
+        Direction: 0
+        LinkedToNextNote: 0
         ShouldSpawn: 1
       - StartTime: 4
         Duration: 1
-        Direction: 1
+        Direction: 2
         LinkedToNextNote: 1
         ShouldSpawn: 1
-      - StartTime: 5
-        Duration: 1
-        Direction: 0
-        LinkedToNextNote: 1
+      - StartTime: 4.75
+        Duration: 0.25
+        Direction: 2
+        LinkedToNextNote: 0
         ShouldSpawn: 1
       - StartTime: 6
-        Duration: 1
+        Duration: 0.5
         Direction: 1
         LinkedToNextNote: 1
         ShouldSpawn: 1
-      - StartTime: 7
-        Duration: 1
-        Direction: 0
-        LinkedToNextNote: 1
+      - StartTime: 6.5
+        Duration: 0.5
+        Direction: 3
+        LinkedToNextNote: 0
         ShouldSpawn: 1
       - StartTime: 8
-        Duration: 1
+        Duration: 0.5
+        Direction: 3
+        LinkedToNextNote: 1
+        ShouldSpawn: 1
+      - StartTime: 8.5
+        Duration: 0.5
         Direction: 1
         LinkedToNextNote: 0
         ShouldSpawn: 1
@@ -431,1659 +491,431 @@ MonoBehaviour:
     Tracks:
     - LeftLane:
       - StartTime: 1
-        Duration: 0
-        Direction: 0
+        Duration: 0.25
+        Direction: 1
         LinkedToNextNote: 0
         ShouldSpawn: 1
-      - StartTime: 2
-        Duration: 0
-        Direction: 0
+      - StartTime: 1.5
+        Duration: 0.25
+        Direction: 1
         LinkedToNextNote: 0
         ShouldSpawn: 1
       - StartTime: 3
-        Duration: 0
-        Direction: 0
+        Duration: 0.25
+        Direction: 3
         LinkedToNextNote: 0
         ShouldSpawn: 1
-      - StartTime: 4
-        Duration: 0
-        Direction: 0
+      - StartTime: 3.5
+        Duration: 0.25
+        Direction: 3
         LinkedToNextNote: 0
         ShouldSpawn: 1
       - StartTime: 5
-        Duration: 0
-        Direction: 0
+        Duration: 0.25
+        Direction: 1
         LinkedToNextNote: 0
         ShouldSpawn: 1
-      - StartTime: 6
-        Duration: 0
-        Direction: 0
+      - StartTime: 5.75
+        Duration: 0.25
+        Direction: 1
         LinkedToNextNote: 0
         ShouldSpawn: 1
       - StartTime: 7
-        Duration: 0
-        Direction: 0
+        Duration: 0.25
+        Direction: 3
+        LinkedToNextNote: 0
+        ShouldSpawn: 1
+      - StartTime: 7.75
+        Duration: 0.25
+        Direction: 3
+        LinkedToNextNote: 0
+        ShouldSpawn: 1
+      RightLane:
+      - StartTime: 2
+        Duration: 0.25
+        Direction: 3
+        LinkedToNextNote: 0
+        ShouldSpawn: 1
+      - StartTime: 2.5
+        Duration: 0.25
+        Direction: 3
+        LinkedToNextNote: 0
+        ShouldSpawn: 1
+      - StartTime: 4
+        Duration: 0.25
+        Direction: 1
+        LinkedToNextNote: 0
+        ShouldSpawn: 1
+      - StartTime: 4.5
+        Duration: 0.25
+        Direction: 1
+        LinkedToNextNote: 0
+        ShouldSpawn: 1
+      - StartTime: 6
+        Duration: 0.25
+        Direction: 3
+        LinkedToNextNote: 0
+        ShouldSpawn: 1
+      - StartTime: 6.75
+        Duration: 0.25
+        Direction: 3
         LinkedToNextNote: 0
         ShouldSpawn: 1
       - StartTime: 8
-        Duration: 0
-        Direction: 0
+        Duration: 0.25
+        Direction: 1
+        LinkedToNextNote: 0
+        ShouldSpawn: 1
+      - StartTime: 8.75
+        Duration: 0.25
+        Direction: 1
+        LinkedToNextNote: 0
+        ShouldSpawn: 1
+    - LeftLane:
+      - StartTime: 2
+        Duration: 0.25
+        Direction: 1
+        LinkedToNextNote: 0
+        ShouldSpawn: 1
+      - StartTime: 2.5
+        Duration: 0.25
+        Direction: 1
+        LinkedToNextNote: 0
+        ShouldSpawn: 1
+      - StartTime: 4
+        Duration: 0.25
+        Direction: 3
+        LinkedToNextNote: 0
+        ShouldSpawn: 1
+      - StartTime: 4.5
+        Duration: 0.25
+        Direction: 3
+        LinkedToNextNote: 0
+        ShouldSpawn: 1
+      - StartTime: 5.25
+        Duration: 0.25
+        Direction: 1
+        LinkedToNextNote: 0
+        ShouldSpawn: 1
+      - StartTime: 5.75
+        Duration: 0.25
+        Direction: 1
+        LinkedToNextNote: 0
+        ShouldSpawn: 1
+      - StartTime: 6.25
+        Duration: 0.25
+        Direction: 1
+        LinkedToNextNote: 0
+        ShouldSpawn: 1
+      - StartTime: 6.75
+        Duration: 0.25
+        Direction: 1
+        LinkedToNextNote: 0
+        ShouldSpawn: 1
+      - StartTime: 7.25
+        Duration: 0.25
+        Direction: 3
+        LinkedToNextNote: 0
+        ShouldSpawn: 1
+      - StartTime: 7.75
+        Duration: 0.25
+        Direction: 3
+        LinkedToNextNote: 0
+        ShouldSpawn: 1
+      - StartTime: 8.25
+        Duration: 0.25
+        Direction: 3
+        LinkedToNextNote: 0
+        ShouldSpawn: 1
+      - StartTime: 8.75
+        Duration: 0.25
+        Direction: 3
         LinkedToNextNote: 0
         ShouldSpawn: 1
       RightLane:
       - StartTime: 1
-        Duration: 1
-        Direction: 0
+        Duration: 0.25
+        Direction: 3
         LinkedToNextNote: 0
         ShouldSpawn: 1
-      - StartTime: 2
-        Duration: 1
-        Direction: 1
+      - StartTime: 1.5
+        Duration: 0.25
+        Direction: 3
         LinkedToNextNote: 0
         ShouldSpawn: 1
       - StartTime: 3
-        Duration: 1
-        Direction: 0
+        Duration: 0.25
+        Direction: 1
         LinkedToNextNote: 0
         ShouldSpawn: 1
-      - StartTime: 4
-        Duration: 1
+      - StartTime: 3.5
+        Duration: 0.25
         Direction: 1
         LinkedToNextNote: 0
         ShouldSpawn: 1
       - StartTime: 5
-        Duration: 1
-        Direction: 0
+        Duration: 0.25
+        Direction: 3
+        LinkedToNextNote: 0
+        ShouldSpawn: 1
+      - StartTime: 5.5
+        Duration: 0.25
+        Direction: 3
         LinkedToNextNote: 0
         ShouldSpawn: 1
       - StartTime: 6
-        Duration: 1
-        Direction: 1
+        Duration: 0.25
+        Direction: 3
+        LinkedToNextNote: 0
+        ShouldSpawn: 1
+      - StartTime: 6.5
+        Duration: 0.25
+        Direction: 3
         LinkedToNextNote: 0
         ShouldSpawn: 1
       - StartTime: 7
-        Duration: 1
-        Direction: 0
+        Duration: 0.25
+        Direction: 1
+        LinkedToNextNote: 0
+        ShouldSpawn: 1
+      - StartTime: 7.5
+        Duration: 0.25
+        Direction: 1
         LinkedToNextNote: 0
         ShouldSpawn: 1
       - StartTime: 8
-        Duration: 1
+        Duration: 0.25
+        Direction: 1
+        LinkedToNextNote: 0
+        ShouldSpawn: 1
+      - StartTime: 8.5
+        Duration: 0.25
         Direction: 1
         LinkedToNextNote: 0
         ShouldSpawn: 1
     - LeftLane:
       - StartTime: 1
-        Duration: 0
+        Duration: 0.25
         Direction: 0
         LinkedToNextNote: 0
         ShouldSpawn: 1
-      - StartTime: 2
-        Duration: 0
+      - StartTime: 1.5
+        Duration: 0.25
         Direction: 0
         LinkedToNextNote: 0
         ShouldSpawn: 1
       - StartTime: 3
-        Duration: 0
+        Duration: 0.25
         Direction: 0
         LinkedToNextNote: 0
         ShouldSpawn: 1
-      - StartTime: 4
-        Duration: 0
+      - StartTime: 3.25
+        Duration: 0.25
+        Direction: 0
+        LinkedToNextNote: 0
+        ShouldSpawn: 1
+      - StartTime: 3.5
+        Duration: 0.25
+        Direction: 0
+        LinkedToNextNote: 0
+        ShouldSpawn: 1
+      - StartTime: 3.75
+        Duration: 0.25
         Direction: 0
         LinkedToNextNote: 0
         ShouldSpawn: 1
       - StartTime: 5
-        Duration: 0
-        Direction: 0
+        Duration: 0.25
+        Direction: 1
         LinkedToNextNote: 0
         ShouldSpawn: 1
-      - StartTime: 6
-        Duration: 0
-        Direction: 0
+      - StartTime: 5.25
+        Duration: 0.25
+        Direction: 1
+        LinkedToNextNote: 0
+        ShouldSpawn: 1
+      - StartTime: 5.5
+        Duration: 0.25
+        Direction: 1
+        LinkedToNextNote: 0
+        ShouldSpawn: 1
+      - StartTime: 5.75
+        Duration: 0.25
+        Direction: 1
         LinkedToNextNote: 0
         ShouldSpawn: 1
       - StartTime: 7
-        Duration: 0
-        Direction: 0
+        Duration: 0.25
+        Direction: 3
         LinkedToNextNote: 0
         ShouldSpawn: 1
-      - StartTime: 8
-        Duration: 0
-        Direction: 0
+      - StartTime: 7.25
+        Duration: 0.25
+        Direction: 3
+        LinkedToNextNote: 0
+        ShouldSpawn: 1
+      - StartTime: 7.5
+        Duration: 0.25
+        Direction: 3
+        LinkedToNextNote: 0
+        ShouldSpawn: 1
+      - StartTime: 7.75
+        Duration: 0.25
+        Direction: 3
         LinkedToNextNote: 0
         ShouldSpawn: 1
       RightLane:
-      - StartTime: 1
-        Duration: 1
+      - StartTime: 2
+        Duration: 0.25
         Direction: 0
         LinkedToNextNote: 0
         ShouldSpawn: 1
-      - StartTime: 2
-        Duration: 1
-        Direction: 1
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 3
-        Duration: 1
+      - StartTime: 2.5
+        Duration: 0.25
         Direction: 0
         LinkedToNextNote: 0
         ShouldSpawn: 1
       - StartTime: 4
-        Duration: 1
-        Direction: 1
+        Duration: 0.25
+        Direction: 0
         LinkedToNextNote: 0
         ShouldSpawn: 1
-      - StartTime: 5
-        Duration: 1
+      - StartTime: 4.25
+        Duration: 0.25
+        Direction: 0
+        LinkedToNextNote: 0
+        ShouldSpawn: 1
+      - StartTime: 4.5
+        Duration: 0.25
+        Direction: 0
+        LinkedToNextNote: 0
+        ShouldSpawn: 1
+      - StartTime: 4.75
+        Duration: 0.25
         Direction: 0
         LinkedToNextNote: 0
         ShouldSpawn: 1
       - StartTime: 6
-        Duration: 1
-        Direction: 1
+        Duration: 0.25
+        Direction: 3
         LinkedToNextNote: 0
         ShouldSpawn: 1
-      - StartTime: 7
-        Duration: 1
-        Direction: 0
+      - StartTime: 6.25
+        Duration: 0.25
+        Direction: 3
+        LinkedToNextNote: 0
+        ShouldSpawn: 1
+      - StartTime: 6.5
+        Duration: 0.25
+        Direction: 3
+        LinkedToNextNote: 0
+        ShouldSpawn: 1
+      - StartTime: 6.75
+        Duration: 0.25
+        Direction: 3
         LinkedToNextNote: 0
         ShouldSpawn: 1
       - StartTime: 8
-        Duration: 1
+        Duration: 0.25
+        Direction: 1
+        LinkedToNextNote: 0
+        ShouldSpawn: 1
+      - StartTime: 8.25
+        Duration: 0.25
+        Direction: 1
+        LinkedToNextNote: 0
+        ShouldSpawn: 1
+      - StartTime: 8.5
+        Duration: 0.25
+        Direction: 1
+        LinkedToNextNote: 0
+        ShouldSpawn: 1
+      - StartTime: 8.75
+        Duration: 0.25
         Direction: 1
         LinkedToNextNote: 0
         ShouldSpawn: 1
     - LeftLane:
       - StartTime: 1
-        Duration: 0
-        Direction: 0
+        Duration: 0.25
+        Direction: 2
         LinkedToNextNote: 0
         ShouldSpawn: 1
-      - StartTime: 2
-        Duration: 0
-        Direction: 0
+      - StartTime: 1.5
+        Duration: 0.25
+        Direction: 2
         LinkedToNextNote: 0
         ShouldSpawn: 1
       - StartTime: 3
-        Duration: 0
+        Duration: 1
         Direction: 0
-        LinkedToNextNote: 0
+        LinkedToNextNote: 1
         ShouldSpawn: 1
-      - StartTime: 4
-        Duration: 0
+      - StartTime: 3.75
+        Duration: 0.25
         Direction: 0
         LinkedToNextNote: 0
         ShouldSpawn: 1
       - StartTime: 5
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
+        Duration: 0.5
+        Direction: 1
+        LinkedToNextNote: 1
         ShouldSpawn: 1
-      - StartTime: 6
-        Duration: 0
-        Direction: 0
+      - StartTime: 5.5
+        Duration: 0.5
+        Direction: 3
         LinkedToNextNote: 0
         ShouldSpawn: 1
       - StartTime: 7
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
+        Duration: 0.5
+        Direction: 3
+        LinkedToNextNote: 1
         ShouldSpawn: 1
-      - StartTime: 8
-        Duration: 0
-        Direction: 0
+      - StartTime: 7.5
+        Duration: 0.5
+        Direction: 1
         LinkedToNextNote: 0
         ShouldSpawn: 1
       RightLane:
-      - StartTime: 1
-        Duration: 1
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
       - StartTime: 2
         Duration: 1
-        Direction: 1
-        LinkedToNextNote: 0
+        Direction: 2
+        LinkedToNextNote: 1
         ShouldSpawn: 1
-      - StartTime: 3
-        Duration: 1
-        Direction: 0
+      - StartTime: 2.75
+        Duration: 0.25
+        Direction: 2
         LinkedToNextNote: 0
         ShouldSpawn: 1
       - StartTime: 4
         Duration: 1
-        Direction: 1
-        LinkedToNextNote: 0
+        Direction: 0
+        LinkedToNextNote: 1
         ShouldSpawn: 1
-      - StartTime: 5
-        Duration: 1
+      - StartTime: 4.75
+        Duration: 0.25
         Direction: 0
         LinkedToNextNote: 0
         ShouldSpawn: 1
       - StartTime: 6
-        Duration: 1
+        Duration: 0.5
+        Direction: 3
+        LinkedToNextNote: 1
+        ShouldSpawn: 1
+      - StartTime: 6.5
+        Duration: 0.5
         Direction: 1
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 7
-        Duration: 1
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 8
-        Duration: 1
-        Direction: 1
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-    - LeftLane:
-      - StartTime: 1
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 2
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 3
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 4
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 5
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 6
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 7
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
+        LinkedToNextNote: 1
         ShouldSpawn: 1
       - StartTime: 8
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      RightLane:
-      - StartTime: 1
-        Duration: 1
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 2
-        Duration: 1
-        Direction: 1
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 3
-        Duration: 1
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 4
-        Duration: 1
-        Direction: 1
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 5
-        Duration: 1
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 6
-        Duration: 1
-        Direction: 1
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 7
-        Duration: 1
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 8
-        Duration: 1
-        Direction: 1
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-    BeatsPerMinute: 110
-  - LoopId: play2a
-    AudioAssetId: play2a
-    Tracks:
-    - LeftLane:
-      - StartTime: 1
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 2
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 3
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 4
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 5
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 6
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 7
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 8
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      RightLane:
-      - StartTime: 1
-        Duration: 1
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 2
-        Duration: 1
-        Direction: 1
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 3
-        Duration: 1
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 4
-        Duration: 1
-        Direction: 1
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 5
-        Duration: 1
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 6
-        Duration: 1
-        Direction: 1
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 7
-        Duration: 1
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 8
-        Duration: 1
-        Direction: 1
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-    - LeftLane:
-      - StartTime: 1
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 2
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 3
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 4
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 5
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 6
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 7
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 8
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      RightLane:
-      - StartTime: 1
-        Duration: 1
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 2
-        Duration: 1
-        Direction: 1
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 3
-        Duration: 1
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 4
-        Duration: 1
-        Direction: 1
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 5
-        Duration: 1
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 6
-        Duration: 1
-        Direction: 1
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 7
-        Duration: 1
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 8
-        Duration: 1
-        Direction: 1
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-    - LeftLane:
-      - StartTime: 1
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 2
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 3
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 4
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 5
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 6
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 7
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 8
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      RightLane:
-      - StartTime: 1
-        Duration: 1
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 2
-        Duration: 1
-        Direction: 1
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 3
-        Duration: 1
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 4
-        Duration: 1
-        Direction: 1
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 5
-        Duration: 1
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 6
-        Duration: 1
-        Direction: 1
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 7
-        Duration: 1
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 8
-        Duration: 1
-        Direction: 1
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-    - LeftLane:
-      - StartTime: 1
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 2
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 3
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 4
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 5
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 6
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 7
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 8
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      RightLane:
-      - StartTime: 1
-        Duration: 1
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 2
-        Duration: 1
-        Direction: 1
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 3
-        Duration: 1
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 4
-        Duration: 1
-        Direction: 1
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 5
-        Duration: 1
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 6
-        Duration: 1
-        Direction: 1
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 7
-        Duration: 1
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 8
-        Duration: 1
-        Direction: 1
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-    BeatsPerMinute: 110
-  - LoopId: play2b
-    AudioAssetId: play2b
-    Tracks:
-    - LeftLane:
-      - StartTime: 1
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 2
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 3
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 4
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 5
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 6
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 7
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 8
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      RightLane:
-      - StartTime: 1
-        Duration: 1
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 2
-        Duration: 1
-        Direction: 1
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 3
-        Duration: 1
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 4
-        Duration: 1
-        Direction: 1
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 5
-        Duration: 1
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 6
-        Duration: 1
-        Direction: 1
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 7
-        Duration: 1
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 8
-        Duration: 1
-        Direction: 1
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-    - LeftLane:
-      - StartTime: 1
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 2
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 3
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 4
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 5
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 6
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 7
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 8
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      RightLane:
-      - StartTime: 1
-        Duration: 1
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 2
-        Duration: 1
-        Direction: 1
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 3
-        Duration: 1
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 4
-        Duration: 1
-        Direction: 1
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 5
-        Duration: 1
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 6
-        Duration: 1
-        Direction: 1
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 7
-        Duration: 1
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 8
-        Duration: 1
-        Direction: 1
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-    - LeftLane:
-      - StartTime: 1
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 2
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 3
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 4
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 5
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 6
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 7
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 8
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      RightLane:
-      - StartTime: 1
-        Duration: 1
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 2
-        Duration: 1
-        Direction: 1
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 3
-        Duration: 1
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 4
-        Duration: 1
-        Direction: 1
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 5
-        Duration: 1
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 6
-        Duration: 1
-        Direction: 1
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 7
-        Duration: 1
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 8
-        Duration: 1
-        Direction: 1
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-    - LeftLane:
-      - StartTime: 1
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 2
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 3
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 4
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 5
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 6
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 7
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 8
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      RightLane:
-      - StartTime: 1
-        Duration: 1
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 2
-        Duration: 1
-        Direction: 1
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 3
-        Duration: 1
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 4
-        Duration: 1
+        Duration: 0.5
         Direction: 1
-        LinkedToNextNote: 0
+        LinkedToNextNote: 1
         ShouldSpawn: 1
-      - StartTime: 5
-        Duration: 1
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 6
-        Duration: 1
-        Direction: 1
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 7
-        Duration: 1
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 8
-        Duration: 1
-        Direction: 1
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-    BeatsPerMinute: 110
-  - LoopId: play3a
-    AudioAssetId: play3a
-    Tracks:
-    - LeftLane:
-      - StartTime: 1
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 2
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 3
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 4
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 5
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 6
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 7
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 8
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      RightLane:
-      - StartTime: 1
-        Duration: 1
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 2
-        Duration: 1
-        Direction: 1
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 3
-        Duration: 1
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 4
-        Duration: 1
-        Direction: 1
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 5
-        Duration: 1
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 6
-        Duration: 1
-        Direction: 1
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 7
-        Duration: 1
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 8
-        Duration: 1
-        Direction: 1
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-    - LeftLane:
-      - StartTime: 1
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 2
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 3
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 4
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 5
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 6
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 7
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 8
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      RightLane:
-      - StartTime: 1
-        Duration: 1
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 2
-        Duration: 1
-        Direction: 1
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 3
-        Duration: 1
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 4
-        Duration: 1
-        Direction: 1
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 5
-        Duration: 1
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 6
-        Duration: 1
-        Direction: 1
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 7
-        Duration: 1
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 8
-        Duration: 1
-        Direction: 1
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-    - LeftLane:
-      - StartTime: 1
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 2
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 3
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 4
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 5
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 6
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 7
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 8
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      RightLane:
-      - StartTime: 1
-        Duration: 1
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 2
-        Duration: 1
-        Direction: 1
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 3
-        Duration: 1
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 4
-        Duration: 1
-        Direction: 1
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 5
-        Duration: 1
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 6
-        Duration: 1
-        Direction: 1
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 7
-        Duration: 1
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 8
-        Duration: 1
-        Direction: 1
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-    - LeftLane:
-      - StartTime: 1
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 2
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 3
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 4
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 5
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 6
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 7
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 8
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      RightLane:
-      - StartTime: 1
-        Duration: 1
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 2
-        Duration: 1
-        Direction: 1
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 3
-        Duration: 1
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 4
-        Duration: 1
-        Direction: 1
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 5
-        Duration: 1
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 6
-        Duration: 1
-        Direction: 1
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 7
-        Duration: 1
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 8
-        Duration: 1
-        Direction: 1
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-    BeatsPerMinute: 110
-  - LoopId: play3b
-    AudioAssetId: play3b
-    Tracks:
-    - LeftLane:
-      - StartTime: 1
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 2
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 3
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 4
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 5
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 6
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 7
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 8
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      RightLane:
-      - StartTime: 1
-        Duration: 1
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 2
-        Duration: 1
-        Direction: 1
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 3
-        Duration: 1
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 4
-        Duration: 1
-        Direction: 1
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 5
-        Duration: 1
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 6
-        Duration: 1
-        Direction: 1
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 7
-        Duration: 1
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 8
-        Duration: 1
-        Direction: 1
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-    - LeftLane:
-      - StartTime: 1
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 2
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 3
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 4
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 5
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 6
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 7
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 8
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      RightLane:
-      - StartTime: 1
-        Duration: 1
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 2
-        Duration: 1
-        Direction: 1
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 3
-        Duration: 1
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 4
-        Duration: 1
-        Direction: 1
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 5
-        Duration: 1
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 6
-        Duration: 1
-        Direction: 1
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 7
-        Duration: 1
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 8
-        Duration: 1
-        Direction: 1
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-    - LeftLane:
-      - StartTime: 1
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 2
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 3
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 4
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 5
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 6
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 7
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 8
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      RightLane:
-      - StartTime: 1
-        Duration: 1
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 2
-        Duration: 1
-        Direction: 1
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 3
-        Duration: 1
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 4
-        Duration: 1
-        Direction: 1
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 5
-        Duration: 1
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 6
-        Duration: 1
-        Direction: 1
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 7
-        Duration: 1
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 8
-        Duration: 1
-        Direction: 1
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-    - LeftLane:
-      - StartTime: 1
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 2
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 3
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 4
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 5
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 6
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 7
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 8
-        Duration: 0
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      RightLane:
-      - StartTime: 1
-        Duration: 1
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 2
-        Duration: 1
-        Direction: 1
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 3
-        Duration: 1
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 4
-        Duration: 1
-        Direction: 1
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 5
-        Duration: 1
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 6
-        Duration: 1
-        Direction: 1
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 7
-        Duration: 1
-        Direction: 0
-        LinkedToNextNote: 0
-        ShouldSpawn: 1
-      - StartTime: 8
-        Duration: 1
-        Direction: 1
-        LinkedToNextNote: 0
+      - StartTime: 8.5
+        Duration: 0.5
+        Direction: 3
+        LinkedToNextNote: 1
         ShouldSpawn: 1
     BeatsPerMinute: 110
   _playerTracks:
