@@ -68,7 +68,10 @@ public class TrackManager : MonoBehaviour
 
             for (int i = 0; i < _playerTracks.Count; i++)
             {
-                _playerTracks[i].Initialize(loop.Tracks[i]); ;
+                if (loop.Tracks.Count > i)
+                {
+                    _playerTracks[i].Initialize(loop.Tracks[i]);
+                }
             }
 
             AudioManager.Instance.PlaySound(loop.AudioAssetId, true);

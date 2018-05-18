@@ -25,6 +25,8 @@ public class PhaseManager : MonoBehaviour
         }
     }
 
+    [SerializeField] private FadeThenDisable _splashFade;
+
     private void Awake()
     {
         // Wont need this just for clarification.
@@ -44,6 +46,13 @@ public class PhaseManager : MonoBehaviour
     {
         _currentGamePhase = GameflowPhases.Intro;
         AudioManager.Instance.PlaySound("splash");
+        StartCoroutine(FadeSplashAfterTime(10));
+    }
+
+    private IEnumerator FadeSplashAfterTime(float waitTime)
+    {
+        yield return new WaitForSeconds(waitTime);
+        _splashFade.StartFade();
     }
 
     public void NextPhase()

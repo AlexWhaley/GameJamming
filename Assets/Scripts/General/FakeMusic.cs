@@ -5,8 +5,7 @@ using UnityEngine;
 public class FakeMusic : MonoBehaviour
 {
     [SerializeField]
-    private GameObject _rhythmCanvas;
-    private Coroutine _musicRoutine; 
+    private GameObject _rhythmCanvas; 
 
     private void Start()
     {
@@ -33,7 +32,7 @@ public class FakeMusic : MonoBehaviour
 
     public void StopMusicLoop()
     {
-        StopCoroutine(_musicRoutine);
+        AudioManager.Instance.PlaySound("end_win");
     }
 
     private void InidicateRhythm(bool isActive)
