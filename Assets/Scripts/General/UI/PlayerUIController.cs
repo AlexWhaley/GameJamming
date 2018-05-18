@@ -23,6 +23,7 @@ public class PlayerUIController : MonoBehaviour
     {
         _actionMenuController.HideActionMenu();
         _playerActionTargeter.RemoveAllIndicators();
+        _playerActionTargeter.UnregisterInputHandlersIfRegistered();
     }
 
     public void InitiateTargettingSequence(Action selectedAction)

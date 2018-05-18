@@ -17,6 +17,8 @@ public class PlayerActionTargeter : MonoBehaviour, InputCommandHandler
     private int _currentTargetedActionIndex;
     private List<ExecuteableAction> _confirmedActions;
 
+    private bool _isRegistered = false;
+
     private enum TargetSelectionMode
     {
         Choice,
@@ -240,6 +242,8 @@ public class PlayerActionTargeter : MonoBehaviour, InputCommandHandler
 
     public void RegisterInputHandlers()
     {
+        _isRegistered = true;
+
         var playerInputHandler = InputManager.Instance.GetPlayerInputHandler(_attatchedPlayer);
         playerInputHandler.ConfirmButtonPress += HandleConfirmButton;
         playerInputHandler.BackButtonPress += HandleBackButton;
@@ -249,12 +253,22 @@ public class PlayerActionTargeter : MonoBehaviour, InputCommandHandler
 
     public void UnregisterInputHandlers()
     {
+        _isRegistered = false;
+
         var playerInputHandler = InputManager.Instance.GetPlayerInputHandler(_attatchedPlayer);
         playerInputHandler.ConfirmButtonPress -= HandleConfirmButton;
         playerInputHandler.BackButtonPress -= HandleBackButton;
         playerInputHandler.LeftButtonPress -= HandleLeftButton;
         playerInputHandler.RightButtonPress -= HandleRightButton;
 
+    }
+
+    public void UnregisterInputHandlersIfRegistered()
+    {
+        if (_isRegistered)
+        {
+            UnregisterInputHandlers();
+        }
     }
 }
 
