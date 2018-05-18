@@ -27,6 +27,7 @@ public class Character : MonoBehaviour
     public bool IsAlive { get; private set; }
 
     public TargetIndicatorController TargetIndicatorController { get; private set; }
+    private HealthBar _healthBar;
 
     public float ArmorModifier
     {
@@ -43,6 +44,20 @@ public class Character : MonoBehaviour
         get { return _healModifier; }
     }
 
+    public float CurrentHealth
+    {
+        get
+        {
+            return _currentHealth;
+        }
+        set
+        {
+            _currentHealth = value;
+            _healthBar.SetSliderValue(_currentHealth / _healthStat);
+        }
+    }
+
+
     private void Awake()
     {
         PrefabSpawner[] prefabSpawners = GetComponentsInChildren<PrefabSpawner>();
@@ -58,6 +73,7 @@ public class Character : MonoBehaviour
     {
         TargetIndicatorController = GetComponentInChildren<TargetIndicatorController>();
         _actionAnimator = GetComponentInChildren<Animator>();
+        _healthBar = GetComponentInChildren<HealthBar>();
     }
 
     public void InitialiseBattle()
@@ -68,13 +84,21 @@ public class Character : MonoBehaviour
 
     public void ApplyDamage(int damage)
     {
-        _healthStat -= (int)(damage * _shieldModifier);
-        _actionAnimator.SetTrigger("PlayDamage");
-
-        if (_currentHealth <= 0)
+        if (IsAlive)
         {
-            IsAlive = false;
-            _currentHealth = 0;
+            float potentialHealth = CurrentHealth - (int)(damage * _shieldModifier);
+
+            _actionAnimator.SetTrigger("PlayDamage");
+
+            if (potentialHealth <= 0)
+            {
+                IsAlive = false;
+                CurrentHealth = 0.0f;
+            }
+            else
+            {
+                CurrentHealth = potentialHealth;
+            }
         }
     }
 
@@ -82,8 +106,18 @@ public class Character : MonoBehaviour
     {
         if (IsAlive)
         {
-            _currentHealth += healing;
+            float potentialHealth = CurrentHealth + healing;
+
             _actionAnimator.SetTrigger("PlayHeal");
+
+            if (potentialHealth > _healthStat)
+            {
+                CurrentHealth = _healthStat;
+            }
+            else
+            {
+                CurrentHealth = potentialHealth;
+            }
         }
     }
 
@@ -91,6 +125,7 @@ public class Character : MonoBehaviour
     {
         if (IsAlive)
         {
+            _actionAnimator.SetTrigger("PlayShield");
             _shieldModifier -= _shieldTurnDuration;
         }
     }
