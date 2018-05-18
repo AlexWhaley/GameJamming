@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using UnityEngine;
 
 [Serializable]
 public class AudioTrack
@@ -16,6 +17,9 @@ public class Note
     public float StartTime;
     public float Duration;
     public Direction Direction;
+    public bool LinkedToNextNote;
+    public Note NextNote;
+    [HideInInspector] public bool ShouldSpawn = true;
 }
 
 public enum Direction

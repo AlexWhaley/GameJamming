@@ -76,6 +76,7 @@ public class PlayerInputHandler : MonoBehaviour
         else if (Input.GetKeyDown(BackButton) || Input.GetButtonDown(_playerID + "Back"))
         {
             BackButtonPress();
+            Debug.Log(_playerID + " pressed back");
         }
         else if (Input.GetKeyDown(UpButton))
         {

@@ -101,11 +101,13 @@ public class NoteViewModel : MonoBehaviour
                     _laneViewModel.NotesInCatcher.Dequeue();
                     _laneViewModel.HeldNotes.Enqueue(this);
                 }
+                _laneViewModel.NotesHit++;
             }
             else
             {
                 Debug.Log("Note hit incorrectly.");
                 _laneViewModel.NotesInCatcher.Dequeue();
+                SetNextNoteNotToSpawn(_noteData.NextNote);
                 Destroy(gameObject);
             }
         }
@@ -122,7 +124,17 @@ public class NoteViewModel : MonoBehaviour
         else
         {
             Debug.Log("Note tail released early");
+            SetNextNoteNotToSpawn(_noteData.NextNote);
             Destroy(gameObject);
+        }
+    }
+
+    private void SetNextNoteNotToSpawn(Note nextNote)
+    {
+        nextNote.ShouldSpawn = false;
+        if (nextNote.NextNote != null)
+        {
+            SetNextNoteNotToSpawn(nextNote.NextNote);
         }
     }
 
@@ -137,6 +149,11 @@ public class NoteViewModel : MonoBehaviour
                 _destructPosition,
                 trackTime
             );
+
+            if (!_noteData.ShouldSpawn)
+            {
+                Destroy(gameObject);
+            }
         }
     }
 
@@ -155,6 +172,7 @@ public class NoteViewModel : MonoBehaviour
         if (!HasBeenHit && _laneViewModel.NotesInCatcher.Any())
         {
             _laneViewModel.NotesInCatcher.Dequeue();
+            SetNextNoteNotToSpawn(_noteData.NextNote);
             Destroy(gameObject);
         }
     }

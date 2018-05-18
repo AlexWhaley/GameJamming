@@ -12,6 +12,9 @@ public class TrackViewModel : MonoBehaviour
     [SerializeField] private LaneViewModel _leftLane;
     [SerializeField] private LaneViewModel _rightLane;
 
+    public int NotesHit;
+    public int TotalNotes;
+
     private void Start()
     {
         _input = InputManager.Instance.GetPlayerInputHandler(_attachedCharacter);
@@ -20,6 +23,8 @@ public class TrackViewModel : MonoBehaviour
     public void Initialize(AudioTrack track)
     {
         _trackData = track;
+        NotesHit = 0;
+        TotalNotes = _trackData.LeftLane.Count + _trackData.RightLane.Count;
         _leftLane.Initialize(_attachedCharacter, Lane.Left, _trackData.LeftLane);
         _rightLane.Initialize(_attachedCharacter, Lane.Right, _trackData.RightLane);
     }
@@ -28,6 +33,8 @@ public class TrackViewModel : MonoBehaviour
     {
         UpdateLaneInput(_leftLane, _input.LeftStick);
         UpdateLaneInput(_rightLane, _input.RightStick);
+
+        NotesHit = _leftLane.NotesHit + _rightLane.NotesHit;
     }
 
     private void UpdateLaneInput(LaneViewModel lane, PlayerInputHandler.AnalogueStick analogueStick)

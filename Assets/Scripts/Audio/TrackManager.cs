@@ -26,6 +26,21 @@ public class TrackManager : MonoBehaviour
         Instance = this;
         _playQueue = new Queue<AudioLoop>();
         _rng = new System.Random(DateTime.Now.Second);
+
+        foreach(var loop in _audioLoops)
+        {
+            foreach(var track in loop.Tracks)
+            {
+                for (int i = 0; i < track.LeftLane.Count - 1; i++)
+                {
+                    track.LeftLane[i].NextNote = track.LeftLane[i + 1];
+                }
+                for (int i = 0; i < track.RightLane.Count - 1; i++)
+                {
+                    track.RightLane[i].NextNote = track.RightLane[i + 1];
+                }
+            }
+        }
     }
 
     public void QueueUpNextPlayerLoop()

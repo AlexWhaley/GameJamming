@@ -25,6 +25,8 @@ public class LaneViewModel : MonoBehaviour
     public Queue<NoteViewModel> NotesInCatcher;
     public Queue<NoteViewModel> HeldNotes;
 
+    public int NotesHit;
+
     public void Initialize(PlayerCharacter attachedCharacter, Lane lane, List<Note> notes)
     {
         _attachedCharacter = attachedCharacter;
@@ -32,6 +34,8 @@ public class LaneViewModel : MonoBehaviour
         _notes = notes;
 
         _nextIndex = 0;
+
+        NotesHit = 0;
 
         NotesInCatcher = new Queue<NoteViewModel>();
         HeldNotes = new Queue<NoteViewModel>();
@@ -48,7 +52,7 @@ public class LaneViewModel : MonoBehaviour
     private void UpdateTrackNotes()
     {
         Note nextNote = GetNextNote();
-        if (_nextIndex < GetNoteCount() && nextNote.StartTime < AudioManager.Instance.SongPosition + TrackManager.Instance.BeatsShownInAdvance)
+        if (_nextIndex < GetNoteCount() && nextNote.StartTime < AudioManager.Instance.SongPosition + TrackManager.Instance.BeatsShownInAdvance && nextNote.ShouldSpawn)
         {
             SpawnNote(nextNote);
 
