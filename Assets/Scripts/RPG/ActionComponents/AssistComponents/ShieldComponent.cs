@@ -9,6 +9,15 @@ public class ShieldComponent : ActionComponent
 
     public override void ExecuteAction(Character target, Character targeter, float modifier)
     {
+        if (targeter is PlayerCharacter)
+        {
+            PeformanceModifier = 0.5f + PerformanceManager.Instance.GetCharacterPerformance((PlayerCharacter)targeter);
+        }
+        else
+        {
+            PeformanceModifier = 1.0f;
+        }
+
         int modifiedShieldModifier = (int)(modifier * BaseShieldModifier);
         target.ApplyShield(modifiedShieldModifier);
     }
