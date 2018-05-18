@@ -36,7 +36,7 @@ public class ActionMenuController : MonoBehaviour, InputCommandHandler
     private TextMeshProUGUI _actionDescription;
 
     [SerializeField] private GameObject _readyMessage;
-    [SerializeField] private Image _borderImage;
+    [SerializeField] private List<Image> _colouredUI;
 
     private ActionMenus _currentMenu;
     private int _currentSelectionIndex;
@@ -61,14 +61,11 @@ public class ActionMenuController : MonoBehaviour, InputCommandHandler
     {
         _uiController = GetComponentInParent<PlayerUIController>();
         _attatchedPlayer = _uiController.AttatchedPlayer;
-        _borderImage.color = _uiController.HudColor;
-
-    }
-
-    private void Start()
-    {
+        foreach (var image in _colouredUI)
+        {
+            image.color = _uiController.HudColor;
+        }
         BuildActionMenu();
-        RevealActionMenu(true);
     }
 
     private void BuildActionMenu()
@@ -80,19 +77,20 @@ public class ActionMenuController : MonoBehaviour, InputCommandHandler
 
     public void RevealActionMenu(bool freshOpen)
     {
+        gameObject.SetActive(true);
         if (freshOpen)
         {
+            BattleManager.Instance.StartPlayersTurns();
             NavigateToActionMenu(ActionMenus.Root, true);
         }
         else
         {
             NavigateToActionMenu(_currentMenu, false);
         }
-        gameObject.SetActive(true);
         RegisterInputHandlers();
     }
 
-    private void HideActionMenu()
+    public void HideActionMenu()
     {
         gameObject.SetActive(false);
     }

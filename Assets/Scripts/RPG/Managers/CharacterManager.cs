@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -10,6 +11,8 @@ public class CharacterManager : MonoBehaviour
 
     [SerializeField]
     List<Character> _enemyCharacters;
+
+    private System.Random _rand;
 
     private static CharacterManager _instance;
     public static CharacterManager Instance
@@ -31,6 +34,7 @@ public class CharacterManager : MonoBehaviour
         {
             // If the singleton hasn't been initialized yet
             _instance = this;
+            _rand = new System.Random();
         }
     }
 
@@ -44,7 +48,8 @@ public class CharacterManager : MonoBehaviour
         var range = characters.Count;
         if (range != 0)
         {
-            int randomIndex = Random.Range(0, range);
+
+            int randomIndex = _rand.Next(0, range);
             return characters[randomIndex];
         }
         Debug.LogError("Can't fetch a random character from an empty list of characters.");
@@ -71,6 +76,11 @@ public class CharacterManager : MonoBehaviour
     public Character GetRandomAliveEnemy()
     {
         return GetRandomCharacter(AliveCharacters(_enemyCharacters));
+    }
+
+    public List<Character> GetPlayers()
+    {
+        return _playerCharacters;
     }
 
     public List<Character> GetAlivePlayers()

@@ -19,6 +19,12 @@ public class PlayerUIController : MonoBehaviour
         _actionMenuController.RevealActionMenu(isFreshOpen);
     }
 
+    public void EndActionSelection()
+    {
+        _actionMenuController.HideActionMenu();
+        _playerActionTargeter.RemoveAllIndicators();
+    }
+
     public void InitiateTargettingSequence(Action selectedAction)
     {
         _playerActionTargeter.InitiateTargettingSequence(selectedAction);

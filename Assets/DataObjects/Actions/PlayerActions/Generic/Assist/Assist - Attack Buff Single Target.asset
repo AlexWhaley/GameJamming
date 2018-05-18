@@ -9,13 +9,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3a540db424f3bdf4cb78dd197c52653f, type: 3}
-  m_Name: Assist - Shield All Allies
+  m_Name: Assist - Attack Buff Single Target
   m_EditorClassIdentifier: 
-  ActionName: Shield All
-  ActionDescription: Shield all allies from a small amount of damage.
+  ActionName: Attack Buff
+  ActionDescription: Buff a single targets damage for one attack.
   TargetedActions:
-  - ActionPartName: ShieldAllAllies
-    SelectionPromptMessage: 
-    TargetType: 4
+  - ActionPartName: AttackBoostSingleTarget
+    SelectionPromptMessage: Select an ally to give a strong attack boost for one attack.
+    TargetType: 1
     ActionComponents:
     - {fileID: 11400000, guid: e94cd8f8e8594054ca08150ec7f85c52, type: 2}

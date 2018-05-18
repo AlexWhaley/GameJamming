@@ -22,12 +22,13 @@ public class Character : MonoBehaviour
     
     // Current shield properties
     private float _shieldModifier = 1.0f;
-    private int _shieldTurnDuration = 0;
+    private float _attackBuffModifier = 1.0f;
 
     public bool IsAlive { get; private set; }
 
     public TargetIndicatorController TargetIndicatorController { get; private set; }
     private HealthBar _healthBar;
+    private BuffController _buffController;
 
     public float ArmorModifier
     {
@@ -74,6 +75,7 @@ public class Character : MonoBehaviour
         TargetIndicatorController = GetComponentInChildren<TargetIndicatorController>();
         _actionAnimator = GetComponentInChildren<Animator>();
         _healthBar = GetComponentInChildren<HealthBar>();
+        _buffController = GetComponentInChildren<BuffController>();
     }
 
     public void InitialiseBattle()
@@ -126,24 +128,40 @@ public class Character : MonoBehaviour
         if (IsAlive)
         {
             _actionAnimator.SetTrigger("PlayShield");
-            _shieldModifier -= _shieldTurnDuration;
-        }
-    }
-
-    public void TickTurnEffects()
-    {
-        ReduceShield();
-    }
-
-    private void ReduceShield()
-    {
-        if(_shieldTurnDuration > 0)
-        {
-            if (--_shieldTurnDuration == 0)
+            _shieldModifier -= newShieldModifier;
+            if (_shieldModifier < 0.0f)
             {
-                _shieldModifier = 1.0f;
+                _shieldModifier = 0.0f;
             }
+            _buffController.SetShieldBuffActive(true);
         }
+    }
+
+    public void ApplyAttackBuff(float newAttackModifier)
+    {
+        if (IsAlive)
+        {
+            _actionAnimator.SetTrigger("PlayAttackBuff");
+            _attackBuffModifier += newAttackModifier;
+            if (_attackBuffModifier > 2.5f)
+            {
+                _attackBuffModifier = 2.5f;
+            }
+            _buffController.SetAttackBuffActive(true);
+        }
+    }
+
+    public void ResetShieldModifier()
+    {
+        _shieldModifier = 1.0f;
+        _buffController.SetShieldBuffActive(false);
+
+    }
+
+    public void ResetAttackBuffModifier()
+    {
+        _attackBuffModifier = 1.0f;
+        _buffController.SetAttackBuffActive(false);
     }
 
     private void SetTargeted(Character targetedBy, bool isTargeted)
