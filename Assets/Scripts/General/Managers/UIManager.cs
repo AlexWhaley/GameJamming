@@ -26,11 +26,10 @@ public class UIManager : MonoBehaviour
         {
             // If the singleton hasn't been initialized yet
             _instance = this;
-            Initialise();
         }
     }
 
-    private void Initialise()
+    private void Start()
     {
         PhaseManager.Instance.ActionSelectionAndEnemyAttacksStarted += RevealAllActionMenus;
         PhaseManager.Instance.IntroActionSelectionStarted += RevealAllActionMenus;

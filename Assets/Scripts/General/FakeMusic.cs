@@ -8,7 +8,7 @@ public class FakeMusic : MonoBehaviour
     private GameObject _rhythmIndicator;
     private Coroutine _musicRoutine; 
 
-    private void Awake()
+    private void Start()
     {
         PhaseManager.Instance.IntroFinished += StartMusicLoop;
         PhaseManager.Instance.EndPhaseStarted += StopMusicLoop;

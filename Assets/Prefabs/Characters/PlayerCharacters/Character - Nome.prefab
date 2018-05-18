@@ -279,7 +279,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: db33cea76b1264e4097ff7b45589d96f, type: 2}
   - {fileID: 11400000, guid: 908a816c3eec97f4f91d27547ae0d971, type: 2}
   _assistActions:
-  - {fileID: 11400000, guid: b1f89dbf850c2d6409577dead5a5805b, type: 2}
+  - {fileID: 11400000, guid: daa887f10864f874196e975ce4996054, type: 2}
   - {fileID: 11400000, guid: 7e44b2b2af0ee884a99d2a49ae00beff, type: 2}
   _healActions:
   - {fileID: 11400000, guid: 1b30aa5ffd2ee7a4eb5e9f072e732109, type: 2}

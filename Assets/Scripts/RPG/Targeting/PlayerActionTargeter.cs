@@ -129,7 +129,7 @@ public class PlayerActionTargeter : MonoBehaviour, InputCommandHandler
 
     private void LockInAction()
     {
-        if (_currentTargetedActionIndex <= _actionsToTarget.Count)
+        if (_currentTargetedActionIndex < _actionsToTarget.Count)
         {
             ExecuteableAction actionToLock = new ExecuteableAction(_attatchedPlayer, CurrentTargetedAction);
             switch (_currentTargetSelectionMode)
