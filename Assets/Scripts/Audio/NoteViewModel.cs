@@ -100,6 +100,7 @@ public class NoteViewModel : MonoBehaviour
                     Debug.Log("Note hit started.");
                     _laneViewModel.NotesInCatcher.Dequeue();
                     _laneViewModel.HeldNotes.Enqueue(this);
+                    _tailImage.color = new Color(0.7f, 0.7f, 0.7f, 1.0f);
                 }
                 _laneViewModel.NotesHit++;
             }
@@ -107,7 +108,10 @@ public class NoteViewModel : MonoBehaviour
             {
                 Debug.Log("Note hit incorrectly.");
                 _laneViewModel.NotesInCatcher.Dequeue();
-                SetNextNoteNotToSpawn(_noteData.NextNote);
+                if (_noteData.LinkedToNextNote && _noteData.NextNote != null)
+                {
+                    SetNextNoteNotToSpawn(_noteData.NextNote);
+                }
                 Destroy(gameObject);
             }
         }
@@ -124,17 +128,20 @@ public class NoteViewModel : MonoBehaviour
         else
         {
             Debug.Log("Note tail released early");
-            SetNextNoteNotToSpawn(_noteData.NextNote);
+            if (_noteData.LinkedToNextNote && _noteData.NextNote != null)
+            {
+                SetNextNoteNotToSpawn(_noteData.NextNote);
+            }
             Destroy(gameObject);
         }
     }
 
-    private void SetNextNoteNotToSpawn(Note nextNote)
+    private void SetNextNoteNotToSpawn(Note note)
     {
-        nextNote.ShouldSpawn = false;
-        if (nextNote.NextNote != null)
+        note.ShouldSpawn = false;
+        if (note.LinkedToNextNote && note.NextNote != null)
         {
-            SetNextNoteNotToSpawn(nextNote.NextNote);
+            SetNextNoteNotToSpawn(note.NextNote);
         }
     }
 
@@ -172,7 +179,10 @@ public class NoteViewModel : MonoBehaviour
         if (!HasBeenHit && _laneViewModel.NotesInCatcher.Any())
         {
             _laneViewModel.NotesInCatcher.Dequeue();
-            SetNextNoteNotToSpawn(_noteData.NextNote);
+            if (_noteData.LinkedToNextNote && _noteData.NextNote != null)
+            {
+                SetNextNoteNotToSpawn(_noteData.NextNote);
+            }
             Destroy(gameObject);
         }
     }
