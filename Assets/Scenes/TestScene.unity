@@ -609,6 +609,48 @@ MonoBehaviour:
     PlayerInputHandler: {fileID: 675719857}
   - Character: {fileID: 960510893}
     PlayerInputHandler: {fileID: 903775428}
+--- !u!1001 &324031845
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4663318033723664, guid: f12001e68f7a2f24f8f07f2d123e5264, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4663318033723664, guid: f12001e68f7a2f24f8f07f2d123e5264, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4663318033723664, guid: f12001e68f7a2f24f8f07f2d123e5264, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4663318033723664, guid: f12001e68f7a2f24f8f07f2d123e5264, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4663318033723664, guid: f12001e68f7a2f24f8f07f2d123e5264, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4663318033723664, guid: f12001e68f7a2f24f8f07f2d123e5264, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4663318033723664, guid: f12001e68f7a2f24f8f07f2d123e5264, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4663318033723664, guid: f12001e68f7a2f24f8f07f2d123e5264, type: 2}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: f12001e68f7a2f24f8f07f2d123e5264, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &346670033
 Prefab:
   m_ObjectHideFlags: 0
@@ -2672,6 +2714,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1553637704}
   - component: {fileID: 1553637705}
+  - component: {fileID: 1553637706}
   m_Layer: 5
   m_Name: UI - Yama
   m_TagString: Untagged
@@ -2714,6 +2757,24 @@ MonoBehaviour:
   _hudColor: {r: 0.6039216, g: 0.21568628, b: 0.85882354, a: 1}
   _actionMenuController: {fileID: 2064662427}
   _playerActionTargeter: {fileID: 646756069}
+--- !u!95 &1553637706
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1553637703}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 37e0f0550c4a61c4db7abafcd13a03ec, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1633142343
 GameObject:
   m_ObjectHideFlags: 0
