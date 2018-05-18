@@ -11,31 +11,49 @@ public class TrackManager : MonoBehaviour
     public float YScale;
     public int BeatsShownInAdvance = 4;
 
-    [SerializeField] private List<AudioTrack> _audioTracks;
+    [SerializeField] private List<AudioLoop> _audioLoops;
 
     [SerializeField] private List<TrackViewModel> _playerTracks;
 
     public bool PlayingTrack = false;
 
+    private Queue<AudioLoop> _playQueue;
+
+    private System.Random _rng;
+
     private void Awake()
     {
         Instance = this;
+        _playQueue = new Queue<AudioLoop>();
+        _rng = new System.Random(DateTime.Now.Second);
     }
 
-    public void PlayTrack(string trackId)
+    public void AddLoopToQueue(string loopId)
     {
-        AudioTrack audioTrack = GetTrackFromId(trackId);
-
-        foreach (var playerTrack in _playerTracks)
+        AudioLoop loop = GetLoopFromId(loopId);
+        if (loop != null)
         {
-            playerTrack.Initialize(GetTrackFromId("demoTrack"));
+            _playQueue.Enqueue(loop);
+            Debug.Log("Added [" + loopId + "] to queue.");
         }
-
-        AudioManager.Instance.AddSoundToQueue(audioTrack.AudioAssetId, true);
     }
 
-    public AudioTrack GetTrackFromId(string trackId)
+    public void PlayNextLoop()
     {
-        return _audioTracks.FirstOrDefault(x => x.TrackId == trackId);
+        if (_playQueue.Any())
+        {
+            AudioLoop loop = _playQueue.Dequeue();
+
+            for (int i = 0; i < _playerTracks.Count; i++)
+            {
+                _playerTracks[i].Initialize(loop.Tracks[i]); ;
+            }
+
+            AudioManager.Instance.AddSoundToQueue(loop.AudioAssetId, true);
+        }
+    }
+    public AudioLoop GetLoopFromId(string loopId)
+    {
+        return _audioLoops.FirstOrDefault(x => x.LoopId == loopId);
     }
 }

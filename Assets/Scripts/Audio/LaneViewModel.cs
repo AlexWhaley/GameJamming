@@ -16,7 +16,7 @@ public class LaneViewModel : MonoBehaviour
     [SerializeField] private RectTransform _spawn;
     [SerializeField] private RectTransform _destruct;
     
-    public List<NoteGroup> _noteGroups;
+    public List<Note> _notes;
 
     private PlayerCharacter _attachedCharacter;
     private Lane _lane;
@@ -25,11 +25,13 @@ public class LaneViewModel : MonoBehaviour
     public Queue<NoteViewModel> NotesInCatcher;
     public Queue<NoteViewModel> HeldNotes;
 
-    public void Initialize(PlayerCharacter attachedCharacter, Lane lane, List<NoteGroup> noteGroups)
+    public void Initialize(PlayerCharacter attachedCharacter, Lane lane, List<Note> notes)
     {
         _attachedCharacter = attachedCharacter;
         _lane = lane;
-        _noteGroups = noteGroups;
+        _notes = notes;
+
+        _nextIndex = 0;
 
         NotesInCatcher = new Queue<NoteViewModel>();
         HeldNotes = new Queue<NoteViewModel>();
@@ -37,8 +39,10 @@ public class LaneViewModel : MonoBehaviour
 
     private void Update()
     {
-        if (TrackManager.Instance.PlayingTrack && _noteGroups != null)
-        UpdateTrackNotes();
+        if (TrackManager.Instance.PlayingTrack && _notes != null)
+        {
+            UpdateTrackNotes();
+        }
     }
 
     private void UpdateTrackNotes()
@@ -60,33 +64,14 @@ public class LaneViewModel : MonoBehaviour
 
     private int GetNoteCount()
     {
-        int count = 0;
-
-        foreach (var group in _noteGroups)
-        {
-            count += group.NoteChain.Count;
-        }
-
-        return count;
+        return _notes.Count;
     }
 
     private Note GetNextNote()
     {
-        int iterateIndex = 0;
-
-        foreach (var group in _noteGroups)
+        if (_nextIndex < _notes.Count)
         {
-            foreach (var note in group.NoteChain)
-            {
-                if (iterateIndex == _nextIndex)
-                {
-                    return note;
-                }
-                else
-                {
-                    iterateIndex++;
-                }
-            }
+            return _notes[_nextIndex];
         }
 
         return null;

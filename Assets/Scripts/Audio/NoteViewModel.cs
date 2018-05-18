@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -62,6 +63,7 @@ public class NoteViewModel : MonoBehaviour
         transform.Rotate(0, 0, (int)noteData.Direction * -90);
 
         _noteImage.sprite = AssetManager.Instance.GetNoteSprite(_attachedCharacter.CharacterName, lane);
+        _tailImage.sprite = AssetManager.Instance.GetTailSprite(_attachedCharacter.CharacterName, lane);
 
         _spawnPosition = spawn;
         _destructPosition = destruct;
@@ -150,7 +152,7 @@ public class NoteViewModel : MonoBehaviour
 
     private void OnNoteTriggerExit(Collider2D collision)
     {
-        if (_laneViewModel.NotesInCatcher.NullSafePeek() == this)
+        if (!HasBeenHit && _laneViewModel.NotesInCatcher.Any())
         {
             _laneViewModel.NotesInCatcher.Dequeue();
             Destroy(gameObject);

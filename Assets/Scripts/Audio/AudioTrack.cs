@@ -6,17 +6,8 @@ using System.Text;
 [Serializable]
 public class AudioTrack
 {
-    public string TrackId;
-    public string AudioAssetId;
-
-    public List<NoteGroup> LeftLane;
-    public List<NoteGroup> RightLane;
-}
-
-[Serializable]
-public class NoteGroup
-{
-    public List<Note> NoteChain;
+    public List<Note> LeftLane;
+    public List<Note> RightLane;
 }
 
 [Serializable]

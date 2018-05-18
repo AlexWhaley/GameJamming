@@ -53,7 +53,7 @@ public class AudioManager : MonoBehaviour
 
             if (!_audioSource.isPlaying)
             {
-                PlayNextQueueClip();
+                TrackManager.Instance.PlayNextLoop();
             }
         }
     }
