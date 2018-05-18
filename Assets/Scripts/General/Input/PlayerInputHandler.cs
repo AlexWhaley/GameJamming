@@ -50,16 +50,30 @@ public class PlayerInputHandler : MonoBehaviour
         LeftStick.Update();
         RightStick.Update();
 
-        if (LeftStick.IsHeld)
+        if (LeftStick.IsPressed)
         {
-            Debug.Log(LeftStick.Direction);
+            switch (LeftStick.Direction)
+            {
+                case Direction.Up:
+                    UpButtonPress();
+                    break;
+                case Direction.Right:
+                    RightButtonPress();
+                    break;
+                case Direction.Down:
+                    DownButtonPress();
+                    break;
+                case Direction.Left:
+                    LeftButtonPress();
+                    break;
+            }
         }
 
-        if (Input.GetKeyDown(ConfirmButton))
+        if (Input.GetKeyDown(ConfirmButton) || Input.GetButtonDown(_playerID + "Confirm"))
         {
             ConfirmButtonPress();
         }
-        else if (Input.GetKeyDown(BackButton))
+        else if (Input.GetKeyDown(BackButton) || Input.GetButtonDown(_playerID + "Back"))
         {
             BackButtonPress();
         }
@@ -89,6 +103,8 @@ public class PlayerInputHandler : MonoBehaviour
         private float _xAxis;
         private float _yAxis;
 
+        private bool _wasHeld;
+
         public float Angle
         {
             get
@@ -104,6 +120,9 @@ public class PlayerInputHandler : MonoBehaviour
                 return _xAxis != 0 || _yAxis != 0;
             }
         }
+
+        public bool IsPressed { get; set; }
+        public bool IsReleased { get; set; }
 
         public Direction Direction
         {
@@ -140,6 +159,24 @@ public class PlayerInputHandler : MonoBehaviour
         {
             _xAxis = Input.GetAxis(_xAxisName);
             _yAxis = Input.GetAxis(_yAxisName);
+
+            if (IsHeld && !_wasHeld)
+            {
+                IsPressed = true;
+                IsReleased = false;
+            }
+            else if (!IsHeld && _wasHeld)
+            {
+                IsReleased = true;
+                IsPressed = false;
+            }
+            else
+            {
+                IsPressed = false;
+                IsReleased = false;
+            }
+
+            _wasHeld = IsHeld;
         }
     }
 }

@@ -12,7 +12,7 @@ public class TrackViewModel : MonoBehaviour
     [SerializeField] private LaneViewModel _leftLane;
     [SerializeField] private LaneViewModel _rightLane;
 
-    private void Awake()
+    private void Start()
     {
         _input = InputManager.Instance.GetPlayerInputHandler(_attachedCharacter);
     }
