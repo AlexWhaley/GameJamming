@@ -260,7 +260,7 @@ MonoBehaviour:
   Name: Pick
   _healthStat: 600
   _armorModifier: 1.1
-  _attackModifier: 1.2
+  _attackModifier: 1.5
   _healModifier: 0.9
   _characterName: 0
   _attackActions:

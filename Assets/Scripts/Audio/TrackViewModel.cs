@@ -39,6 +39,10 @@ public class TrackViewModel : MonoBehaviour
 
     private void UpdateLaneInput(LaneViewModel lane, PlayerInputHandler.AnalogueStick analogueStick)
     {
+        if (analogueStick.IsHeld)
+        {
+            Debug.Log("Stick held");
+        }
         if (lane.NotesInCatcher != null && lane.HeldNotes != null)
         {
             var catcherNote = lane.NotesInCatcher.NullSafePeek();

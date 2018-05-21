@@ -66,12 +66,12 @@ public class BattleManager : MonoBehaviour
             }
         }
 
-        _actionSequence = StartCoroutine(ProcessSubmittedTurns(_submittedPlayerActions, true));
+        _actionSequence = StartCoroutine(ProcessSubmittedTurns(_submittedPlayerActions, false));
     }
 
     public void ExecuteEnemyTurn(List<SubmittedAction> enemyActions)
     {
-        _actionSequence = StartCoroutine(ProcessSubmittedTurns(enemyActions, false));
+        _actionSequence = StartCoroutine(ProcessSubmittedTurns(enemyActions, true));
     }
 
     private void RemovePlayerShields()
@@ -94,7 +94,7 @@ public class BattleManager : MonoBehaviour
 
     private IEnumerator ProcessSubmittedTurns(List<SubmittedAction> submittedActions, bool isEnemyTurn)
     {
-        float actionTime = 1.0f;
+        float actionTime = 0.5f;
         foreach (var submittedAction in submittedActions)
         {
 

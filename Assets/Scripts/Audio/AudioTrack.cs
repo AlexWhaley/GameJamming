@@ -19,7 +19,7 @@ public class Note
     public Direction Direction;
     public bool LinkedToNextNote;
     public Note NextNote;
-    [HideInInspector] public bool ShouldSpawn = true;
+    //[HideInInspector] public bool ShouldSpawn = true;
 }
 
 public enum Direction

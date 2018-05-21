@@ -26,7 +26,7 @@ public class NoteViewModel : MonoBehaviour
     {
         get
         {
-            return _noteData != null ? _noteData.Duration > 0 : false;
+            return false;// _noteData != null ? _noteData.Duration > 0 : false;
         }
     }
 
@@ -102,6 +102,7 @@ public class NoteViewModel : MonoBehaviour
                     _laneViewModel.HeldNotes.Enqueue(this);
                     _tailImage.color = new Color(0.7f, 0.7f, 0.7f, 1.0f);
                 }
+                _noteImage.color = new Color(0, 0, 0, 0);
                 _laneViewModel.NotesHit++;
             }
             else
@@ -138,11 +139,11 @@ public class NoteViewModel : MonoBehaviour
 
     private void SetNextNoteNotToSpawn(Note note)
     {
-        note.ShouldSpawn = false;
+        /*note.ShouldSpawn = false;
         if (note.LinkedToNextNote && note.NextNote != null)
         {
             SetNextNoteNotToSpawn(note.NextNote);
-        }
+        }*/
     }
 
     private void Update()
@@ -157,10 +158,10 @@ public class NoteViewModel : MonoBehaviour
                 trackTime
             );
 
-            if (!_noteData.ShouldSpawn)
+            /*if (!_noteData.ShouldSpawn)
             {
                 Destroy(gameObject);
-            }
+            }*/
         }
     }
 

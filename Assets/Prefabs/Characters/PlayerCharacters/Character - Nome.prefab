@@ -273,7 +273,7 @@ MonoBehaviour:
   Name: Nome
   _healthStat: 650
   _armorModifier: 0.9
-  _attackModifier: 0.9
+  _attackModifier: 1.4
   _healModifier: 1
   _characterName: 1
   _attackActions:

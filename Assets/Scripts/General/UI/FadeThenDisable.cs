@@ -7,6 +7,7 @@ using UnityEngine.UI;
 
 public class FadeThenDisable : MonoBehaviour
 {
+    public List<Image> Images;
     public float Duration = 3f;
     private bool fade = false;
     private float time = 0;
@@ -23,7 +24,10 @@ public class FadeThenDisable : MonoBehaviour
         {
             time -= Time.deltaTime;
 
-            GetComponent<Image>().color = new Color(1, 1, 1, time / Duration);
+            foreach (var image in Images)
+            {
+                image.color = new Color(1, 1, 1, time / Duration);
+            }
 
             if (time <= 0)
             {

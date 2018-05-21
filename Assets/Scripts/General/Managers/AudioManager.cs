@@ -104,6 +104,6 @@ public class AudioAsset
 {
     public string ClipId;
     public AudioClip Clip;
-    public int BeatsPerMinute;
+    public float BeatsPerMinute;
     public AudioSource AudioSource;
 }

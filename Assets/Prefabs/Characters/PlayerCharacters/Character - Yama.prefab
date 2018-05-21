@@ -234,7 +234,7 @@ MonoBehaviour:
   Name: Yama
   _healthStat: 550
   _armorModifier: 1
-  _attackModifier: 1
+  _attackModifier: 1.5
   _healModifier: 1.2
   _characterName: 2
   _attackActions:

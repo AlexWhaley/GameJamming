@@ -52,7 +52,7 @@ public class LaneViewModel : MonoBehaviour
     private void UpdateTrackNotes()
     {
         Note nextNote = GetNextNote();
-        if (_nextIndex < GetNoteCount() && nextNote.StartTime < AudioManager.Instance.SongPosition + TrackManager.Instance.BeatsShownInAdvance && nextNote.ShouldSpawn)
+        if (_nextIndex < GetNoteCount() && nextNote.StartTime < AudioManager.Instance.SongPosition + TrackManager.Instance.BeatsShownInAdvance/* && nextNote.ShouldSpawn*/)
         {
             SpawnNote(nextNote);
 

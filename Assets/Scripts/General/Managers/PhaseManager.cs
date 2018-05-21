@@ -45,8 +45,12 @@ public class PhaseManager : MonoBehaviour
     private void Initialise()
     {
         _currentGamePhase = GameflowPhases.Intro;
-        AudioManager.Instance.PlaySound("splash");
-        StartCoroutine(FadeSplashAfterTime(10));
+        StartCoroutine(FadeSplashAfterTime(2));
+    }
+
+    private void Start()
+    {
+        NextPhase();
     }
 
     private IEnumerator FadeSplashAfterTime(float waitTime)

@@ -234,7 +234,7 @@ MonoBehaviour:
   Name: Four
   _healthStat: 600
   _armorModifier: 1
-  _attackModifier: 1
+  _attackModifier: 1.5
   _healModifier: 1
   _characterName: 3
   _attackActions:

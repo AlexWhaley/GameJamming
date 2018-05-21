@@ -64,11 +64,11 @@ MonoBehaviour:
   LeftLaneTail:
   - {fileID: 21300000, guid: 0851d0560d32e59499533615c05c4d95, type: 3}
   - {fileID: 21300004, guid: 0851d0560d32e59499533615c05c4d95, type: 3}
-  - {fileID: 21300008, guid: 0851d0560d32e59499533615c05c4d95, type: 3}
   - {fileID: 21300012, guid: 0851d0560d32e59499533615c05c4d95, type: 3}
+  - {fileID: 21300008, guid: 0851d0560d32e59499533615c05c4d95, type: 3}
   RightLaneTail:
   - {fileID: 21300002, guid: 0851d0560d32e59499533615c05c4d95, type: 3}
   - {fileID: 21300006, guid: 0851d0560d32e59499533615c05c4d95, type: 3}
-  - {fileID: 21300010, guid: 0851d0560d32e59499533615c05c4d95, type: 3}
   - {fileID: 21300014, guid: 0851d0560d32e59499533615c05c4d95, type: 3}
+  - {fileID: 21300010, guid: 0851d0560d32e59499533615c05c4d95, type: 3}
   NotePrefab: {fileID: 1242380123870386, guid: 5246903bd6333ff41a3e030b3e611dcb, type: 2}
