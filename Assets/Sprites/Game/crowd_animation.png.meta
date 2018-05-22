@@ -94,9 +94,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 28
-        width: 16
-        height: 28
+        y: 40
+        width: 17
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -104,7 +104,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e9fc8445ea4d66e41a422aa5ea833997
+      spriteID: 169c3f9b2d1cd2146afd0933f94b8351
       vertices: []
       indices: 
       edges: []
@@ -113,10 +113,10 @@ TextureImporter:
       name: crowd_animation_1
       rect:
         serializedVersion: 2
-        x: 16
-        y: 28
-        width: 16
-        height: 28
+        x: 17
+        y: 40
+        width: 17
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,7 +124,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 276779b9c62dc964c9bbbd25cc3fa99a
+      spriteID: 5e1ee6dcca5ea7c4ab19cec3a4fa833f
       vertices: []
       indices: 
       edges: []
@@ -133,10 +133,10 @@ TextureImporter:
       name: crowd_animation_2
       rect:
         serializedVersion: 2
-        x: 32
-        y: 28
-        width: 16
-        height: 28
+        x: 34
+        y: 40
+        width: 17
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -144,7 +144,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 97fb61e5b6ec4604ca1efeb32885e974
+      spriteID: 03ff49edd25e1ba4a84067631cfbe698
       vertices: []
       indices: 
       edges: []
@@ -153,10 +153,10 @@ TextureImporter:
       name: crowd_animation_3
       rect:
         serializedVersion: 2
-        x: 48
-        y: 28
-        width: 16
-        height: 28
+        x: 51
+        y: 40
+        width: 17
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -164,7 +164,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 127f09a8cbef9344182c7818dd7f3a45
+      spriteID: f2cb15e25e5a51f469a9a7d9e4805f7f
       vertices: []
       indices: 
       edges: []
@@ -175,8 +175,8 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 16
-        height: 28
+        width: 17
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -184,7 +184,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f1e2785a5de21a44391e1e1f187b0d27
+      spriteID: bb6df29b7f400714e809a20e5caf6f84
       vertices: []
       indices: 
       edges: []
@@ -193,10 +193,10 @@ TextureImporter:
       name: crowd_animation_5
       rect:
         serializedVersion: 2
-        x: 16
+        x: 17
         y: 0
-        width: 16
-        height: 28
+        width: 17
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -204,7 +204,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 10ffc16b5bad25b4dbd6469ea279b92a
+      spriteID: 8c6ae1ec912efbd45ba786d0470e9594
       vertices: []
       indices: 
       edges: []
@@ -213,10 +213,10 @@ TextureImporter:
       name: crowd_animation_6
       rect:
         serializedVersion: 2
-        x: 32
+        x: 34
         y: 0
-        width: 16
-        height: 28
+        width: 17
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -224,7 +224,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 54bac9f0dfb523d4d9786e6cf7ccba4e
+      spriteID: 28a218f04fe01e74ba966c2174d397a3
       vertices: []
       indices: 
       edges: []
@@ -233,10 +233,10 @@ TextureImporter:
       name: crowd_animation_7
       rect:
         serializedVersion: 2
-        x: 48
+        x: 51
         y: 0
-        width: 16
-        height: 28
+        width: 17
+        height: 40
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -244,7 +244,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ec71b53141b83be47bada8e678e90f21
+      spriteID: 6b994660dacfd6447b0e0fd7e215d01a
       vertices: []
       indices: 
       edges: []
