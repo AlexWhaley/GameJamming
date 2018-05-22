@@ -150,7 +150,7 @@ public class NoteViewModel : MonoBehaviour
     {
         if (TrackManager.Instance.PlayingTrack)
         {
-            float trackTime = ((TrackManager.Instance.BeatsShownInAdvance - (_noteData.StartTime - AudioManager.Instance.SongPosition)) / TrackManager.Instance.BeatsShownInAdvance);
+            float trackTime = ((TrackManager.Instance.BeatsShownInAdvance - (_noteData.StartTime + 0.1f - AudioManager.Instance.SongPosition)) / TrackManager.Instance.BeatsShownInAdvance);
 
             transform.position = Vector2.LerpUnclamped(
                 _spawnPosition,

@@ -1372,46 +1372,6 @@ Prefab:
       propertyPath: _playerTracks.Array.data[3]
       value: 
       objectReference: {fileID: 1664101591}
-    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
-        type: 2}
-      propertyPath: BeatsShownInAdvance
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
-        type: 2}
-      propertyPath: _audioLoops.Array.data[0].Tracks.Array.data[2].LeftLane.Array.data[0].Duration
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
-        type: 2}
-      propertyPath: _audioLoops.Array.data[0].Tracks.Array.data[2].LeftLane.Array.data[1].Duration
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
-        type: 2}
-      propertyPath: _audioLoops.Array.data[0].Tracks.Array.data[2].LeftLane.Array.data[2].Duration
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
-        type: 2}
-      propertyPath: _audioLoops.Array.data[0].Tracks.Array.data[2].LeftLane.Array.data[3].Duration
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
-        type: 2}
-      propertyPath: _audioLoops.Array.data[0].Tracks.Array.data[2].LeftLane.Array.data[4].Duration
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
-        type: 2}
-      propertyPath: _audioLoops.Array.data[0].Tracks.Array.data[2].LeftLane.Array.data[5].Duration
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
-        type: 2}
-      propertyPath: _audioLoops.Array.data[0].Tracks.Array.data[2].LeftLane.Array.data[6].Duration
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 87f02b6297d9b3449a2c79fd66a11e59, type: 2}
   m_IsPrefabParent: 0

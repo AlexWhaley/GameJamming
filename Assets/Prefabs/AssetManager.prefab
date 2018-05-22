@@ -54,13 +54,13 @@ MonoBehaviour:
   LeftLaneNote:
   - {fileID: 21300000, guid: 415a0bfb127292c4b8f535e9cd184522, type: 3}
   - {fileID: 21300002, guid: 415a0bfb127292c4b8f535e9cd184522, type: 3}
-  - {fileID: 21300004, guid: 415a0bfb127292c4b8f535e9cd184522, type: 3}
   - {fileID: 21300006, guid: 415a0bfb127292c4b8f535e9cd184522, type: 3}
+  - {fileID: 21300004, guid: 415a0bfb127292c4b8f535e9cd184522, type: 3}
   RightLaneNote:
   - {fileID: 21300008, guid: 415a0bfb127292c4b8f535e9cd184522, type: 3}
   - {fileID: 21300010, guid: 415a0bfb127292c4b8f535e9cd184522, type: 3}
-  - {fileID: 21300012, guid: 415a0bfb127292c4b8f535e9cd184522, type: 3}
   - {fileID: 21300014, guid: 415a0bfb127292c4b8f535e9cd184522, type: 3}
+  - {fileID: 21300012, guid: 415a0bfb127292c4b8f535e9cd184522, type: 3}
   LeftLaneTail:
   - {fileID: 21300000, guid: 0851d0560d32e59499533615c05c4d95, type: 3}
   - {fileID: 21300004, guid: 0851d0560d32e59499533615c05c4d95, type: 3}

@@ -7,9 +7,7 @@ using UnityEngine;
 public class TrackManager : MonoBehaviour
 {
     public static TrackManager Instance;
-    
-    public float YScale;
-    public int BeatsShownInAdvance = 4;
+    public float BeatsShownInAdvance = 4;
 
     [SerializeField] private List<AudioLoop> _audioLoops;
 

@@ -41,7 +41,9 @@ public class ActionMenuController : MonoBehaviour, InputCommandHandler
     private ActionMenus _currentMenu;
     private int _currentSelectionIndex;
     private int _rootSelectionIndex;
-     
+    private bool _isRegistered = false;
+
+
     public enum ActionMenus
     {
         Root,
@@ -92,6 +94,7 @@ public class ActionMenuController : MonoBehaviour, InputCommandHandler
 
     public void HideActionMenu()
     {
+        UnregisterInputHandlersIfRegistered();
         gameObject.SetActive(false);
     }
 
@@ -223,6 +226,7 @@ public class ActionMenuController : MonoBehaviour, InputCommandHandler
 
     public void RegisterInputHandlers()
     {
+        _isRegistered = true;
         var playerInputHandler = InputManager.Instance.GetPlayerInputHandler(_attatchedPlayer);
         playerInputHandler.ConfirmButtonPress += HandleConfirmButton;
         playerInputHandler.BackButtonPress += HandleBackButton;
@@ -232,12 +236,20 @@ public class ActionMenuController : MonoBehaviour, InputCommandHandler
 
     public void UnregisterInputHandlers()
     {
+        _isRegistered = false;
         var playerInputHandler = InputManager.Instance.GetPlayerInputHandler(_attatchedPlayer);
         playerInputHandler.ConfirmButtonPress -= HandleConfirmButton;
         playerInputHandler.BackButtonPress -= HandleBackButton;
         playerInputHandler.UpButtonPress -= HandleUpButton;
         playerInputHandler.DownButtonPress -= HandleDownButton;
+    }
 
+    public void UnregisterInputHandlersIfRegistered()
+    {
+        if (_isRegistered)
+        {
+            UnregisterInputHandlers();
+        }
     }
 
     // Menu controls
