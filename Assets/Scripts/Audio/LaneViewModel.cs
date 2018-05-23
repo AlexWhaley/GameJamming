@@ -91,7 +91,10 @@ public class LaneViewModel : MonoBehaviour
 
     public void PlayDestroyEffect()
     {
-        //_destructEffect.Play();
+        if (_destructEffect != null)
+        {
+            _destructEffect.Play();
+        }
         _destructAnimator.SetTrigger("PlayEffect");
     }
 }
