@@ -60,7 +60,7 @@ public class NoteViewModel : MonoBehaviour
         _noteData = noteData;
         _lane = lane;
 
-        transform.Rotate(0, 0, Random.Range(0, 3) * -90);
+        transform.Rotate(0, 0, (int)_noteData.Direction * -90);
 
         _noteImage.sprite = AssetManager.Instance.GetNoteSprite(_attachedCharacter.CharacterName, lane);
         _tailImage.sprite = AssetManager.Instance.GetTailSprite(_attachedCharacter.CharacterName, lane);
@@ -93,6 +93,7 @@ public class NoteViewModel : MonoBehaviour
                 {
                     Debug.Log("Note hit correctly.");
                     _laneViewModel.NotesInCatcher.Dequeue();
+                    _laneViewModel.PlayDestroyEffect();
                     Destroy(gameObject);
                 }
                 else
@@ -113,7 +114,6 @@ public class NoteViewModel : MonoBehaviour
                 {
                     SetNextNoteNotToSpawn(_noteData.NextNote);
                 }
-                Destroy(gameObject);
             }
         }
     }
@@ -167,6 +167,7 @@ public class NoteViewModel : MonoBehaviour
 
     private void OnNoteTriggerEnter(Collider2D collision)
     {
+
         _laneViewModel.NotesInCatcher.Enqueue(this);
     }
 

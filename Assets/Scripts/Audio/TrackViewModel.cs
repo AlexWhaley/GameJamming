@@ -39,10 +39,6 @@ public class TrackViewModel : MonoBehaviour
 
     private void UpdateLaneInput(LaneViewModel lane, PlayerInputHandler.AnalogueStick analogueStick)
     {
-        if (analogueStick.IsHeld)
-        {
-            Debug.Log("Stick held");
-        }
         if (lane.NotesInCatcher != null && lane.HeldNotes != null)
         {
             var catcherNote = lane.NotesInCatcher.NullSafePeek();
@@ -51,13 +47,14 @@ public class TrackViewModel : MonoBehaviour
             if (catcherNote != null)
             {
                 bool correctHit = analogueStick.Direction == catcherNote.Direction;
+                
                 bool correctHold = heldNote != null ? analogueStick.Direction == heldNote.Direction : false;
 
                 if (!catcherNote.HasBeenHit && 
                     (analogueStick.IsPressed || (analogueStick.IsHeld && correctHit && heldNote != null && !correctHold)))
                 {
+                    Debug.Log(string.Format("Notes in catcher: {0}, Note Direction is : {1}, stick held in Direction: {2}", lane.NotesInCatcher.Count, catcherNote.Direction, analogueStick.Direction));
                     catcherNote.HitNote(correctHit);
-                    Debug.Log("Attempted note hit");
                 }
             }
 

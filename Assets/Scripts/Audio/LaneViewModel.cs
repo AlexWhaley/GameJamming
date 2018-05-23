@@ -26,6 +26,14 @@ public class LaneViewModel : MonoBehaviour
     public Queue<NoteViewModel> HeldNotes;
 
     public int NotesHit;
+    private Animator _destructAnimator;
+    private ParticleSystem _destructEffect;
+
+    private void Awake()
+    {
+        _destructEffect = GetComponentInChildren<ParticleSystem>();
+        _destructAnimator = GetComponentInChildren<Animator>();
+    }
 
     public void Initialize(PlayerCharacter attachedCharacter, Lane lane, List<Note> notes)
     {
@@ -79,5 +87,11 @@ public class LaneViewModel : MonoBehaviour
         }
 
         return null;
+    }
+
+    public void PlayDestroyEffect()
+    {
+        //_destructEffect.Play();
+        _destructAnimator.SetTrigger("PlayEffect");
     }
 }
