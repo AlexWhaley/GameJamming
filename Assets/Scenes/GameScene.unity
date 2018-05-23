@@ -1320,6 +1320,186 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 996441151}
     m_Modifications:
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[2].Tracks.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[3].Tracks.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[4].Tracks.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[5].Tracks.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[2].Tracks.Array.data[0].LeftLane.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[2].Tracks.Array.data[1].LeftLane.Array.size
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[2].Tracks.Array.data[2].LeftLane.Array.size
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[2].Tracks.Array.data[3].LeftLane.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[3].Tracks.Array.data[0].LeftLane.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[3].Tracks.Array.data[1].LeftLane.Array.size
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[3].Tracks.Array.data[2].LeftLane.Array.size
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[3].Tracks.Array.data[3].LeftLane.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[4].Tracks.Array.data[0].LeftLane.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[4].Tracks.Array.data[1].LeftLane.Array.size
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[4].Tracks.Array.data[2].LeftLane.Array.size
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[4].Tracks.Array.data[3].LeftLane.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[5].Tracks.Array.data[0].LeftLane.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[5].Tracks.Array.data[1].LeftLane.Array.size
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[5].Tracks.Array.data[2].LeftLane.Array.size
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[5].Tracks.Array.data[3].LeftLane.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[2].Tracks.Array.data[0].RightLane.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[2].Tracks.Array.data[1].RightLane.Array.size
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[2].Tracks.Array.data[2].RightLane.Array.size
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[2].Tracks.Array.data[3].RightLane.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[3].Tracks.Array.data[0].RightLane.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[3].Tracks.Array.data[1].RightLane.Array.size
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[3].Tracks.Array.data[2].RightLane.Array.size
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[3].Tracks.Array.data[3].RightLane.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[4].Tracks.Array.data[0].RightLane.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[4].Tracks.Array.data[1].RightLane.Array.size
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[4].Tracks.Array.data[2].RightLane.Array.size
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[4].Tracks.Array.data[3].RightLane.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[5].Tracks.Array.data[0].RightLane.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[5].Tracks.Array.data[1].RightLane.Array.size
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[5].Tracks.Array.data[2].RightLane.Array.size
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[5].Tracks.Array.data[3].RightLane.Array.size
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4398520979468284, guid: 87f02b6297d9b3449a2c79fd66a11e59, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1372,6 +1552,1806 @@ Prefab:
       propertyPath: _playerTracks.Array.data[3]
       value: 
       objectReference: {fileID: 1664101591}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[2].LoopId
+      value: play1b
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[2].AudioAssetId
+      value: play1b
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[2].Tracks.Array.data[0].LeftLane.Array.data[0].StartTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[2].Tracks.Array.data[0].LeftLane.Array.data[1].StartTime
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[2].Tracks.Array.data[0].LeftLane.Array.data[2].StartTime
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[2].Tracks.Array.data[0].LeftLane.Array.data[3].StartTime
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[2].Tracks.Array.data[0].LeftLane.Array.data[4].StartTime
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[2].Tracks.Array.data[0].LeftLane.Array.data[5].StartTime
+      value: 5.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[2].Tracks.Array.data[0].LeftLane.Array.data[6].StartTime
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[2].Tracks.Array.data[0].LeftLane.Array.data[7].StartTime
+      value: 7.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[2].Tracks.Array.data[0].RightLane.Array.data[0].StartTime
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[2].Tracks.Array.data[0].RightLane.Array.data[1].StartTime
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[2].Tracks.Array.data[0].RightLane.Array.data[2].StartTime
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[2].Tracks.Array.data[0].RightLane.Array.data[3].StartTime
+      value: 4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[2].Tracks.Array.data[0].RightLane.Array.data[4].StartTime
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[2].Tracks.Array.data[0].RightLane.Array.data[5].StartTime
+      value: 6.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[2].Tracks.Array.data[0].RightLane.Array.data[6].StartTime
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[2].Tracks.Array.data[0].RightLane.Array.data[7].StartTime
+      value: 8.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[2].Tracks.Array.data[1].LeftLane.Array.data[0].StartTime
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[2].Tracks.Array.data[1].LeftLane.Array.data[1].StartTime
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[2].Tracks.Array.data[1].LeftLane.Array.data[2].StartTime
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[2].Tracks.Array.data[1].LeftLane.Array.data[3].StartTime
+      value: 4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[2].Tracks.Array.data[1].LeftLane.Array.data[4].StartTime
+      value: 5.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[2].Tracks.Array.data[1].LeftLane.Array.data[5].StartTime
+      value: 5.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[2].Tracks.Array.data[1].LeftLane.Array.data[6].StartTime
+      value: 6.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[2].Tracks.Array.data[1].LeftLane.Array.data[7].StartTime
+      value: 6.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[2].Tracks.Array.data[1].LeftLane.Array.data[8].StartTime
+      value: 7.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[2].Tracks.Array.data[1].LeftLane.Array.data[9].StartTime
+      value: 7.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[2].Tracks.Array.data[1].LeftLane.Array.data[10].StartTime
+      value: 8.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[2].Tracks.Array.data[1].LeftLane.Array.data[11].StartTime
+      value: 8.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[2].Tracks.Array.data[1].RightLane.Array.data[0].StartTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[2].Tracks.Array.data[1].RightLane.Array.data[1].StartTime
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[2].Tracks.Array.data[1].RightLane.Array.data[2].StartTime
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[2].Tracks.Array.data[1].RightLane.Array.data[3].StartTime
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[2].Tracks.Array.data[1].RightLane.Array.data[4].StartTime
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[2].Tracks.Array.data[1].RightLane.Array.data[5].StartTime
+      value: 5.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[2].Tracks.Array.data[1].RightLane.Array.data[6].StartTime
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[2].Tracks.Array.data[1].RightLane.Array.data[6].Duration
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[2].Tracks.Array.data[1].RightLane.Array.data[7].StartTime
+      value: 6.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[2].Tracks.Array.data[1].RightLane.Array.data[8].StartTime
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[2].Tracks.Array.data[1].RightLane.Array.data[9].StartTime
+      value: 7.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[2].Tracks.Array.data[1].RightLane.Array.data[10].StartTime
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[2].Tracks.Array.data[1].RightLane.Array.data[11].StartTime
+      value: 8.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[2].Tracks.Array.data[2].LeftLane.Array.data[0].StartTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[2].Tracks.Array.data[2].LeftLane.Array.data[1].StartTime
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[2].Tracks.Array.data[2].LeftLane.Array.data[2].StartTime
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[2].Tracks.Array.data[2].LeftLane.Array.data[3].StartTime
+      value: 3.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[2].Tracks.Array.data[2].LeftLane.Array.data[4].StartTime
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[2].Tracks.Array.data[2].LeftLane.Array.data[5].StartTime
+      value: 3.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[2].Tracks.Array.data[2].LeftLane.Array.data[6].StartTime
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[2].Tracks.Array.data[2].LeftLane.Array.data[7].StartTime
+      value: 5.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[2].Tracks.Array.data[2].LeftLane.Array.data[8].StartTime
+      value: 5.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[2].Tracks.Array.data[2].LeftLane.Array.data[9].StartTime
+      value: 5.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[2].Tracks.Array.data[2].LeftLane.Array.data[10].StartTime
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[2].Tracks.Array.data[2].LeftLane.Array.data[11].StartTime
+      value: 7.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[2].Tracks.Array.data[2].LeftLane.Array.data[12].StartTime
+      value: 7.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[2].Tracks.Array.data[2].LeftLane.Array.data[13].StartTime
+      value: 7.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[2].Tracks.Array.data[2].RightLane.Array.data[0].StartTime
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[2].Tracks.Array.data[2].RightLane.Array.data[1].StartTime
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[2].Tracks.Array.data[2].RightLane.Array.data[2].StartTime
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[2].Tracks.Array.data[2].RightLane.Array.data[3].StartTime
+      value: 4.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[2].Tracks.Array.data[2].RightLane.Array.data[4].StartTime
+      value: 4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[2].Tracks.Array.data[2].RightLane.Array.data[5].StartTime
+      value: 4.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[2].Tracks.Array.data[2].RightLane.Array.data[6].StartTime
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[2].Tracks.Array.data[2].RightLane.Array.data[7].StartTime
+      value: 6.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[2].Tracks.Array.data[2].RightLane.Array.data[8].StartTime
+      value: 6.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[2].Tracks.Array.data[2].RightLane.Array.data[9].StartTime
+      value: 6.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[2].Tracks.Array.data[2].RightLane.Array.data[10].StartTime
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[2].Tracks.Array.data[2].RightLane.Array.data[11].StartTime
+      value: 8.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[2].Tracks.Array.data[2].RightLane.Array.data[12].StartTime
+      value: 8.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[2].Tracks.Array.data[2].RightLane.Array.data[13].StartTime
+      value: 8.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[2].Tracks.Array.data[3].LeftLane.Array.data[0].StartTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[2].Tracks.Array.data[3].LeftLane.Array.data[1].StartTime
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[2].Tracks.Array.data[3].LeftLane.Array.data[2].StartTime
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[2].Tracks.Array.data[3].LeftLane.Array.data[2].LinkedToNextNote
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[2].Tracks.Array.data[3].LeftLane.Array.data[3].StartTime
+      value: 3.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[2].Tracks.Array.data[3].LeftLane.Array.data[4].StartTime
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[2].Tracks.Array.data[3].LeftLane.Array.data[5].StartTime
+      value: 5.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[2].Tracks.Array.data[3].LeftLane.Array.data[6].StartTime
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[2].Tracks.Array.data[3].LeftLane.Array.data[7].StartTime
+      value: 7.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[2].Tracks.Array.data[3].RightLane.Array.data[0].StartTime
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[2].Tracks.Array.data[3].RightLane.Array.data[1].StartTime
+      value: 2.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[2].Tracks.Array.data[3].RightLane.Array.data[2].StartTime
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[2].Tracks.Array.data[3].RightLane.Array.data[3].StartTime
+      value: 4.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[2].Tracks.Array.data[3].RightLane.Array.data[4].StartTime
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[2].Tracks.Array.data[3].RightLane.Array.data[5].StartTime
+      value: 6.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[2].Tracks.Array.data[3].RightLane.Array.data[5].LinkedToNextNote
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[2].Tracks.Array.data[3].RightLane.Array.data[6].StartTime
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[2].Tracks.Array.data[3].RightLane.Array.data[7].StartTime
+      value: 8.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[2].BeatsPerMinute
+      value: 110
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[3].LoopId
+      value: play1b
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[3].AudioAssetId
+      value: play1b
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[3].Tracks.Array.data[0].LeftLane.Array.data[0].StartTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[3].Tracks.Array.data[0].LeftLane.Array.data[1].StartTime
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[3].Tracks.Array.data[0].LeftLane.Array.data[2].StartTime
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[3].Tracks.Array.data[0].LeftLane.Array.data[3].StartTime
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[3].Tracks.Array.data[0].LeftLane.Array.data[4].StartTime
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[3].Tracks.Array.data[0].LeftLane.Array.data[5].StartTime
+      value: 5.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[3].Tracks.Array.data[0].LeftLane.Array.data[6].StartTime
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[3].Tracks.Array.data[0].LeftLane.Array.data[7].StartTime
+      value: 7.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[3].Tracks.Array.data[0].RightLane.Array.data[0].StartTime
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[3].Tracks.Array.data[0].RightLane.Array.data[1].StartTime
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[3].Tracks.Array.data[0].RightLane.Array.data[2].StartTime
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[3].Tracks.Array.data[0].RightLane.Array.data[3].StartTime
+      value: 4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[3].Tracks.Array.data[0].RightLane.Array.data[4].StartTime
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[3].Tracks.Array.data[0].RightLane.Array.data[5].StartTime
+      value: 6.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[3].Tracks.Array.data[0].RightLane.Array.data[6].StartTime
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[3].Tracks.Array.data[0].RightLane.Array.data[7].StartTime
+      value: 8.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[3].Tracks.Array.data[1].LeftLane.Array.data[0].StartTime
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[3].Tracks.Array.data[1].LeftLane.Array.data[1].StartTime
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[3].Tracks.Array.data[1].LeftLane.Array.data[2].StartTime
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[3].Tracks.Array.data[1].LeftLane.Array.data[3].StartTime
+      value: 4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[3].Tracks.Array.data[1].LeftLane.Array.data[4].StartTime
+      value: 5.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[3].Tracks.Array.data[1].LeftLane.Array.data[5].StartTime
+      value: 5.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[3].Tracks.Array.data[1].LeftLane.Array.data[6].StartTime
+      value: 6.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[3].Tracks.Array.data[1].LeftLane.Array.data[7].StartTime
+      value: 6.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[3].Tracks.Array.data[1].LeftLane.Array.data[8].StartTime
+      value: 7.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[3].Tracks.Array.data[1].LeftLane.Array.data[9].StartTime
+      value: 7.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[3].Tracks.Array.data[1].LeftLane.Array.data[10].StartTime
+      value: 8.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[3].Tracks.Array.data[1].LeftLane.Array.data[11].StartTime
+      value: 8.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[3].Tracks.Array.data[1].RightLane.Array.data[0].StartTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[3].Tracks.Array.data[1].RightLane.Array.data[1].StartTime
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[3].Tracks.Array.data[1].RightLane.Array.data[2].StartTime
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[3].Tracks.Array.data[1].RightLane.Array.data[3].StartTime
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[3].Tracks.Array.data[1].RightLane.Array.data[4].StartTime
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[3].Tracks.Array.data[1].RightLane.Array.data[5].StartTime
+      value: 5.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[3].Tracks.Array.data[1].RightLane.Array.data[6].StartTime
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[3].Tracks.Array.data[1].RightLane.Array.data[6].Duration
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[3].Tracks.Array.data[1].RightLane.Array.data[7].StartTime
+      value: 6.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[3].Tracks.Array.data[1].RightLane.Array.data[8].StartTime
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[3].Tracks.Array.data[1].RightLane.Array.data[9].StartTime
+      value: 7.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[3].Tracks.Array.data[1].RightLane.Array.data[10].StartTime
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[3].Tracks.Array.data[1].RightLane.Array.data[11].StartTime
+      value: 8.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[3].Tracks.Array.data[2].LeftLane.Array.data[0].StartTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[3].Tracks.Array.data[2].LeftLane.Array.data[1].StartTime
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[3].Tracks.Array.data[2].LeftLane.Array.data[2].StartTime
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[3].Tracks.Array.data[2].LeftLane.Array.data[3].StartTime
+      value: 3.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[3].Tracks.Array.data[2].LeftLane.Array.data[4].StartTime
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[3].Tracks.Array.data[2].LeftLane.Array.data[5].StartTime
+      value: 3.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[3].Tracks.Array.data[2].LeftLane.Array.data[6].StartTime
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[3].Tracks.Array.data[2].LeftLane.Array.data[7].StartTime
+      value: 5.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[3].Tracks.Array.data[2].LeftLane.Array.data[8].StartTime
+      value: 5.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[3].Tracks.Array.data[2].LeftLane.Array.data[9].StartTime
+      value: 5.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[3].Tracks.Array.data[2].LeftLane.Array.data[10].StartTime
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[3].Tracks.Array.data[2].LeftLane.Array.data[11].StartTime
+      value: 7.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[3].Tracks.Array.data[2].LeftLane.Array.data[12].StartTime
+      value: 7.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[3].Tracks.Array.data[2].LeftLane.Array.data[13].StartTime
+      value: 7.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[3].Tracks.Array.data[2].RightLane.Array.data[0].StartTime
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[3].Tracks.Array.data[2].RightLane.Array.data[1].StartTime
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[3].Tracks.Array.data[2].RightLane.Array.data[2].StartTime
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[3].Tracks.Array.data[2].RightLane.Array.data[3].StartTime
+      value: 4.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[3].Tracks.Array.data[2].RightLane.Array.data[4].StartTime
+      value: 4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[3].Tracks.Array.data[2].RightLane.Array.data[5].StartTime
+      value: 4.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[3].Tracks.Array.data[2].RightLane.Array.data[6].StartTime
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[3].Tracks.Array.data[2].RightLane.Array.data[7].StartTime
+      value: 6.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[3].Tracks.Array.data[2].RightLane.Array.data[8].StartTime
+      value: 6.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[3].Tracks.Array.data[2].RightLane.Array.data[9].StartTime
+      value: 6.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[3].Tracks.Array.data[2].RightLane.Array.data[10].StartTime
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[3].Tracks.Array.data[2].RightLane.Array.data[11].StartTime
+      value: 8.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[3].Tracks.Array.data[2].RightLane.Array.data[12].StartTime
+      value: 8.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[3].Tracks.Array.data[2].RightLane.Array.data[13].StartTime
+      value: 8.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[3].Tracks.Array.data[3].LeftLane.Array.data[0].StartTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[3].Tracks.Array.data[3].LeftLane.Array.data[1].StartTime
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[3].Tracks.Array.data[3].LeftLane.Array.data[2].StartTime
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[3].Tracks.Array.data[3].LeftLane.Array.data[2].LinkedToNextNote
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[3].Tracks.Array.data[3].LeftLane.Array.data[3].StartTime
+      value: 3.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[3].Tracks.Array.data[3].LeftLane.Array.data[4].StartTime
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[3].Tracks.Array.data[3].LeftLane.Array.data[5].StartTime
+      value: 5.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[3].Tracks.Array.data[3].LeftLane.Array.data[6].StartTime
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[3].Tracks.Array.data[3].LeftLane.Array.data[7].StartTime
+      value: 7.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[3].Tracks.Array.data[3].RightLane.Array.data[0].StartTime
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[3].Tracks.Array.data[3].RightLane.Array.data[1].StartTime
+      value: 2.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[3].Tracks.Array.data[3].RightLane.Array.data[2].StartTime
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[3].Tracks.Array.data[3].RightLane.Array.data[3].StartTime
+      value: 4.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[3].Tracks.Array.data[3].RightLane.Array.data[4].StartTime
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[3].Tracks.Array.data[3].RightLane.Array.data[5].StartTime
+      value: 6.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[3].Tracks.Array.data[3].RightLane.Array.data[5].LinkedToNextNote
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[3].Tracks.Array.data[3].RightLane.Array.data[6].StartTime
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[3].Tracks.Array.data[3].RightLane.Array.data[7].StartTime
+      value: 8.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[3].BeatsPerMinute
+      value: 110
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[4].LoopId
+      value: play1b
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[4].AudioAssetId
+      value: play1b
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[4].Tracks.Array.data[0].LeftLane.Array.data[0].StartTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[4].Tracks.Array.data[0].LeftLane.Array.data[1].StartTime
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[4].Tracks.Array.data[0].LeftLane.Array.data[2].StartTime
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[4].Tracks.Array.data[0].LeftLane.Array.data[3].StartTime
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[4].Tracks.Array.data[0].LeftLane.Array.data[4].StartTime
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[4].Tracks.Array.data[0].LeftLane.Array.data[5].StartTime
+      value: 5.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[4].Tracks.Array.data[0].LeftLane.Array.data[6].StartTime
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[4].Tracks.Array.data[0].LeftLane.Array.data[7].StartTime
+      value: 7.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[4].Tracks.Array.data[0].RightLane.Array.data[0].StartTime
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[4].Tracks.Array.data[0].RightLane.Array.data[1].StartTime
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[4].Tracks.Array.data[0].RightLane.Array.data[2].StartTime
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[4].Tracks.Array.data[0].RightLane.Array.data[3].StartTime
+      value: 4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[4].Tracks.Array.data[0].RightLane.Array.data[4].StartTime
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[4].Tracks.Array.data[0].RightLane.Array.data[5].StartTime
+      value: 6.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[4].Tracks.Array.data[0].RightLane.Array.data[6].StartTime
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[4].Tracks.Array.data[0].RightLane.Array.data[7].StartTime
+      value: 8.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[4].Tracks.Array.data[1].LeftLane.Array.data[0].StartTime
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[4].Tracks.Array.data[1].LeftLane.Array.data[1].StartTime
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[4].Tracks.Array.data[1].LeftLane.Array.data[2].StartTime
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[4].Tracks.Array.data[1].LeftLane.Array.data[3].StartTime
+      value: 4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[4].Tracks.Array.data[1].LeftLane.Array.data[4].StartTime
+      value: 5.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[4].Tracks.Array.data[1].LeftLane.Array.data[5].StartTime
+      value: 5.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[4].Tracks.Array.data[1].LeftLane.Array.data[6].StartTime
+      value: 6.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[4].Tracks.Array.data[1].LeftLane.Array.data[7].StartTime
+      value: 6.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[4].Tracks.Array.data[1].LeftLane.Array.data[8].StartTime
+      value: 7.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[4].Tracks.Array.data[1].LeftLane.Array.data[9].StartTime
+      value: 7.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[4].Tracks.Array.data[1].LeftLane.Array.data[10].StartTime
+      value: 8.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[4].Tracks.Array.data[1].LeftLane.Array.data[11].StartTime
+      value: 8.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[4].Tracks.Array.data[1].RightLane.Array.data[0].StartTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[4].Tracks.Array.data[1].RightLane.Array.data[1].StartTime
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[4].Tracks.Array.data[1].RightLane.Array.data[2].StartTime
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[4].Tracks.Array.data[1].RightLane.Array.data[3].StartTime
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[4].Tracks.Array.data[1].RightLane.Array.data[4].StartTime
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[4].Tracks.Array.data[1].RightLane.Array.data[5].StartTime
+      value: 5.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[4].Tracks.Array.data[1].RightLane.Array.data[6].StartTime
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[4].Tracks.Array.data[1].RightLane.Array.data[6].Duration
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[4].Tracks.Array.data[1].RightLane.Array.data[7].StartTime
+      value: 6.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[4].Tracks.Array.data[1].RightLane.Array.data[8].StartTime
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[4].Tracks.Array.data[1].RightLane.Array.data[9].StartTime
+      value: 7.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[4].Tracks.Array.data[1].RightLane.Array.data[10].StartTime
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[4].Tracks.Array.data[1].RightLane.Array.data[11].StartTime
+      value: 8.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[4].Tracks.Array.data[2].LeftLane.Array.data[0].StartTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[4].Tracks.Array.data[2].LeftLane.Array.data[1].StartTime
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[4].Tracks.Array.data[2].LeftLane.Array.data[2].StartTime
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[4].Tracks.Array.data[2].LeftLane.Array.data[3].StartTime
+      value: 3.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[4].Tracks.Array.data[2].LeftLane.Array.data[4].StartTime
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[4].Tracks.Array.data[2].LeftLane.Array.data[5].StartTime
+      value: 3.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[4].Tracks.Array.data[2].LeftLane.Array.data[6].StartTime
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[4].Tracks.Array.data[2].LeftLane.Array.data[7].StartTime
+      value: 5.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[4].Tracks.Array.data[2].LeftLane.Array.data[8].StartTime
+      value: 5.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[4].Tracks.Array.data[2].LeftLane.Array.data[9].StartTime
+      value: 5.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[4].Tracks.Array.data[2].LeftLane.Array.data[10].StartTime
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[4].Tracks.Array.data[2].LeftLane.Array.data[11].StartTime
+      value: 7.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[4].Tracks.Array.data[2].LeftLane.Array.data[12].StartTime
+      value: 7.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[4].Tracks.Array.data[2].LeftLane.Array.data[13].StartTime
+      value: 7.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[4].Tracks.Array.data[2].RightLane.Array.data[0].StartTime
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[4].Tracks.Array.data[2].RightLane.Array.data[1].StartTime
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[4].Tracks.Array.data[2].RightLane.Array.data[2].StartTime
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[4].Tracks.Array.data[2].RightLane.Array.data[3].StartTime
+      value: 4.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[4].Tracks.Array.data[2].RightLane.Array.data[4].StartTime
+      value: 4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[4].Tracks.Array.data[2].RightLane.Array.data[5].StartTime
+      value: 4.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[4].Tracks.Array.data[2].RightLane.Array.data[6].StartTime
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[4].Tracks.Array.data[2].RightLane.Array.data[7].StartTime
+      value: 6.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[4].Tracks.Array.data[2].RightLane.Array.data[8].StartTime
+      value: 6.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[4].Tracks.Array.data[2].RightLane.Array.data[9].StartTime
+      value: 6.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[4].Tracks.Array.data[2].RightLane.Array.data[10].StartTime
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[4].Tracks.Array.data[2].RightLane.Array.data[11].StartTime
+      value: 8.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[4].Tracks.Array.data[2].RightLane.Array.data[12].StartTime
+      value: 8.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[4].Tracks.Array.data[2].RightLane.Array.data[13].StartTime
+      value: 8.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[4].Tracks.Array.data[3].LeftLane.Array.data[0].StartTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[4].Tracks.Array.data[3].LeftLane.Array.data[1].StartTime
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[4].Tracks.Array.data[3].LeftLane.Array.data[2].StartTime
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[4].Tracks.Array.data[3].LeftLane.Array.data[2].LinkedToNextNote
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[4].Tracks.Array.data[3].LeftLane.Array.data[3].StartTime
+      value: 3.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[4].Tracks.Array.data[3].LeftLane.Array.data[4].StartTime
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[4].Tracks.Array.data[3].LeftLane.Array.data[5].StartTime
+      value: 5.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[4].Tracks.Array.data[3].LeftLane.Array.data[6].StartTime
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[4].Tracks.Array.data[3].LeftLane.Array.data[7].StartTime
+      value: 7.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[4].Tracks.Array.data[3].RightLane.Array.data[0].StartTime
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[4].Tracks.Array.data[3].RightLane.Array.data[1].StartTime
+      value: 2.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[4].Tracks.Array.data[3].RightLane.Array.data[2].StartTime
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[4].Tracks.Array.data[3].RightLane.Array.data[3].StartTime
+      value: 4.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[4].Tracks.Array.data[3].RightLane.Array.data[4].StartTime
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[4].Tracks.Array.data[3].RightLane.Array.data[5].StartTime
+      value: 6.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[4].Tracks.Array.data[3].RightLane.Array.data[5].LinkedToNextNote
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[4].Tracks.Array.data[3].RightLane.Array.data[6].StartTime
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[4].Tracks.Array.data[3].RightLane.Array.data[7].StartTime
+      value: 8.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[4].BeatsPerMinute
+      value: 110
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[5].LoopId
+      value: play1b
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[5].AudioAssetId
+      value: play1b
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[5].Tracks.Array.data[0].LeftLane.Array.data[0].StartTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[5].Tracks.Array.data[0].LeftLane.Array.data[1].StartTime
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[5].Tracks.Array.data[0].LeftLane.Array.data[2].StartTime
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[5].Tracks.Array.data[0].LeftLane.Array.data[3].StartTime
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[5].Tracks.Array.data[0].LeftLane.Array.data[4].StartTime
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[5].Tracks.Array.data[0].LeftLane.Array.data[5].StartTime
+      value: 5.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[5].Tracks.Array.data[0].LeftLane.Array.data[6].StartTime
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[5].Tracks.Array.data[0].LeftLane.Array.data[7].StartTime
+      value: 7.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[5].Tracks.Array.data[0].RightLane.Array.data[0].StartTime
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[5].Tracks.Array.data[0].RightLane.Array.data[1].StartTime
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[5].Tracks.Array.data[0].RightLane.Array.data[2].StartTime
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[5].Tracks.Array.data[0].RightLane.Array.data[3].StartTime
+      value: 4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[5].Tracks.Array.data[0].RightLane.Array.data[4].StartTime
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[5].Tracks.Array.data[0].RightLane.Array.data[5].StartTime
+      value: 6.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[5].Tracks.Array.data[0].RightLane.Array.data[6].StartTime
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[5].Tracks.Array.data[0].RightLane.Array.data[7].StartTime
+      value: 8.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[5].Tracks.Array.data[1].LeftLane.Array.data[0].StartTime
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[5].Tracks.Array.data[1].LeftLane.Array.data[1].StartTime
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[5].Tracks.Array.data[1].LeftLane.Array.data[2].StartTime
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[5].Tracks.Array.data[1].LeftLane.Array.data[3].StartTime
+      value: 4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[5].Tracks.Array.data[1].LeftLane.Array.data[4].StartTime
+      value: 5.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[5].Tracks.Array.data[1].LeftLane.Array.data[5].StartTime
+      value: 5.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[5].Tracks.Array.data[1].LeftLane.Array.data[6].StartTime
+      value: 6.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[5].Tracks.Array.data[1].LeftLane.Array.data[7].StartTime
+      value: 6.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[5].Tracks.Array.data[1].LeftLane.Array.data[8].StartTime
+      value: 7.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[5].Tracks.Array.data[1].LeftLane.Array.data[9].StartTime
+      value: 7.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[5].Tracks.Array.data[1].LeftLane.Array.data[10].StartTime
+      value: 8.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[5].Tracks.Array.data[1].LeftLane.Array.data[11].StartTime
+      value: 8.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[5].Tracks.Array.data[1].RightLane.Array.data[0].StartTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[5].Tracks.Array.data[1].RightLane.Array.data[1].StartTime
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[5].Tracks.Array.data[1].RightLane.Array.data[2].StartTime
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[5].Tracks.Array.data[1].RightLane.Array.data[3].StartTime
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[5].Tracks.Array.data[1].RightLane.Array.data[4].StartTime
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[5].Tracks.Array.data[1].RightLane.Array.data[5].StartTime
+      value: 5.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[5].Tracks.Array.data[1].RightLane.Array.data[6].StartTime
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[5].Tracks.Array.data[1].RightLane.Array.data[6].Duration
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[5].Tracks.Array.data[1].RightLane.Array.data[7].StartTime
+      value: 6.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[5].Tracks.Array.data[1].RightLane.Array.data[8].StartTime
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[5].Tracks.Array.data[1].RightLane.Array.data[9].StartTime
+      value: 7.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[5].Tracks.Array.data[1].RightLane.Array.data[10].StartTime
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[5].Tracks.Array.data[1].RightLane.Array.data[11].StartTime
+      value: 8.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[5].Tracks.Array.data[2].LeftLane.Array.data[0].StartTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[5].Tracks.Array.data[2].LeftLane.Array.data[1].StartTime
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[5].Tracks.Array.data[2].LeftLane.Array.data[2].StartTime
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[5].Tracks.Array.data[2].LeftLane.Array.data[3].StartTime
+      value: 3.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[5].Tracks.Array.data[2].LeftLane.Array.data[4].StartTime
+      value: 3.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[5].Tracks.Array.data[2].LeftLane.Array.data[5].StartTime
+      value: 3.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[5].Tracks.Array.data[2].LeftLane.Array.data[6].StartTime
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[5].Tracks.Array.data[2].LeftLane.Array.data[7].StartTime
+      value: 5.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[5].Tracks.Array.data[2].LeftLane.Array.data[8].StartTime
+      value: 5.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[5].Tracks.Array.data[2].LeftLane.Array.data[9].StartTime
+      value: 5.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[5].Tracks.Array.data[2].LeftLane.Array.data[10].StartTime
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[5].Tracks.Array.data[2].LeftLane.Array.data[11].StartTime
+      value: 7.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[5].Tracks.Array.data[2].LeftLane.Array.data[12].StartTime
+      value: 7.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[5].Tracks.Array.data[2].LeftLane.Array.data[13].StartTime
+      value: 7.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[5].Tracks.Array.data[2].RightLane.Array.data[0].StartTime
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[5].Tracks.Array.data[2].RightLane.Array.data[1].StartTime
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[5].Tracks.Array.data[2].RightLane.Array.data[2].StartTime
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[5].Tracks.Array.data[2].RightLane.Array.data[3].StartTime
+      value: 4.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[5].Tracks.Array.data[2].RightLane.Array.data[4].StartTime
+      value: 4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[5].Tracks.Array.data[2].RightLane.Array.data[5].StartTime
+      value: 4.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[5].Tracks.Array.data[2].RightLane.Array.data[6].StartTime
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[5].Tracks.Array.data[2].RightLane.Array.data[7].StartTime
+      value: 6.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[5].Tracks.Array.data[2].RightLane.Array.data[8].StartTime
+      value: 6.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[5].Tracks.Array.data[2].RightLane.Array.data[9].StartTime
+      value: 6.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[5].Tracks.Array.data[2].RightLane.Array.data[10].StartTime
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[5].Tracks.Array.data[2].RightLane.Array.data[11].StartTime
+      value: 8.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[5].Tracks.Array.data[2].RightLane.Array.data[12].StartTime
+      value: 8.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[5].Tracks.Array.data[2].RightLane.Array.data[13].StartTime
+      value: 8.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[5].Tracks.Array.data[3].LeftLane.Array.data[0].StartTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[5].Tracks.Array.data[3].LeftLane.Array.data[1].StartTime
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[5].Tracks.Array.data[3].LeftLane.Array.data[2].StartTime
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[5].Tracks.Array.data[3].LeftLane.Array.data[2].LinkedToNextNote
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[5].Tracks.Array.data[3].LeftLane.Array.data[3].StartTime
+      value: 3.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[5].Tracks.Array.data[3].LeftLane.Array.data[4].StartTime
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[5].Tracks.Array.data[3].LeftLane.Array.data[5].StartTime
+      value: 5.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[5].Tracks.Array.data[3].LeftLane.Array.data[6].StartTime
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[5].Tracks.Array.data[3].LeftLane.Array.data[7].StartTime
+      value: 7.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[5].Tracks.Array.data[3].RightLane.Array.data[0].StartTime
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[5].Tracks.Array.data[3].RightLane.Array.data[1].StartTime
+      value: 2.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[5].Tracks.Array.data[3].RightLane.Array.data[2].StartTime
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[5].Tracks.Array.data[3].RightLane.Array.data[3].StartTime
+      value: 4.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[5].Tracks.Array.data[3].RightLane.Array.data[4].StartTime
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[5].Tracks.Array.data[3].RightLane.Array.data[5].StartTime
+      value: 6.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[5].Tracks.Array.data[3].RightLane.Array.data[5].LinkedToNextNote
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[5].Tracks.Array.data[3].RightLane.Array.data[6].StartTime
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[5].Tracks.Array.data[3].RightLane.Array.data[7].StartTime
+      value: 8.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114471351052072220, guid: 87f02b6297d9b3449a2c79fd66a11e59,
+        type: 2}
+      propertyPath: _audioLoops.Array.data[5].BeatsPerMinute
+      value: 110
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 87f02b6297d9b3449a2c79fd66a11e59, type: 2}
   m_IsPrefabParent: 0

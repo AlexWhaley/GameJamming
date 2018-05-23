@@ -60,7 +60,7 @@ public class NoteViewModel : MonoBehaviour
         _noteData = noteData;
         _lane = lane;
 
-        transform.Rotate(0, 0, (int)noteData.Direction * -90);
+        transform.Rotate(0, 0, Random.Range(0, 3) * -90);
 
         _noteImage.sprite = AssetManager.Instance.GetNoteSprite(_attachedCharacter.CharacterName, lane);
         _tailImage.sprite = AssetManager.Instance.GetTailSprite(_attachedCharacter.CharacterName, lane);
@@ -74,7 +74,7 @@ public class NoteViewModel : MonoBehaviour
 
         Vector2 tailSize = new Vector2(
             _tailImage.GetComponent<RectTransform>().sizeDelta.x,
-            _noteData.Duration * trackHeight / TrackManager.Instance.BeatsShownInAdvance);
+            0.0f * trackHeight / TrackManager.Instance.BeatsShownInAdvance);
 
         _tailImage.GetComponent<RectTransform>().sizeDelta = tailSize;
         _tailImage.GetComponent<BoxCollider2D>().size = tailSize;
@@ -150,7 +150,7 @@ public class NoteViewModel : MonoBehaviour
     {
         if (TrackManager.Instance.PlayingTrack)
         {
-            float trackTime = ((TrackManager.Instance.BeatsShownInAdvance - (_noteData.StartTime + 0.1f - AudioManager.Instance.SongPosition)) / TrackManager.Instance.BeatsShownInAdvance);
+            float trackTime = ((TrackManager.Instance.BeatsShownInAdvance - (_noteData.StartTime + 0.07f - AudioManager.Instance.SongPosition)) / TrackManager.Instance.BeatsShownInAdvance);
 
             transform.position = Vector2.LerpUnclamped(
                 _spawnPosition,
