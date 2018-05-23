@@ -70,19 +70,19 @@ MonoBehaviour:
     AudioSource: {fileID: 0}
   - ClipId: play1a
     Clip: {fileID: 8300000, guid: 37376fe9420de5441aa732309e676b90, type: 3}
-    BeatsPerMinute: 110
+    BeatsPerMinute: 27.5
     AudioSource: {fileID: 0}
   - ClipId: play1b
     Clip: {fileID: 8300000, guid: 2f4ebee4aa3221342af4c26028edc8d1, type: 3}
-    BeatsPerMinute: 110
+    BeatsPerMinute: 27.5
     AudioSource: {fileID: 0}
   - ClipId: play2a
     Clip: {fileID: 8300000, guid: 49c78480d46bf9d4abbbc2082e14f7aa, type: 3}
-    BeatsPerMinute: 110
+    BeatsPerMinute: 27.5
     AudioSource: {fileID: 0}
   - ClipId: play2b
     Clip: {fileID: 8300000, guid: 55605f83d9a8d874f87b720e5f6a27c6, type: 3}
-    BeatsPerMinute: 110
+    BeatsPerMinute: 27.5
     AudioSource: {fileID: 0}
   - ClipId: play3a
     Clip: {fileID: 8300000, guid: 49a7c3ee1cf05ad44937d5d515f9d511, type: 3}
