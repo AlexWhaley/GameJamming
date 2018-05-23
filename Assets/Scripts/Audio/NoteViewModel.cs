@@ -86,9 +86,9 @@ public class NoteViewModel : MonoBehaviour
     {
         if (!HasBeenHit)
         {
-            HasBeenHit = true;
             if (correctHit)
             {
+                HasBeenHit = true;
                 if (!HasTail)
                 {
                     Debug.Log("Note hit correctly.");
@@ -109,7 +109,6 @@ public class NoteViewModel : MonoBehaviour
             else
             {
                 Debug.Log("Note hit incorrectly.");
-                _laneViewModel.NotesInCatcher.Dequeue();
                 if (_noteData.LinkedToNextNote && _noteData.NextNote != null)
                 {
                     SetNextNoteNotToSpawn(_noteData.NextNote);

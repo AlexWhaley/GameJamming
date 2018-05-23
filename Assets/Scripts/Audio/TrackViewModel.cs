@@ -56,8 +56,15 @@ public class TrackViewModel : MonoBehaviour
                     Debug.Log(string.Format("Notes in catcher: {0}, Note Direction is : {1}, stick held in Direction: {2}", lane.NotesInCatcher.Count, catcherNote.Direction, analogueStick.Direction));
                     catcherNote.HitNote(correctHit);
                 }
+                else if (analogueStick.IsPressed && catcherNote.HasBeenHit)
+                {
+                    Debug.Log("Catcher note has been hit.");
+                }
             }
-
+            else if (analogueStick.IsPressed && catcherNote == null)
+            {
+                Debug.Log("Catcher note is null.");
+            }
             if (heldNote != null)
             {
                 bool correctHold = analogueStick.Direction == heldNote.Direction;
