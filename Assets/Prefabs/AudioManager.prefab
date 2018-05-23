@@ -86,11 +86,11 @@ MonoBehaviour:
     AudioSource: {fileID: 0}
   - ClipId: play3a
     Clip: {fileID: 8300000, guid: 49a7c3ee1cf05ad44937d5d515f9d511, type: 3}
-    BeatsPerMinute: 110
+    BeatsPerMinute: 27.5
     AudioSource: {fileID: 0}
   - ClipId: play3b
     Clip: {fileID: 8300000, guid: 167abd199ecc365408edd91698f00679, type: 3}
-    BeatsPerMinute: 110
+    BeatsPerMinute: 27.5
     AudioSource: {fileID: 0}
   - ClipId: splash
     Clip: {fileID: 8300000, guid: 55ac7e9a4b9814849a4fb83d4ac765c4, type: 3}
