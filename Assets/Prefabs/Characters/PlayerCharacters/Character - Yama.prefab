@@ -232,10 +232,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Yama
-  _healthStat: 550
+  _healthStat: 600
   _armorModifier: 1
-  _attackModifier: 1.5
-  _healModifier: 1.2
+  _attackModifier: 1.3
+  _healModifier: 1.3
   _characterName: 2
   _attackActions:
   - {fileID: 11400000, guid: db33cea76b1264e4097ff7b45589d96f, type: 2}

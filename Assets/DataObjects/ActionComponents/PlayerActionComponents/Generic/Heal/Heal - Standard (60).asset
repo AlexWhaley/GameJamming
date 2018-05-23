@@ -8,7 +8,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3313e5f8cd8e26a4fbe6bd43034a5b08, type: 3}
-  m_Name: Shield - Standard (25%)
+  m_Script: {fileID: 11500000, guid: 262c98a4e7c6904419cc0544071cf827, type: 3}
+  m_Name: Heal - Standard (60)
   m_EditorClassIdentifier: 
-  BaseShieldModifier: 0.25
+  BaseHealing: 60

@@ -18,4 +18,4 @@ MonoBehaviour:
     SelectionPromptMessage: Select an ally to give a strong attack boost for one attack.
     TargetType: 1
     ActionComponents:
-    - {fileID: 11400000, guid: e94cd8f8e8594054ca08150ec7f85c52, type: 2}
+    - {fileID: 11400000, guid: 89b118d1276259f41ad09e693de0f9d5, type: 2}

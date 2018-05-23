@@ -161,13 +161,17 @@ public class EnemyActionManager : MonoBehaviour
         EnemyCharacter hench2 = _enemyCharactersInExecutionOrder[1];
         EnemyCharacter boss = _enemyCharactersInExecutionOrder[2];
 
-        if (hench1.HealthPortionRemaining < 0.3)
+        if (hench1.HealthPortionRemaining < 0.3 && hench1.IsAlive)
         {
             return 4;
         }
-        else if (hench2.HealthPortionRemaining < 0.3)
+        else if (hench2.HealthPortionRemaining < 0.3 && hench2.IsAlive)
         {
             return 5;
+        }
+        else if (!hench1.IsAlive && !hench2.IsAlive)
+        {
+            return Random.Range(6, 8);
         }
         else
         {

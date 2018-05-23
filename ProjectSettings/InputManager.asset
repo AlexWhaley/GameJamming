@@ -292,7 +292,7 @@ InputManager:
     invert: 0
     type: 2
     axis: 4
-    joyNum: 4
+    joyNum: 3
   - serializedVersion: 3
     m_Name: Player4Confirm
     descriptiveName: 

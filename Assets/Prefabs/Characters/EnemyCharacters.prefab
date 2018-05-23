@@ -651,12 +651,14 @@ MonoBehaviour:
   _attackModifier: 3
   _healModifier: 2
   EnemyActions:
+  - {fileID: 11400000, guid: b35bfb9583fb0fe4ca6ceefc34c87c20, type: 2}
   - {fileID: 11400000, guid: 6869e90cef522314489940935a46face, type: 2}
-  - {fileID: 11400000, guid: 0e1cd8674b5e7334b925ad9d695517d2, type: 2}
   - {fileID: 11400000, guid: 7410190fc9011f54d90ebfed6807bd1e, type: 2}
-  - {fileID: 11400000, guid: 6869e90cef522314489940935a46face, type: 2}
-  - {fileID: 11400000, guid: 4081dfaae5c5ddf4bb99bb3dacbf9329, type: 2}
-  - {fileID: 11400000, guid: 6869e90cef522314489940935a46face, type: 2}
+  - {fileID: 11400000, guid: 0e1cd8674b5e7334b925ad9d695517d2, type: 2}
+  - {fileID: 11400000, guid: 479ab7fa2fed1ce40bde747272dd6a08, type: 2}
+  - {fileID: 11400000, guid: 7410190fc9011f54d90ebfed6807bd1e, type: 2}
+  - {fileID: 11400000, guid: e51ae54c0b83abe42b6e22e48632e9e3, type: 2}
+  - {fileID: 11400000, guid: e51ae54c0b83abe42b6e22e48632e9e3, type: 2}
 --- !u!114 &114332637642446562
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -714,11 +716,13 @@ MonoBehaviour:
   _healModifier: 0.75
   EnemyActions:
   - {fileID: 11400000, guid: 4081dfaae5c5ddf4bb99bb3dacbf9329, type: 2}
-  - {fileID: 11400000, guid: 6869e90cef522314489940935a46face, type: 2}
+  - {fileID: 11400000, guid: 479ab7fa2fed1ce40bde747272dd6a08, type: 2}
   - {fileID: 11400000, guid: 3099c99032782234a8398bba780d15b7, type: 2}
   - {fileID: 11400000, guid: 4081dfaae5c5ddf4bb99bb3dacbf9329, type: 2}
-  - {fileID: 11400000, guid: e51ae54c0b83abe42b6e22e48632e9e3, type: 2}
-  - {fileID: 11400000, guid: a1ef84b3511bafe488426d9c6c81bf6a, type: 2}
+  - {fileID: 11400000, guid: 4d4ffc97093a89849afe701ec1adcee1, type: 2}
+  - {fileID: 11400000, guid: 4d4ffc97093a89849afe701ec1adcee1, type: 2}
+  - {fileID: 11400000, guid: b35bfb9583fb0fe4ca6ceefc34c87c20, type: 2}
+  - {fileID: 11400000, guid: 3bdffd66cffb10949add67f114dcdfc9, type: 2}
 --- !u!114 &114588822053720070
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -786,14 +790,16 @@ MonoBehaviour:
   _healthStat: 400
   _armorModifier: 1
   _attackModifier: 3
-  _healModifier: 1.4
+  _healModifier: 1.6
   EnemyActions:
+  - {fileID: 11400000, guid: 3099c99032782234a8398bba780d15b7, type: 2}
+  - {fileID: 11400000, guid: 0e1cd8674b5e7334b925ad9d695517d2, type: 2}
+  - {fileID: 11400000, guid: 80f1f6d20e7710f4b9357bf37c472682, type: 2}
+  - {fileID: 11400000, guid: b35bfb9583fb0fe4ca6ceefc34c87c20, type: 2}
   - {fileID: 11400000, guid: 4081dfaae5c5ddf4bb99bb3dacbf9329, type: 2}
-  - {fileID: 11400000, guid: 0e1cd8674b5e7334b925ad9d695517d2, type: 2}
-  - {fileID: 11400000, guid: 80f1f6d20e7710f4b9357bf37c472682, type: 2}
-  - {fileID: 11400000, guid: 0e1cd8674b5e7334b925ad9d695517d2, type: 2}
-  - {fileID: 11400000, guid: 80f1f6d20e7710f4b9357bf37c472682, type: 2}
-  - {fileID: 11400000, guid: 0e1cd8674b5e7334b925ad9d695517d2, type: 2}
+  - {fileID: 11400000, guid: 6869e90cef522314489940935a46face, type: 2}
+  - {fileID: 11400000, guid: a1ef84b3511bafe488426d9c6c81bf6a, type: 2}
+  - {fileID: 11400000, guid: a1ef84b3511bafe488426d9c6c81bf6a, type: 2}
 --- !u!114 &114874598319808962
 MonoBehaviour:
   m_ObjectHideFlags: 1
