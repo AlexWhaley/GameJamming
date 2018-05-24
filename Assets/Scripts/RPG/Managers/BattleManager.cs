@@ -97,8 +97,6 @@ public class BattleManager : MonoBehaviour
         float actionTime = 0.5f;
         foreach (var submittedAction in submittedActions)
         {
-
-            StartCoroutine(HandleSubmittedAction(submittedAction, actionTime));
             yield return new WaitForSeconds(actionTime);
         }
         if (!isEnemyTurn)
@@ -166,6 +164,11 @@ public class BattleManager : MonoBehaviour
             }
         }
 
+        if (newTargets.Count == 0)
+        {
+            StopAllCoroutines();
+            PhaseManager.Instance.EndGame();
+        }
         executableAction.Targets = newTargets;
         return executableAction;
     }

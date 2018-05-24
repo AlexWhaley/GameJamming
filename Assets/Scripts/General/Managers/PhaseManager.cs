@@ -112,6 +112,12 @@ public class PhaseManager : MonoBehaviour
 
         }
     }
+
+    public void EndGame()
+    {
+        _currentGamePhase = GameflowPhases.End;
+        EndPhaseStarted();
+    }
     
     public delegate void PhaseDel();
 
